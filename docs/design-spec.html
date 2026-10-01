@@ -92,7 +92,7 @@ pre{margin:0;overflow-x:auto;background:var(--bg-2);border:1px solid var(--line)
   <div class="tbl"><table>
     <thead><tr><th>File</th><th>Purpose</th><th>Notes</th></tr></thead>
     <tbody>
-      <tr><td><code>index.html</code></td><td>The website</td><td>About 130 KB. Set <code>FORM_ENDPOINT</code> near the bottom once hosting is chosen (section 7).</td></tr>
+      <tr><td><code>index.html</code></td><td>The website</td><td>About 130 KB. Form posts to Formspree (section 7).</td></tr>
       <tr><td><code>og-image.png</code></td><td>Link preview image, 1200 × 630</td><td>Used by LinkedIn, X, Facebook, Teams and Slack.</td></tr>
       <tr><td><code>favicon.svg</code>, <code>favicon-32.png</code></td><td>Browser tab icon</td><td>Mark only on Navy 950, flat stacks, per brand guide section 2.</td></tr>
       <tr><td><code>apple-touch-icon.png</code></td><td>Phone home-screen icon, 180 px</td><td></td></tr>
@@ -227,14 +227,9 @@ pre{margin:0;overflow-x:auto;background:var(--bg-2);border:1px solid var(--line)
     <li>Privacy line under the button: "We use these details only to reply to you. We do not share them."</li>
     <li>Spam: a hidden trap field (<code>website</code>) that people never fill in; submissions with it filled are dropped.</li>
   </ul>
-  <h3>Connecting it</h3>
-  <p>A static page cannot send email itself. Set one line in <code>index.html</code>:</p>
-  <pre>var FORM_ENDPOINT = "";   // "netlify", or a Formspree URL such as "https://formspree.io/f/abcdwxyz"</pre>
-  <div class="two">
-    <div class="box"><h3>Netlify</h3><p>Set to <code>"netlify"</code>. The form already carries Netlify's attributes. Submissions appear under Forms; add an email notification to rvisser@globalc60.com. The free plan includes a monthly submission allowance; check the current limit.</p></div>
-    <div class="box"><h3>Cloudflare Pages or Bluehost</h3><p>Create a Formspree form that sends to rvisser@globalc60.com and paste its URL. Formspree's free plan has a monthly submission cap; check the current limit.</p></div>
-  </div>
-  <div class="note"><p>Until the endpoint is set, the form tells visitors to email rvisser@globalc60.com. The address is also shown as plain text in the contact band and footer.</p></div>
+  <h3>Connection</h3>
+  <p>The form posts to Formspree at <code>https://formspree.io/f/xyezaoww</code>, which emails each submission to rvisser@globalc60.com with the subject "GlobalC60.com: new interest registration". The same URL is the form's <code>action</code>, so it still posts if JavaScript is off. The hidden spam field is Formspree's <code>_gotcha</code>.</p>
+  <div class="note"><p>After launch, send one test submission from globalc60.com and, in Formspree, restrict the form to the globalc60.com domain.</p></div>
 </section>
 
 <section id="s8">
@@ -296,7 +291,7 @@ pre{margin:0;overflow-x:auto;background:var(--bg-2);border:1px solid var(--line)
   <h2>12. Open items before launch</h2>
   <div class="note flag"><strong>Claims to confirm</strong><p>The SO<sub>x</sub>, NO<sub>x</sub> and carbon monoxide reduction statement, and "modular units can significantly reduce the cost of carbon compliance", are performance claims. Check both against the October test results before going live.</p></div>
   <div class="note flag"><strong>Elemental Air</strong><p>Confirm Elemental Air approves being named and linked. Their site currently opens to a login page.</p></div>
-  <div class="note"><strong>Hosting and form</strong><p>Choose Netlify, Cloudflare Pages or Bluehost; set <code>FORM_ENDPOINT</code>; send a test submission.</p></div>
+  <div class="note"><strong>Hosting and form</strong><p>Hosting on Bluehost; form connected to Formspree. Send a test submission once the site is live.</p></div>
   <div class="note"><strong>Logo</strong><p>Designer re-set of GLOBALC60 / RECOVERY and export of the six variants; licence check for Ethnocentric before any embedded use elsewhere.</p></div>
   <div class="note"><strong>Final read</strong><p>Each co-founder reviews their team entry and LinkedIn link.</p></div>
 </section>

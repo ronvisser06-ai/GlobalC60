@@ -37,15 +37,13 @@ Edits made only to `public/index.html` are overwritten the next time `build.py` 
 
 ## Interest form
 
-The form opens in a pop-up from every "Register interest", "Host a unit" and "Buy our carbon" button. A static page cannot send email by itself, so it posts to a form service. Set one line near the bottom of `index.html` (and of `src/index.src.html`):
+The form opens in a pop-up from every "Register interest", "Host a unit" and "Buy our carbon" button. It submits to Formspree, which emails each submission to rvisser@globalc60.com.
 
-```
-var FORM_ENDPOINT = "";   // a Formspree URL such as "https://formspree.io/f/abcdwxyz", or "netlify" on Netlify
-```
-
-Until it is set, the form asks visitors to email rvisser@globalc60.com.
-
-For Bluehost: create a free Formspree form that sends to rvisser@globalc60.com, paste its URL into `FORM_ENDPOINT`, upload, and send a test submission.
+- Endpoint: `https://formspree.io/f/xyezaoww`, set in `FORM_ENDPOINT` near the bottom of the page and in the form's `action` attribute (the fallback when JavaScript is off). If it ever changes, update both, in `src/index.src.html`, then rebuild.
+- Each email has the subject "GlobalC60.com: new interest registration". Replying goes to the visitor's email address.
+- The interest is sent as readable text, for example "Deploying the technology on our site", along with the page the visitor submitted from.
+- Spam: a hidden `_gotcha` field. Formspree discards submissions where it is filled in.
+- After the site is live, send one test submission from https://globalc60.com. In Formspree, consider restricting the form to the globalc60.com domain.
 
 ## Deploying to Bluehost
 
@@ -53,13 +51,13 @@ For Bluehost: create a free Formspree form that sends to rvisser@globalc60.com, 
 2. Open File Manager (or connect by FTP) and go to the site's document root, usually `public_html`.
 3. Upload everything inside `public/` (not the folder itself) so `index.html` sits in the document root.
 4. Make sure SSL is active for globalc60.com in Bluehost, so the site loads on https.
-5. Visit https://globalc60.com and check the page, the favicon and the form.
+5. Visit https://globalc60.com and check the page, the favicon and the form. Send one test submission and confirm it arrives at rvisser@globalc60.com.
 
 Domain and email stay where they are, so no DNS changes are needed.
 
 ## Before launch
 
-- Set `FORM_ENDPOINT` and send a test submission.
+- Send a test submission from the live site.
 - Confirm the SOx, NOx and carbon monoxide statement and the "significantly reduce the cost" line against the October test results.
 - Confirm Elemental Air approves being named and linked.
 - Each co-founder checks their team entry and LinkedIn link.

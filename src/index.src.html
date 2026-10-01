@@ -691,9 +691,9 @@ form.enquiry{padding:20px 24px 24px;display:grid;gap:16px}
     </div>
     <button class="modal-close" type="button" data-close-form aria-label="Close">×</button>
   </div>
-  <form class="enquiry" name="interest" method="POST" data-netlify="true" netlify-honeypot="website" novalidate>
-    <input type="hidden" name="form-name" value="interest">
-    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+  <form class="enquiry" name="interest" action="https://formspree.io/f/xyezaoww" method="POST" novalidate>
+    <input type="hidden" name="_subject" value="GlobalC60.com: new interest registration">
+    <p class="hp"><label>Leave this empty <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
     <div class="two">
       <div class="field"><label for="f-company">Company name</label><input id="f-company" name="company" autocomplete="organization" required><span class="err" hidden>Enter your company name.</span></div>
       <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" hidden>Enter your name.</span></div>
@@ -726,11 +726,10 @@ form.enquiry{padding:20px 24px 24px;display:grid;gap:16px}
 
 <script>
 /* ---------- Form delivery ----------
-   Set FORM_ENDPOINT once hosting is chosen:
-   - Netlify: "netlify"  (submissions appear under Forms in Netlify; add an email notification to rvisser@globalc60.com)
-   - Formspree or similar: the form's URL, for example "https://formspree.io/f/abcdwxyz"
-   - Left empty: visitors are asked to email rvisser@globalc60.com instead. */
-var FORM_ENDPOINT = "";
+   Submissions go to Formspree, which emails them to rvisser@globalc60.com.
+   The form's action attribute holds the same URL, so the form still posts if JavaScript is off.
+   If the endpoint ever changes, update it here and in the form's action attribute. */
+var FORM_ENDPOINT = "https://formspree.io/f/xyezaoww";
 var CONTACT_EMAIL = "rvisser@globalc60.com";
 
 (function(){
@@ -806,22 +805,27 @@ var CONTACT_EMAIL = "rvisser@globalc60.com";
     e.preventDefault();
     msg.hidden = true;
     if (!validate()) return;
-    if (form.website.value) return; /* spam trap */
+    if (form._gotcha.value) return; /* spam trap */
     if (!FORM_ENDPOINT){
       show('The form is not connected yet. Please email ' + CONTACT_EMAIL + ' with your details and we will reply.', false);
       return;
     }
     submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
-    var data = new FormData(form), req;
-    if (FORM_ENDPOINT === 'netlify'){
-      req = fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(data).toString() });
-    } else {
-      req = fetch(FORM_ENDPOINT, { method:'POST', headers:{'Accept':'application/json'}, body:data });
-    }
-    req.then(function(r){
-      if (!r.ok) throw new Error(r.status);
-      form.reset();
-      show('Thank you. We have your details and will be in touch.', true);
+    var data = new FormData(form);
+    /* send the readable interest, not the internal code */
+    data.set('interest', form.interest.options[form.interest.selectedIndex].text);
+    data.append('page', location.href);
+    fetch(FORM_ENDPOINT, { method:'POST', headers:{'Accept':'application/json'}, body:data })
+    .then(function(r){
+      if (r.ok){
+        form.reset();
+        show('Thank you. We have your details and will be in touch.', true);
+        return;
+      }
+      return r.json().catch(function(){ return {}; }).then(function(j){
+        var detail = (j && j.errors && j.errors.length) ? j.errors.map(function(x){ return x.message; }).join(' ') + ' ' : '';
+        show(detail + 'Your details were not sent. Please try again, or email ' + CONTACT_EMAIL + '.', false);
+      });
     }).catch(function(){
       show('Your details were not sent. Check your connection and try again, or email ' + CONTACT_EMAIL + '.', false);
     }).finally(function(){ submitBtn.disabled = false; submitBtn.textContent = 'Send'; });
