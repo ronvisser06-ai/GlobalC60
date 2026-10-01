@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Global C60 | Converting Industrial CO₂ into Carbon Products</title>
+<meta name="description" content="Global C60 installs and operates units at industrial sites that convert CO₂ emissions into carbon black equivalent carbon, carbon nanotubes and fullerenes. Calgary, Alberta.">
+<link rel="canonical" href="https://globalc60.com/">
+<meta name="theme-color" content="#061423">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global C60">
+<meta property="og:title" content="Global C60 | Converting Industrial CO₂ into Carbon Products">
+<meta property="og:description" content="Global C60 installs and operates units at industrial sites that convert CO₂ emissions into solid carbon products. Calgary, Alberta.">
+<meta property="og:url" content="https://globalc60.com/">
+<meta property="og:image" content="https://globalc60.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Global C60: industrial CO₂ converted into solid carbon">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Global C60 | Converting Industrial CO₂ into Carbon Products">
+<meta name="twitter:description" content="Global C60 installs and operates units at industrial sites that convert CO₂ emissions into solid carbon products.">
+<meta name="twitter:image" content="https://globalc60.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Global C60 Inc.",
+  "alternateName": "GlobalC60 Recovery",
+  "url": "https://globalc60.com/",
+  "logo": "https://globalc60.com/logo-512.png",
+  "email": "rvisser@globalc60.com",
+  "description": "Global C60 installs and operates units at industrial sites that convert CO₂ emissions into solid carbon products.",
+  "address": {"@type": "PostalAddress", "addressLocality": "Calgary", "addressRegion": "AB", "addressCountry": "CA"},
+  "founder": [
+    {"@type": "Person", "name": "Ron Visser", "jobTitle": "CEO & Co-founder", "sameAs": "https://www.linkedin.com/in/ron-visser"},
+    {"@type": "Person", "name": "Ron Green", "jobTitle": "CFO & Co-founder", "sameAs": "https://www.linkedin.com/in/ronwgreen/"},
+    {"@type": "Person", "name": "Kevin Carroll", "jobTitle": "Technical Advisor & Co-founder", "sameAs": "https://www.linkedin.com/in/kevin-carroll-494a862/"}
+  ]
+}
+</script>
+
+<script>
+/* Dark-first. A visitor's choice from the footer switch is remembered. */
+(function(){try{var t=localStorage.getItem('gc60-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+/* Layout: dark-first single page on a 1200px, 12-column grid. Deep Navy opening band,
+   content on Navy 900 with Navy 800 cards; light theme swaps to white with Steel 50 cards.
+   Tokens follow the GlobalC60 Recovery Brand and Website Design Guide v1.2, section 7. */
+:root{
+  --navy-950:#061423;--navy-900:#0B1F33;--navy-800:#10304D;--navy-700:#164468;--navy-600:#1E5A87;--navy-500:#2A73A8;
+  --blue-400:#56A7CE;--blue-300:#5DCEE9;--blue-200:#A8DCEF;
+  --steel-900:#141A21;--steel-800:#262E38;--steel-700:#3E4955;--steel-600:#5A6675;--steel-500:#7A8695;--steel-400:#9EA8B4;--steel-300:#C3CAD3;--steel-200:#DDE2E8;--steel-100:#EDF0F3;--steel-50:#F6F8FA;
+  --green-700:#2F7A17;--green-600:#76C15F;--green-500:#66D42F;--green-400:#6DFF29;--green-300:#A6F57C;
+  --orange-700:#B44508;--orange-600:#D9560E;--orange-500:#F4731F;--orange-400:#FF9442;--orange-300:#FFB57A;
+
+  /* semantic, dark (default) */
+  --bg:#061423;--bg-2:#0B1F33;--bg-3:#10304D;
+  --fg:#EEF2F6;--fg-2:#A9B8C8;--fg-3:#9EA8B4;
+  --line:#1C3A57;--line-strong:#35638F;
+  --brand:#56A7CE;--link:#5DCEE9;
+  --accent:#F4731F;--accent-hover:#FF9442;--accent-fg:#061423;--accent-text:#FF9442;
+  --green:#6DFF29;--green-text:#A6F57C;--blue:#5DCEE9;--blue-text:#5DCEE9;--focus:#5DCEE9;
+  --section:#0B1F33;--card:#10304D;--card-line:#1C3A57;
+  --logo-bar:#9EA8B4;--logo-word:#F6F8FA;--logo-sub:#5DCEE9;--logo-p1:#7A8695;--logo-p2:#5DCEE9;--logo-p3:#6DFF29;
+  --il-line:#5DCEE9;--il-faint:#35638F;--il-atom:#EEF2F6;--il-pent:#6DFF29;--il-part:#10304D;
+  --lattice:#5DCEE9;
+
+  --font-display:"Barlow","Arial Narrow",system-ui,sans-serif;
+  --font-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --radius-control:6px;--radius-card:8px;
+  --content-max:1200px;--measure:68ch;
+  --gutter:24px;--pad-x:24px;--section-pad:64px;
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#FFFFFF;--bg-2:#F6F8FA;--bg-3:#EDF0F3;
+  --fg:#0B1F33;--fg-2:#3E4955;--fg-3:#5A6675;
+  --line:#DDE2E8;--line-strong:#7A8695;
+  --brand:#10304D;--link:#1E5A87;
+  --accent:#F4731F;--accent-hover:#D9560E;--accent-fg:#061423;--accent-text:#B44508;
+  --green:#66D42F;--green-text:#2F7A17;--blue:#56A7CE;--blue-text:#2A73A8;--focus:#2A73A8;
+  --section:#FFFFFF;--card:#F6F8FA;--card-line:#DDE2E8;
+  --logo-bar:#3E4955;--logo-word:#0B1F33;--logo-sub:#2A73A8;--logo-p1:#10304D;--logo-p2:#56A7CE;--logo-p3:#66D42F;
+  --il-line:#1E5A87;--il-faint:#C3CAD3;--il-atom:#0B1F33;--il-pent:#66D42F;--il-part:#EDF0F3;
+  --lattice:#10304D;
+  color-scheme:light;
+}
+/* The opening band and closing contact band stay Deep Navy in both themes. */
+.on-dark{
+  --bg:#061423;--bg-2:#0B1F33;--bg-3:#10304D;
+  --fg:#EEF2F6;--fg-2:#A9B8C8;--fg-3:#9EA8B4;
+  --line:#1C3A57;--line-strong:#35638F;
+  --brand:#56A7CE;--link:#5DCEE9;
+  --accent-hover:#FF9442;--accent-text:#FF9442;
+  --green:#6DFF29;--green-text:#A6F57C;--blue:#5DCEE9;--blue-text:#5DCEE9;--focus:#5DCEE9;
+  --card:#10304D;--card-line:#1C3A57;
+  --logo-bar:#9EA8B4;--logo-word:#F6F8FA;--logo-sub:#5DCEE9;--logo-p1:#7A8695;--logo-p2:#5DCEE9;--logo-p3:#6DFF29;
+  --il-line:#5DCEE9;--il-faint:#35638F;--il-atom:#EEF2F6;--il-pent:#6DFF29;--il-part:#10304D;
+  --lattice:#5DCEE9;
+  background:var(--bg);color:var(--fg);
+}
+@media (max-width:640px){:root{--pad-x:16px;--section-pad:40px}}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(92px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:26px;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+[hidden]{display:none!important}
+a{color:var(--link);text-underline-offset:3px;transition:color 150ms}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:2px}
+sub{font-size:.7em;line-height:0;vertical-align:-.25em}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--accent);color:var(--accent-fg);padding:10px 16px;border-radius:var(--radius-control);font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+
+/* type */
+h1,h2,h3{font-family:var(--font-display);font-weight:700;margin:0;text-wrap:balance;color:var(--fg)}
+.display{font-size:54px;line-height:56px;letter-spacing:-.01em}
+h2{font-size:30px;line-height:36px}
+h3{font-size:22px;line-height:28px;font-weight:600}
+p{margin:0;max-width:var(--measure)}
+.lead{font-size:19px;line-height:30px;color:var(--fg-2)}
+.small{font-size:14px;line-height:22px}
+.label{font-family:var(--font-mono);font-weight:500;font-size:12px;line-height:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-text)}
+.muted{color:var(--fg-2)}
+@media (max-width:640px){.display{font-size:36px;line-height:40px}h2{font-size:26px;line-height:32px}}
+
+/* layout */
+.wrap{max-width:calc(var(--content-max) + 2*var(--pad-x));margin:0 auto;padding-inline:var(--pad-x)}
+.band{padding-block:var(--section-pad);background:var(--section)}
+.band + .band{border-top:1px solid var(--line)}
+.band.alt{background:var(--bg)}
+.section-head{display:grid;gap:12px;margin-bottom:40px;max-width:760px}
+.stack{display:grid;gap:16px;align-content:start}
+.grid{display:grid;gap:var(--gutter)}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:960px){.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.g2,.g3{grid-template-columns:minmax(0,1fr)}}
+.grid > *{min-width:0}
+ul.plain{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+ul.plain li{position:relative;padding-left:20px;max-width:var(--measure)}
+ul.plain li::before{content:"";position:absolute;left:2px;top:10px;width:8px;height:2px;background:var(--blue)}
+ul.plain.green li::before{background:var(--green)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;border-radius:var(--radius-control);font:600 16px/20px var(--font-body);text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:background-color 150ms,color 150ms,border-color 150ms}
+.btn-primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:var(--accent-fg)}
+.btn-secondary{background:transparent;color:var(--fg);border-color:var(--brand)}
+.btn-secondary:hover{background:var(--brand);color:var(--bg)}
+.btn-link{background:none;border:0;padding:0;min-height:44px;color:var(--link);font:600 16px/20px var(--font-body);cursor:pointer;text-decoration:none}
+.btn-link:hover{text-decoration:underline}
+.btn[disabled]{opacity:.6;cursor:progress}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:8px;padding:3px 10px;border-radius:999px;font:500 12px/18px var(--font-mono);letter-spacing:.04em;border:1px solid var(--line-strong);color:var(--fg-2);white-space:nowrap}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--fg-3)}
+.chip.ok{border-color:var(--green-text);color:var(--green-text)}
+.chip.ok::before{background:var(--green)}
+
+/* header */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--bg);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px}
+.brand-link{display:flex;align-items:center;flex:none}
+.logo{display:block;height:64px;width:auto}
+@media (max-width:640px){.logo{height:56px}}
+.logo .bar{fill:var(--logo-bar)}.logo .word{fill:var(--logo-word)}.logo .sub{fill:var(--logo-sub)}
+.logo .plume-black{fill:var(--logo-p1)}.logo .plume-blue{fill:var(--logo-p2)}.logo .plume-green{fill:var(--logo-p3)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{color:var(--fg-2);text-decoration:none;font-weight:500;font-size:15px;padding-block:12px}
+.nav a:hover{color:var(--fg)}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line-strong);color:var(--fg);border-radius:var(--radius-control);min-height:44px;padding:0 14px;font:600 15px var(--font-body);cursor:pointer}
+@media (max-width:960px){
+  .menu-btn{display:inline-flex;align-items:center}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px var(--pad-x) 16px}
+  .nav.open{display:flex}
+  .nav a{padding-block:12px;border-bottom:1px solid var(--line)}
+  .nav .btn{margin-top:12px}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:72px 64px;border-bottom:1px solid var(--line)}
+.hero-lattice{position:absolute;inset:0;width:100%;height:100%;opacity:.08;pointer-events:none}
+.hero-lattice path{fill:none;stroke:var(--lattice);stroke-width:1}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px;align-items:center}
+.hero-copy{display:grid;gap:24px;align-content:start}
+.hero-status{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;padding-top:8px;border-top:1px solid var(--line);color:var(--fg-2);font-size:14px;line-height:22px}
+.hero-figure{margin:0}
+.hero-figure svg{display:block;width:100%;height:auto}
+@media (max-width:960px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero-figure{max-width:560px}}
+@media (max-width:640px){.hero{padding-block:48px 40px}}
+
+/* process diagram */
+.dg .stackbody{fill:var(--bg-3);stroke:var(--line-strong);stroke-width:1.5}
+.dg .unit{fill:var(--bg-2);stroke:var(--fg-2);stroke-width:1.5}
+.dg .gas{fill:none;stroke:var(--blue);stroke-width:3;stroke-linecap:square}
+.dg .gas-thin{fill:none;stroke:var(--blue);stroke-width:1.5;stroke-dasharray:4 5}
+.dg .prod{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:square}
+.dg .rep{fill:none;stroke:var(--fg-3);stroke-width:1.5;stroke-dasharray:4 5}
+.dg .gasfill{fill:var(--blue)}.dg .prodfill{fill:var(--green)}.dg .repfill{fill:var(--fg-3)}
+.dg .act{fill:var(--accent)}
+.dg .particle{fill:var(--bg-3);stroke:var(--green);stroke-width:1.5}
+.dg .doc{fill:var(--bg-2);stroke:var(--fg-3);stroke-width:1.5}
+.dg .docline{stroke:var(--fg-3);stroke-width:1.5}
+.dg .unit-lattice{fill:none;stroke:var(--line-strong);stroke-width:1}
+.dg text{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;fill:var(--fg-2)}
+.dg text.strong{fill:var(--fg);font-weight:500}
+
+/* cards and panels */
+.card{background:var(--card);border:1px solid var(--card-line);border-radius:var(--radius-card);padding:24px;display:grid;gap:12px;align-content:start}
+.card h3{font-size:20px;line-height:26px}
+.card p{color:var(--fg-2)}
+.panel-title{font-family:var(--font-display);font-weight:600;font-size:20px;line-height:26px;margin:0 0 12px}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gutter);counter-reset:step}
+.steps li{counter-increment:step;display:grid;gap:8px;align-content:start;padding-top:16px;border-top:2px solid var(--line-strong)}
+.steps li::before{content:counter(step,decimal-leading-zero);font:500 12px/16px var(--font-mono);letter-spacing:.1em;color:var(--blue-text)}
+.steps h3{font-size:18px;line-height:24px}
+.steps p{color:var(--fg-2);font-size:15px;line-height:24px}
+@media (max-width:960px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.steps{grid-template-columns:minmax(0,1fr)}}
+
+/* report */
+.report{border:1px solid var(--card-line);border-radius:var(--radius-card);overflow:hidden;background:var(--card)}
+.report-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:16px 20px;border-bottom:1px solid var(--card-line)}
+.report-head strong{font-family:var(--font-display);font-weight:600;font-size:18px}
+.report-scroll{overflow-x:auto}
+.report table{width:100%;border-collapse:collapse;min-width:440px}
+.report th,.report td{text-align:left;padding:12px 20px;border-bottom:1px solid var(--card-line);vertical-align:top;font-size:15px;line-height:22px}
+.report tr:last-child td{border-bottom:0}
+.report th{font:500 12px/16px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)}
+.report td:first-child{font-family:var(--font-mono);font-size:14px;color:var(--fg);white-space:nowrap}
+.report td:last-child{color:var(--fg-2)}
+.report tr.total td:first-child{color:var(--green-text)}
+
+/* callouts */
+.callout{border:1px solid var(--card-line);border-left:3px solid var(--blue);border-radius:var(--radius-card);padding:24px;display:grid;gap:10px;align-content:start;background:var(--bg-2)}
+.callout.investigate{border-left-color:var(--line-strong)}
+.callout p{color:var(--fg-2)}
+
+/* products */
+.product{background:var(--card);border:1px solid var(--card-line);border-radius:var(--radius-card);overflow:hidden;display:grid;align-content:start}
+.product-art{background:var(--bg);border-bottom:1px solid var(--card-line);display:flex;align-items:center;justify-content:center;gap:12px;padding:20px;min-height:220px}
+.product-art svg{height:180px;width:auto;max-width:100%}
+.product-body{padding:24px;display:grid;gap:12px;align-content:start}
+.product-body p{color:var(--fg-2)}
+.product-title{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.product.feature{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.product.feature .product-art{border-bottom:0;border-right:1px solid var(--card-line);min-height:100%}
+.product.feature .product-art svg{height:260px}
+.feature-lists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+@media (max-width:960px){.product.feature{grid-template-columns:minmax(0,1fr)}.product.feature .product-art{border-right:0;border-bottom:1px solid var(--card-line);min-height:220px}}
+@media (max-width:640px){.feature-lists{grid-template-columns:minmax(0,1fr)}.product-art svg{height:150px}.product-art{min-height:180px}}
+.illo .ln{stroke:var(--il-line);stroke-width:1.5}
+.illo .lf,.illo .lr{stroke:var(--il-faint);stroke-width:1;fill:none}
+.illo .at{fill:var(--il-atom)}
+.illo .pf{fill:var(--il-pent);fill-opacity:.22;stroke:var(--il-pent);stroke-width:1.5}
+.illo .pc{fill:var(--il-part)}
+.illo .po{fill:none;stroke:var(--il-line);stroke-width:1.5}
+.fig-note{font:500 11px/16px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3);text-align:center}
+.art-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;align-items:center}
+.art-pair figure{margin:0;display:grid;gap:6px;justify-items:center}
+.art-pair svg{height:140px}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gutter);margin-top:var(--gutter)}
+.why div{border-top:2px solid var(--green);padding-top:14px;color:var(--fg);font-weight:500}
+@media (max-width:640px){.why{grid-template-columns:minmax(0,1fr)}}
+
+/* status list */
+.status-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gutter)}
+.status-list li{display:grid;gap:10px;padding:20px;border:1px solid var(--card-line);border-radius:var(--radius-card);background:var(--card)}
+.status-list strong{font-family:var(--font-display);font-weight:600;font-size:18px}
+@media (max-width:960px){.status-list{grid-template-columns:minmax(0,1fr)}}
+
+/* team */
+.person{display:grid;gap:6px;align-content:start}
+.person h3{font-size:20px;line-height:26px}
+.person .role{font:500 12px/16px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--blue-text);margin-bottom:6px}
+.person p{color:var(--fg-2);font-size:15px;line-height:24px}
+.person .contact{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:8px;font-size:14px}
+.li-link{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-10px 0}
+.li-link img{width:20px;height:auto;display:block}
+
+/* contact band */
+.contact-band{position:relative;overflow:hidden;padding-block:80px;border-top:1px solid var(--line)}
+.contact-band .wrap{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:center}
+.contact-box{display:grid;gap:12px;border:1px solid var(--line);border-radius:var(--radius-card);padding:24px;background:var(--bg-2)}
+.email-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-family:var(--font-mono);font-size:15px}
+@media (max-width:960px){.contact-band .wrap{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.contact-band{padding-block:48px}}
+
+/* footer */
+.site-footer{background:var(--bg);border-top:1px solid var(--line);padding-block:40px;color:var(--fg-2);font-size:14px;line-height:22px}
+.site-footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 40px;align-items:start}
+.site-footer .logo{height:64px}
+.foot-meta{display:grid;gap:6px;margin-top:16px}
+.theme-switch{display:inline-flex;border:1px solid var(--line-strong);border-radius:var(--radius-control);overflow:hidden}
+.theme-switch button{background:transparent;color:var(--fg-2);border:0;min-height:40px;padding:0 16px;font:500 13px var(--font-body);cursor:pointer}
+.theme-switch button[aria-pressed="true"]{background:var(--bg-3);color:var(--fg)}
+.foot-right{display:grid;gap:10px;justify-items:end}
+@media (max-width:640px){.site-footer .wrap{grid-template-columns:minmax(0,1fr)}.foot-right{justify-items:start}}
+
+/* modal form */
+dialog.modal{width:min(640px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:0;border:1px solid var(--line-strong);border-radius:var(--radius-card);background:var(--bg-2);color:var(--fg);overflow:auto}
+dialog.modal::backdrop{background:rgba(6,20,35,.72)}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:24px 24px 0}
+.modal-close{background:none;border:1px solid var(--line-strong);color:var(--fg);border-radius:var(--radius-control);width:44px;height:44px;font-size:22px;line-height:1;cursor:pointer;flex:none}
+form.enquiry{padding:20px 24px 24px;display:grid;gap:16px}
+.field{display:grid;gap:6px}
+.field label,.field legend{font-weight:500;font-size:14px;line-height:20px;color:var(--fg)}
+.field .opt{color:var(--fg-3);font-weight:400}
+.field input,.field select,.field textarea{width:100%;min-height:44px;padding:10px 12px;border:1.5px solid var(--line-strong);border-radius:var(--radius-control);background:var(--bg);color:var(--fg);font:400 16px/22px var(--font-body)}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+.field .help{font-size:13px;line-height:20px;color:var(--fg-3)}
+.field .err{font-size:13px;line-height:20px;color:var(--accent-text)}
+.field[data-invalid] input,.field[data-invalid] select{border-color:var(--accent-text)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:640px){.two{grid-template-columns:minmax(0,1fr)}}
+.form-foot{display:grid;gap:10px}
+.form-msg{padding:12px 14px;border-radius:var(--radius-control);border:1px solid var(--line-strong);font-size:14px;line-height:22px}
+.form-msg.ok{border-color:var(--green-text);color:var(--fg)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand-link" href="#top" aria-label="Global C60, back to top"><svg class="logo" viewBox="0 0 1000 449" role="img" aria-label="GlobalC60 Recovery" xmlns="http://www.w3.org/2000/svg"><g><path class="bar" data-bar="0" fill-rule="nonzero" d="M 51.6 362.6 L 51.6 252.7 L 88.2 252.7 L 88.2 362.6 Z M 51.6 362.6"/><path class="bar" data-bar="1" fill-rule="nonzero" d="M 97.9 362.6 L 97.9 230.8 L 134.5 230.8 L 134.5 362.6 Z M 97.9 362.6"/><path class="bar" data-bar="2" fill-rule="nonzero" d="M 145.1 362.6 L 145.1 216.7 L 181.7 216.7 L 181.7 362.6 Z M 145.1 362.6"/><path class="plume-black" fill-rule="evenodd" d="M 78.0 238.2 C 143.4 162.9 46.7 151.7 36.3 99.2 C 8.2 167.1 103.1 168.1 78.0 238.2"/><path class="plume-green" fill-rule="evenodd" d="M 159.6 138.9 C 211.6 63.3 120.9 52.4 111.1 0.0 C 84.6 67.9 173.5 72.8 159.6 138.9"/><path class="plume-blue" fill-rule="evenodd" d="M 116.7 218.3 C 208.8 115.3 42.4 75.1 58.4 0.0 C 0.0 99.8 160.4 127.0 116.7 218.3"/><path class="word" fill-rule="nonzero" d="M 257.1 362.6 C 245.5 362.6 235.8 361.3 228.0 358.8 C 216.3 354.9 210.4 348.4 210.4 339.1 L 210.4 280.3 C 210.4 271.2 216.3 264.7 228.0 260.7 C 235.8 258.0 245.5 256.7 257.1 256.7 L 341.0 256.7 L 341.0 277.4 L 257.1 277.4 C 239.9 277.4 231.3 280.4 231.3 286.2 L 231.3 332.9 C 231.3 338.9 239.9 341.8 257.1 341.8 L 320.2 341.8 L 320.2 310.7 L 249.7 310.7 L 249.7 289.9 L 330.6 289.9 C 333.4 289.9 335.9 290.9 338.0 293.0 C 340.0 295.1 341.0 297.5 341.0 300.4 L 341.0 362.6 Z M 257.1 362.6"/><path class="word" fill-rule="nonzero" d="M 357.4 362.6 L 357.4 256.7 L 378.2 256.7 L 378.2 341.8 L 452.0 341.8 L 452.0 362.6 Z M 357.4 362.6"/><path class="word" fill-rule="nonzero" d="M 595.3 339.1 C 595.3 347.9 589.4 354.4 577.5 358.5 C 569.0 361.2 559.3 362.6 548.5 362.6 L 511.4 362.6 C 501.2 362.6 491.6 361.1 482.7 358.0 C 470.7 353.9 464.6 347.6 464.6 339.1 L 464.6 280.3 C 464.6 271.2 470.5 264.7 482.3 260.8 C 490.4 258.0 500.1 256.7 511.4 256.7 L 548.5 256.7 C 579.7 256.7 595.3 264.5 595.3 280.3 Z M 574.5 285.8 C 574.5 280.2 566.2 277.4 549.6 277.4 L 510.4 277.4 C 494.1 277.4 486.0 280.2 486.0 285.8 L 486.0 333.8 C 486.0 339.2 494.1 341.8 510.4 341.8 L 549.6 341.8 C 566.2 341.8 574.5 339.2 574.5 333.8 Z M 574.5 285.8"/><path class="word" fill-rule="nonzero" d="M 743.9 339.1 C 743.9 347.7 737.7 354.1 725.5 358.3 C 716.9 361.2 707.2 362.6 696.4 362.6 L 613.2 362.6 L 613.2 256.5 L 697.1 256.5 C 708.1 256.5 717.7 258.0 725.9 260.8 C 737.9 265.0 743.9 271.5 743.9 280.2 L 743.9 295.5 C 743.9 302.7 740.0 307.3 732.2 309.4 C 735.6 310.0 738.4 311.5 740.6 313.9 C 742.8 316.4 743.9 319.3 743.9 322.6 Z M 722.5 285.2 C 722.5 282.4 719.0 280.3 712.0 278.9 C 707.0 277.8 702.0 277.3 697.1 277.3 L 634.0 277.3 L 634.0 298.8 L 712.9 298.8 C 714.8 298.8 716.8 298.4 718.8 297.7 C 721.3 296.8 722.5 295.5 722.5 293.8 Z M 722.5 325.9 C 722.5 321.7 716.5 319.6 704.6 319.6 L 634.0 319.6 L 634.0 341.8 L 696.4 341.8 C 713.8 341.8 722.5 339.3 722.5 334.1 Z M 722.5 325.9"/><path class="word" fill-rule="nonzero" d="M 871.7 362.6 L 871.7 329.5 L 782.6 329.5 L 782.6 362.6 L 761.8 362.6 L 761.8 290.2 C 761.8 279.3 767.1 270.7 777.7 264.5 C 786.7 259.3 797.0 256.7 808.7 256.7 L 844.3 256.7 C 855.6 256.7 866.1 259.4 875.5 264.8 C 886.8 271.2 892.4 279.7 892.4 290.2 L 892.4 362.6 Z M 871.7 294.7 C 871.7 289.2 868.3 284.8 861.6 281.6 C 855.9 278.8 850.1 277.4 844.3 277.4 L 808.7 277.4 C 803.7 277.4 798.3 279.1 792.5 282.3 C 785.9 286.1 782.6 290.2 782.6 294.7 L 782.6 308.7 L 871.7 308.7 Z M 871.7 294.7"/><path class="word" fill-rule="nonzero" d="M 905.3 362.6 L 905.3 256.7 L 926.1 256.7 L 926.1 341.8 L 1000.0 341.8 L 1000.0 362.6 Z M 905.3 362.6"/><path class="sub" fill-rule="nonzero" d="M 126.5 433.3 L 114.9 448.3 L 85.6 448.3 C 80.5 448.3 75.8 447.6 71.5 446.0 C 67.2 444.5 63.4 442.4 60.3 439.8 C 57.2 437.1 54.8 434.0 53.0 430.4 C 51.2 426.7 50.3 422.8 50.3 418.5 C 50.3 414.3 51.2 410.4 53.0 406.9 C 54.8 403.3 57.2 400.3 60.3 397.8 C 63.4 395.2 67.2 393.3 71.5 391.9 C 75.8 390.5 80.5 389.9 85.6 389.9 L 126.5 389.9 L 114.9 405.1 L 85.6 405.1 C 83.1 405.1 80.8 405.4 78.7 406.1 C 76.6 406.8 74.8 407.8 73.3 409.0 C 71.8 410.3 70.6 411.8 69.7 413.5 C 68.9 415.3 68.4 417.2 68.4 419.3 C 68.4 421.4 68.9 423.3 69.7 425.0 C 70.5 426.7 71.7 428.2 73.3 429.4 C 74.8 430.7 76.6 431.6 78.7 432.3 C 80.8 433.0 83.1 433.3 85.6 433.3 Z M 126.5 433.3"/><path class="sub" fill-rule="nonzero" d="M 165.3 405.1 C 161.7 405.1 158.6 405.8 155.8 407.2 C 153.1 408.7 151.0 410.7 149.7 413.2 L 186.7 413.2 C 193.3 413.2 198.6 414.6 202.6 417.3 C 206.5 420.0 208.5 424.1 208.5 429.3 C 208.5 433.4 207.5 436.7 205.4 439.3 C 203.4 441.9 200.7 443.9 197.3 445.4 C 193.9 446.9 190.1 447.9 185.7 448.4 C 181.3 449.0 176.7 449.3 172.0 449.3 C 158.5 449.3 148.3 446.8 141.4 441.9 C 134.5 437.0 131.0 429.2 131.0 418.5 C 131.0 414.3 131.9 410.4 133.7 406.9 C 135.4 403.3 137.9 400.3 141.0 397.8 C 144.1 395.2 147.8 393.3 152.1 391.9 C 156.5 390.5 161.1 389.9 166.2 389.9 L 203.9 389.9 L 192.2 405.1 Z M 149.7 424.8 C 150.2 426.7 151.1 428.3 152.3 429.5 C 153.5 430.8 155.1 431.7 157.0 432.4 C 158.9 433.0 161.2 433.5 163.9 433.7 C 166.5 434.0 169.6 434.1 173.0 434.1 C 176.8 434.1 179.8 434.0 182.2 433.7 C 184.7 433.5 186.5 433.2 187.9 432.7 C 189.2 432.3 190.1 431.7 190.7 431.1 C 191.2 430.4 191.4 429.6 191.4 428.8 C 191.4 426.2 189.4 424.8 185.2 424.8 Z M 149.7 424.8"/><path class="sub" fill-rule="nonzero" d="M 253.2 388.9 C 265.6 388.9 274.9 391.3 281.1 396.2 C 287.4 401.0 290.5 408.6 290.5 419.0 C 290.5 429.5 287.4 437.2 281.2 442.0 C 275.0 446.9 265.6 449.3 253.2 449.3 C 240.7 449.3 231.4 446.9 225.1 442.0 C 218.9 437.2 215.8 429.5 215.8 419.0 C 215.8 408.6 219.0 401.0 225.2 396.2 C 231.4 391.3 240.7 388.9 253.2 388.9 Z M 253.2 434.1 C 256.7 434.1 259.7 433.9 262.2 433.5 C 264.7 433.1 266.8 432.4 268.3 431.3 C 269.8 430.2 270.9 428.6 271.6 426.7 C 272.3 424.7 272.6 422.2 272.6 419.0 C 272.6 415.9 272.3 413.4 271.6 411.4 C 270.9 409.5 269.8 407.9 268.3 406.9 C 266.8 405.8 264.7 405.1 262.2 404.7 C 259.7 404.3 256.7 404.1 253.2 404.1 C 249.5 404.1 246.5 404.3 244.0 404.7 C 241.5 405.1 239.6 405.8 238.0 406.9 C 236.5 407.9 235.4 409.5 234.7 411.4 C 234.0 413.4 233.7 415.9 233.7 419.0 C 233.7 422.2 234.0 424.7 234.7 426.7 C 235.4 428.6 236.5 430.2 238.0 431.3 C 239.6 432.4 241.5 433.1 244.0 433.5 C 246.5 433.9 249.5 434.1 253.2 434.1"/><path class="sub" fill-rule="nonzero" d="M 416.0 448.3 L 391.8 448.3 L 378.8 432.9 L 351.0 432.9 L 351.0 448.3 L 332.9 448.3 L 332.9 418.4 L 383.8 418.4 C 386.6 418.4 388.9 417.8 390.9 416.7 C 392.8 415.5 393.8 413.9 393.8 411.9 C 393.8 409.6 392.9 407.9 391.1 406.8 C 389.4 405.6 386.9 405.1 383.8 405.1 L 332.9 405.1 L 344.7 389.9 L 382.3 389.9 C 385.6 389.9 389.1 390.2 392.6 390.8 C 396.2 391.4 399.4 392.5 402.3 394.1 C 405.2 395.6 407.7 397.8 409.5 400.4 C 411.4 403.1 412.4 406.6 412.4 410.7 C 412.4 413.0 412.0 415.2 411.3 417.2 C 410.6 419.2 409.6 421.1 408.3 422.7 C 407.0 424.4 405.4 425.7 403.5 426.9 C 401.6 428.0 399.5 428.8 397.1 429.3 C 398.1 430.0 399.2 431.0 400.4 432.2 C 401.6 433.3 403.2 434.9 405.3 437.0 Z M 416.0 448.3"/><path class="sub" fill-rule="nonzero" d="M 490.4 433.3 L 478.8 448.3 L 422.5 448.3 L 422.5 389.9 L 490.2 389.9 L 478.5 405.1 L 440.7 405.1 L 440.7 412.1 L 487.0 412.1 L 476.6 425.3 L 440.7 425.3 L 440.7 433.3 Z M 490.4 433.3"/><path class="sub" fill-rule="nonzero" d="M 571.0 433.3 L 559.4 448.3 L 530.0 448.3 C 524.9 448.3 520.2 447.6 515.9 446.0 C 511.6 444.5 507.9 442.4 504.8 439.8 C 501.7 437.1 499.2 434.0 497.4 430.4 C 495.7 426.7 494.8 422.8 494.8 418.5 C 494.8 414.3 495.7 410.4 497.4 406.9 C 499.2 403.3 501.7 400.3 504.8 397.8 C 507.9 395.2 511.6 393.3 515.9 391.9 C 520.2 390.5 524.9 389.9 530.0 389.9 L 571.0 389.9 L 559.4 405.1 L 530.0 405.1 C 527.6 405.1 525.3 405.4 523.2 406.1 C 521.1 406.8 519.3 407.8 517.8 409.0 C 516.2 410.3 515.1 411.8 514.2 413.5 C 513.3 415.3 512.9 417.2 512.9 419.3 C 512.9 421.4 513.3 423.3 514.1 425.0 C 515.0 426.7 516.2 428.2 517.7 429.4 C 519.3 430.7 521.1 431.6 523.2 432.3 C 525.3 433.0 527.6 433.3 530.0 433.3 Z M 571.0 433.3"/><path class="sub" fill-rule="nonzero" d="M 618.2 388.9 C 632.4 388.9 643.1 391.3 650.2 396.2 C 657.3 401.0 660.9 408.6 660.9 419.0 C 660.9 429.5 657.4 437.2 650.2 442.0 C 643.1 446.9 632.5 449.3 618.2 449.3 C 603.8 449.3 593.1 446.9 586.1 442.0 C 579.0 437.2 575.4 429.5 575.4 419.0 C 575.4 408.6 579.0 401.0 586.1 396.2 C 593.2 391.3 603.9 388.9 618.2 388.9 Z M 618.2 434.1 C 622.7 434.1 626.6 433.9 629.7 433.5 C 632.9 433.1 635.4 432.4 637.4 431.3 C 639.3 430.2 640.7 428.6 641.6 426.7 C 642.5 424.7 642.9 422.2 642.9 419.0 C 642.9 415.9 642.5 413.4 641.6 411.4 C 640.7 409.5 639.3 407.9 637.4 406.9 C 635.4 405.8 632.9 405.1 629.7 404.7 C 626.6 404.3 622.7 404.1 618.2 404.1 C 613.6 404.1 609.8 404.3 606.7 404.7 C 603.5 405.1 600.9 405.8 599.0 406.9 C 597.0 407.9 595.6 409.5 594.8 411.4 C 593.9 413.4 593.4 415.9 593.4 419.0 C 593.4 422.2 593.9 424.7 594.8 426.7 C 595.6 428.6 597.0 430.2 599.0 431.3 C 600.9 432.4 603.5 433.1 606.7 433.5 C 609.8 433.9 613.6 434.1 618.2 434.1"/><path class="sub" fill-rule="nonzero" d="M 679.2 389.9 L 705.5 428.7 L 732.9 389.9 L 754.2 389.9 L 716.8 442.7 C 715.6 444.4 714.0 445.9 712.1 447.3 C 710.2 448.6 707.9 449.3 705.1 449.3 C 702.4 449.3 700.1 448.6 698.3 447.4 C 696.4 446.1 694.9 444.6 693.6 442.7 L 657.0 389.9 Z M 679.2 389.9"/><path class="sub" fill-rule="nonzero" d="M 828.6 433.3 L 817.0 448.3 L 760.7 448.3 L 760.7 389.9 L 828.4 389.9 L 816.7 405.1 L 778.9 405.1 L 778.9 412.1 L 825.2 412.1 L 814.8 425.3 L 778.9 425.3 L 778.9 433.3 Z M 828.6 433.3"/><path class="sub" fill-rule="nonzero" d="M 917.7 448.3 L 893.5 448.3 L 880.5 432.9 L 852.7 432.9 L 852.7 448.3 L 834.6 448.3 L 834.6 418.4 L 885.5 418.4 C 888.3 418.4 890.7 417.8 892.6 416.7 C 894.5 415.5 895.5 413.9 895.5 411.9 C 895.5 409.6 894.6 407.9 892.8 406.8 C 891.1 405.6 888.6 405.1 885.5 405.1 L 834.6 405.1 L 846.4 389.9 L 884.0 389.9 C 887.3 389.9 890.8 390.2 894.3 390.8 C 897.9 391.4 901.1 392.5 904.0 394.1 C 906.9 395.6 909.3 397.8 911.2 400.4 C 913.1 403.1 914.1 406.6 914.1 410.7 C 914.1 413.0 913.7 415.2 913.0 417.2 C 912.3 419.2 911.3 421.1 910.0 422.7 C 908.7 424.4 907.1 425.7 905.2 426.9 C 903.3 428.0 901.2 428.8 898.8 429.3 C 899.8 430.0 900.9 431.0 902.1 432.2 C 903.3 433.3 905.0 434.9 907.0 437.0 Z M 917.7 448.3"/><path class="sub" fill-rule="nonzero" d="M 1000.0 389.9 L 965.3 429.0 L 965.3 448.3 L 947.1 448.3 L 947.1 428.9 L 911.5 389.9 L 934.7 389.9 L 948.7 406.1 C 949.1 406.6 949.8 407.3 950.5 408.2 C 951.3 409.0 952.1 409.9 952.9 410.8 C 953.7 411.8 954.4 412.6 955.1 413.4 C 955.9 414.3 956.3 414.9 956.6 415.3 C 957.2 414.5 958.1 413.4 959.2 412.0 C 960.3 410.6 961.9 408.6 964.0 406.0 L 977.3 389.9 Z M 1000.0 389.9"/></g></svg></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#what">What we do</a>
+      <a href="#work">How we work</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#carbon">Carbon</a>
+      <a href="#company">Company</a>
+      <button class="btn btn-secondary" type="button" data-open-form="">Register interest</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero on-dark" id="top" aria-labelledby="hero-h">
+  <svg class="hero-lattice" aria-hidden="true" focusable="false"><defs><pattern id="lat1" width="66.00" height="38.11" patternUnits="userSpaceOnUse"><path d="M0 19.05 L11.00 0 L33.00 0 L44.00 19.05 L33.00 38.11 L11.00 38.11 Z M44.00 19.05 L66.00 19.05"/></pattern></defs><rect width="100%" height="100%" fill="url(#lat1)"/></svg>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="label">Industrial carbon recovery · Calgary, Alberta</span>
+      <h1 class="display" id="hero-h">Industrial CO<sub>2</sub>, converted into solid carbon.</h1>
+      <p class="lead">Global C60 installs and operates carbon conversion units at industrial sites. The CO<sub>2</sub> in your emission stream becomes solid carbon for industrial markets, starting with a carbon black equivalent, and you receive a monthly record of how much CO<sub>2</sub> was removed.</p>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" data-open-form="site">Host a unit at your site</button>
+        <button class="btn btn-secondary" type="button" data-open-form="carbon">Buy our carbon</button>
+      </div>
+      <div class="hero-status">
+        <span class="chip">Validation under way</span>
+        <span>Validation and verification of the technology is under way, and discussions for first deployments are planned.</span>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      <svg class="dg" viewBox="0 0 520 390" role="img" aria-label="CO2 in flue gas flows from your stack into a Global C60 unit on your site. Out come treated gas, solid carbon sold to industry, and a monthly CO2 report." xmlns="http://www.w3.org/2000/svg"><rect class="stackbody" x="34" y="120" width="54" height="206" rx="3"/><rect class="stackbody" x="26" y="326" width="70" height="14" rx="2"/><text x="61" y="104" text-anchor="middle" class="strong">YOUR STACK</text><path class="gas" d="M88 236 H196"/><polygon class="gasfill" points="206,236 197,230 197,242"/><text x="146" y="222" text-anchor="middle">CO₂ IN</text><text x="146" y="260" text-anchor="middle">FLUE GAS</text><rect class="unit" x="208" y="164" width="150" height="144" rx="8"/><polygon class="unit-lattice" points="249.0,262.0 243.5,271.5 232.5,271.5 227.0,262.0 232.5,252.5 243.5,252.5"/><polygon class="unit-lattice" points="282.0,262.0 276.5,271.5 265.5,271.5 260.0,262.0 265.5,252.5 276.5,252.5"/><polygon class="unit-lattice" points="315.0,262.0 309.5,271.5 298.5,271.5 293.0,262.0 298.5,252.5 309.5,252.5"/><polygon class="unit-lattice" points="348.0,262.0 342.5,271.5 331.5,271.5 326.0,262.0 331.5,252.5 342.5,252.5"/><polygon class="unit-lattice" points="265.5,271.5 260.0,281.1 249.0,281.1 243.5,271.5 249.0,262.0 260.0,262.0"/><polygon class="unit-lattice" points="298.5,271.5 293.0,281.1 282.0,281.1 276.5,271.5 282.0,262.0 293.0,262.0"/><polygon class="unit-lattice" points="331.5,271.5 326.0,281.1 315.0,281.1 309.5,271.5 315.0,262.0 326.0,262.0"/><polygon class="unit-lattice" points="249.0,281.1 243.5,290.6 232.5,290.6 227.0,281.1 232.5,271.5 243.5,271.5"/><polygon class="unit-lattice" points="282.0,281.1 276.5,290.6 265.5,290.6 260.0,281.1 265.5,271.5 276.5,271.5"/><polygon class="unit-lattice" points="315.0,281.1 309.5,290.6 298.5,290.6 293.0,281.1 298.5,271.5 309.5,271.5"/><polygon class="unit-lattice" points="348.0,281.1 342.5,290.6 331.5,290.6 326.0,281.1 331.5,271.5 342.5,271.5"/><text x="283" y="196" text-anchor="middle" class="strong">GLOBAL C60</text><text x="283" y="214" text-anchor="middle" class="strong">UNIT</text><text x="283" y="232" text-anchor="middle">ON YOUR SITE</text><circle class="act" cx="208" cy="236" r="6"/><path class="gas-thin" d="M318 164 V78"/><polygon class="gasfill" points="318,66 312,75 324,75"/><text x="332" y="92">TREATED GAS</text><path class="prod" d="M358 236 H428"/><polygon class="prodfill" points="438,236 429,230 429,242"/><circle class="particle" cx="462" cy="228" r="11"/><circle class="particle" cx="478" cy="240" r="9"/><circle class="particle" cx="464" cy="248" r="8"/><circle class="particle" cx="486" cy="224" r="7"/><circle class="particle" cx="451" cy="243" r="6"/><text x="468" y="206" text-anchor="middle" class="strong">SOLID CARBON</text><text x="468" y="276" text-anchor="middle">SOLD TO</text><text x="468" y="292" text-anchor="middle">INDUSTRY</text><path class="rep" d="M283 308 V346 H428"/><polygon class="repfill" points="438,346 429,340 429,352"/><rect class="doc" x="446" y="322" width="38" height="48" rx="3"/><line class="docline" x1="453" y1="336" x2="477" y2="336"/><line class="docline" x1="453" y1="346" x2="477" y2="346"/><line class="docline" x1="453" y1="356" x2="469" y2="356"/><text x="430" y="332" text-anchor="end">MONTHLY</text><text x="430" y="370" text-anchor="end">CO₂ REPORT</text></svg>
+      <figcaption class="visually-hidden">Diagram: CO<sub>2</sub> in your flue gas flows from your stack into a Global C60 unit on your site. Three things come out: treated gas, solid carbon that is trucked off site and sold, and a monthly CO<sub>2</sub> reduction report.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="band" id="what" aria-labelledby="what-h">
+  <div class="wrap">
+    <div class="grid g2" style="gap:48px">
+      <div class="stack">
+        <span class="label">What we do</span>
+        <h2 id="what-h">What Global C60 does</h2>
+        <p class="lead">Global C60 Inc. is a Calgary company that removes CO<sub>2</sub> from industrial emission streams and turns it into carbon products. We use carbon conversion technology licensed from <a href="https://elementalair.com" rel="noopener">Elemental Air</a>.</p>
+        <p class="muted">Global C60 installs, operates and maintains the units, removes the carbon from site, and reports the results to you every month. Clients can host a unit at their site, or contract us to remove CO<sub>2</sub> on a per-tonne basis.</p>
+      </div>
+      <div class="grid g2">
+        <div class="card">
+          <h3>Who we work with</h3>
+          <ul class="plain">
+            <li>Oil and gas operators</li>
+            <li>Gas-fired power producers, including those supplying data centres</li>
+            <li>Renewable natural gas (RNG) operators</li>
+            <li>Heavy industrial facilities</li>
+            <li>Any site that emits large volumes of CO<sub>2</sub></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What comes out</h3>
+          <ul class="plain green">
+            <li>Less CO<sub>2</sub> leaving your stack</li>
+            <li>A monthly, documented record of the CO<sub>2</sub> removed</li>
+            <li>Solid carbon that is sold into industrial markets</li>
+            <li>Carbon credits created from the CO<sub>2</sub> removed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="band alt" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">How we work with you</span>
+      <h2 id="work-h">Ways to work with us</h2>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <span class="label">Model 1</span>
+        <h3>Host a unit</h3>
+        <p>Global C60 places a unit at your site and runs it. You provide space, power and access to your flue gas stream.</p>
+      </div>
+      <div class="card">
+        <span class="label">Model 2</span>
+        <h3>Carbon-as-a-Service (CaaS)</h3>
+        <p>You contract Global C60 to remove CO<sub>2</sub> from your emissions on a per-tonne basis. You pay for the tonnes removed, which lowers your CO<sub>2</sub> emissions and your exposure to carbon taxes and compliance costs.</p>
+      </div>
+    </div>
+
+    <h3 style="margin:56px 0 24px">How a deployment works</h3>
+    <ol class="steps">
+      <li><h3>First conversation</h3><p>You tell us about your emission source, the volumes involved and the site.</p></li>
+      <li><h3>Site and stream review</h3><p>We look at your flue gas flow rate and CO<sub>2</sub> concentration, available power, space and truck access.</p></li>
+      <li><h3>Agreement</h3><p>We agree the service model, site access and the monthly reporting you will receive.</p></li>
+      <li><h3>Installation</h3><p>We place the unit and a small, modular, temporary building on site, and connect to your flue gas stream and power.</p></li>
+      <li><h3>Operation and reporting</h3><p>We run the unit, truck the carbon off site, and send you a CO<sub>2</sub> reduction report every month.</p></li>
+    </ol>
+
+    <div class="grid g2" style="margin-top:56px">
+      <div class="card">
+        <h3>What your site provides</h3>
+        <ul class="plain">
+          <li>Space for the unit</li>
+          <li>Room for a small, modular, temporary building</li>
+          <li>Access to power</li>
+          <li>A connection to your flue gas stream</li>
+          <li>Access for trucks</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What you receive</h3>
+        <ul class="plain green">
+          <li>A monthly CO<sub>2</sub> reduction report for the emission stream</li>
+          <li>A unit installed, operated and maintained by Global C60</li>
+          <li>CO<sub>2</sub> removed from your stream, which is converted into solid carbon and creates carbon credits</li>
+        </ul>
+      </div>
+    </div>
+    <div class="report" role="region" aria-labelledby="rep-h" style="margin-top:var(--gutter)">
+        <div class="report-head"><strong id="rep-h">What the monthly report shows</strong><span class="label">Per emission stream</span></div>
+        <div class="report-scroll" tabindex="0" aria-label="Monthly report fields">
+          <table>
+            <thead><tr><th scope="col">Field</th><th scope="col">What it tells you</th></tr></thead>
+            <tbody>
+              <tr><td>Emission volume</td><td>Total flue gas treated in the month</td></tr>
+              <tr><td>Flow rate</td><td>Rate of the emission stream through the unit</td></tr>
+              <tr><td>Inlet CO<sub>2</sub></td><td>CO<sub>2</sub> concentration of the stream as it enters</td></tr>
+              <tr class="total"><td>CO<sub>2</sub> removed</td><td>Total CO<sub>2</sub> removed from that stream in the month</td></tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="band" id="benefits" aria-labelledby="ben-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Benefits</span>
+      <h2 id="ben-h">What it means for an emitter</h2>
+    </div>
+    <div class="grid g3">
+      <div class="card"><h3>Lower compliance cost</h3><p>Carbon pricing in Canada, and in several US states and programs, puts a cost on each tonne of CO<sub>2</sub> a facility emits. CO<sub>2</sub> removed from your stream by a Global C60 unit is measured and documented, which can reduce what you owe or need to offset.</p></div>
+      <div class="card"><h3>Documented reductions</h3><p>The monthly report gives your environment and regulatory teams measured data for compliance filings and sustainability reporting.</p></div>
+      <div class="card"><h3>Pay for results</h3><p>Under a Carbon-as-a-Service (CaaS) contract you pay per tonne of CO<sub>2</sub> removed. Global C60 installs, operates and maintains the unit. Your site provides space, power and access.</p></div>
+      <div class="card"><h3>Waste becomes a product</h3><p>Today the CO<sub>2</sub> in your emissions is a waste stream. Global C60 turns that waste into solid carbon that is sold to industrial buyers, instead of being released to the air or stored underground.</p></div>
+      <div class="card"><h3>Reduced at the source</h3><p>CO<sub>2</sub> is converted where it is produced. It is not captured and sent off site for sequestration, so your facility does not need a connection to CO<sub>2</sub> pipeline and storage infrastructure. Modular units can significantly reduce the cost of carbon compliance.</p></div>
+      <div class="card"><h3>Other emissions reduced</h3><p>Along with CO<sub>2</sub>, a Global C60 unit reduces sulphur oxides (SO<sub>x</sub>), nitrogen oxides (NO<sub>x</sub>) and other carbon oxides such as carbon monoxide in the emission stream. It does not remove hydrogen sulphide (H<sub>2</sub>S).</p></div>
+    </div>
+    <div class="grid g2" style="margin-top:var(--gutter)">
+      <div class="callout">
+        <span class="label">Alberta facilities</span>
+        <h3>Managing TIER obligations</h3>
+        <p>Facilities regulated under Alberta's Technology Innovation and Emissions Reduction (TIER) Regulation must meet an emissions benchmark or cover the gap with fund payments, credits or offsets. A Global C60 unit removes CO<sub>2</sub> at the source and gives you monthly measured data, which can help you manage your TIER obligations and plan for tightening benchmarks. Global C60 is in discussions with the TIER program on recognizing CO<sub>2</sub> removed by our process for credit.</p>
+      </div>
+      <div class="callout investigate">
+        <span class="label">Under investigation</span>
+        <h3>Methane-as-a-Service (MaaS)</h3>
+        <p>Global C60 is investigating how to capture methane that is not combusted in engines and heaters, and methane redirected from flaring, and convert it into solid carbon. If you operate engines, heaters or flares and would like to be part of that work, register your interest.</p>
+        <div><button class="btn-link" type="button" data-open-form="reduction">Register interest in MaaS →</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARBON PRODUCTS -->
+<section class="band alt" id="carbon" aria-labelledby="carbon-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Carbon products</span>
+      <h2 id="carbon-h">The carbon we produce</h2>
+      <p class="lead">Every Global C60 unit produces solid carbon. We are starting with a domestically produced carbon equivalent to carbon black. Lab-assessed specifications for our carbon nanotubes and fullerenes will be published once the current validation work is complete.</p>
+    </div>
+
+    <article class="product feature" aria-labelledby="p-cb">
+      <div class="product-art"><svg viewBox="0 0 320 220" class="illo" role="img" aria-label="Drawing of a carbon black aggregate: small spherical carbon particles fused into a chain"><circle class="pc" cx="169.3" cy="104.7" r="24.0"/><circle class="pc" cx="140.1" cy="127.4" r="23.5"/><circle class="pc" cx="139.2" cy="97.8" r="15.7"/><circle class="pc" cx="195.1" cy="130.1" r="22.4"/><circle class="pc" cx="110.2" cy="110.3" r="20.7"/><circle class="pc" cx="122.3" cy="82.8" r="17.8"/><circle class="pc" cx="164.6" cy="145.0" r="21.1"/><circle class="pc" cx="146.3" cy="72.8" r="17.7"/><circle class="pc" cx="185.9" cy="158.4" r="15.7"/><circle class="pc" cx="142.3" cy="41.4" r="22.9"/><circle class="pc" cx="97.3" cy="88.9" r="15.2"/><circle class="pc" cx="218.9" cy="155.2" r="21.9"/><circle class="pc" cx="222.9" cy="114.1" r="18.6"/><circle class="pc" cx="202.8" cy="178.1" r="17.5"/><circle class="pc" cx="158.5" cy="178.7" r="22.8"/><circle class="pc" cx="172.2" cy="41.4" r="15.5"/><circle class="pc" cx="94.5" cy="134.1" r="15.9"/><circle class="po" cx="169.3" cy="104.7" r="24.0"/><circle class="lr" cx="169.3" cy="104.7" r="13.2" fill="none"/><circle class="po" cx="140.1" cy="127.4" r="23.5"/><circle class="lr" cx="140.1" cy="127.4" r="12.9" fill="none"/><circle class="po" cx="139.2" cy="97.8" r="15.7"/><circle class="lr" cx="139.2" cy="97.8" r="8.6" fill="none"/><circle class="po" cx="195.1" cy="130.1" r="22.4"/><circle class="lr" cx="195.1" cy="130.1" r="12.3" fill="none"/><circle class="po" cx="110.2" cy="110.3" r="20.7"/><circle class="lr" cx="110.2" cy="110.3" r="11.4" fill="none"/><circle class="po" cx="122.3" cy="82.8" r="17.8"/><circle class="lr" cx="122.3" cy="82.8" r="9.8" fill="none"/><circle class="po" cx="164.6" cy="145.0" r="21.1"/><circle class="lr" cx="164.6" cy="145.0" r="11.6" fill="none"/><circle class="po" cx="146.3" cy="72.8" r="17.7"/><circle class="lr" cx="146.3" cy="72.8" r="9.7" fill="none"/><circle class="po" cx="185.9" cy="158.4" r="15.7"/><circle class="lr" cx="185.9" cy="158.4" r="8.7" fill="none"/><circle class="po" cx="142.3" cy="41.4" r="22.9"/><circle class="lr" cx="142.3" cy="41.4" r="12.6" fill="none"/><circle class="po" cx="97.3" cy="88.9" r="15.2"/><circle class="lr" cx="97.3" cy="88.9" r="8.4" fill="none"/><circle class="po" cx="218.9" cy="155.2" r="21.9"/><circle class="lr" cx="218.9" cy="155.2" r="12.1" fill="none"/><circle class="po" cx="222.9" cy="114.1" r="18.6"/><circle class="lr" cx="222.9" cy="114.1" r="10.2" fill="none"/><circle class="po" cx="202.8" cy="178.1" r="17.5"/><circle class="lr" cx="202.8" cy="178.1" r="9.6" fill="none"/><circle class="po" cx="158.5" cy="178.7" r="22.8"/><circle class="lr" cx="158.5" cy="178.7" r="12.5" fill="none"/><circle class="po" cx="172.2" cy="41.4" r="15.5"/><circle class="lr" cx="172.2" cy="41.4" r="8.5" fill="none"/><circle class="po" cx="94.5" cy="134.1" r="15.9"/><circle class="lr" cx="94.5" cy="134.1" r="8.8" fill="none"/></svg></div>
+      <div class="product-body">
+        <div class="product-title"><h3 id="p-cb">Carbon black equivalent</h3><span class="chip ok">Available for discussion now</span></div>
+        <p>A fine black carbon powder, produced in North America from captured CO<sub>2</sub>, for use where carbon black is used today. Because it is a direct alternative to an existing material, it is expected to need less extensive qualification testing than a new specialty material before it can be added to, or replace, a current carbon black supply.</p>
+        <span class="label" style="margin-top:8px">Industries that use carbon black</span>
+        <ul class="plain feature-lists">
+          <li>Tires and rubber products, including belts, hoses, seals and mouldings</li>
+          <li>Plastics and masterbatch, for colour, UV protection and antistatic grades</li>
+          <li>Printing inks and toners</li>
+          <li>Paints and coatings</li>
+          <li>Wire and cable jacketing</li>
+          <li>Conductive additives for batteries and electronics</li>
+          <li>Construction materials, as a pigment for concrete and roofing</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="grid g2" style="margin-top:var(--gutter)">
+      <article class="product" aria-labelledby="p-cnt">
+        <div class="product-art">
+          <div class="art-pair">
+            <figure><svg viewBox="0 0 320 200" class="illo" role="img" aria-label="Drawing of a single-wall carbon nanotube: one layer of carbon atoms rolled into a tube"><line class="lf" x1="78.0" y1="166.6" x2="85.7" y2="165.1"/><line class="lf" x1="124.4" y1="158.5" x2="132.2" y2="156.9"/><line class="lf" x1="170.9" y1="150.3" x2="178.6" y2="148.7"/><line class="lf" x1="217.3" y1="142.1" x2="225.1" y2="140.6"/><line class="lf" x1="56.2" y1="66.1" x2="71.7" y2="63.4"/><line class="lf" x1="71.7" y1="63.4" x2="79.7" y2="65.4"/><line class="lf" x1="79.7" y1="65.4" x2="95.1" y2="62.7"/><line class="lf" x1="95.1" y1="62.7" x2="102.7" y2="57.9"/><line class="lf" x1="95.1" y1="62.7" x2="103.3" y2="68.0"/><line class="lf" x1="102.7" y1="57.9" x2="118.2" y2="55.2"/><line class="lf" x1="118.2" y1="55.2" x2="126.1" y2="57.2"/><line class="lf" x1="126.1" y1="57.2" x2="141.6" y2="54.5"/><line class="lf" x1="141.6" y1="54.5" x2="149.1" y2="49.7"/><line class="lf" x1="141.6" y1="54.5" x2="149.7" y2="59.8"/><line class="lf" x1="149.1" y1="49.7" x2="164.6" y2="47.0"/><line class="lf" x1="164.6" y1="47.0" x2="172.5" y2="49.0"/><line class="lf" x1="172.5" y1="49.0" x2="188.0" y2="46.3"/><line class="lf" x1="188.0" y1="46.3" x2="195.6" y2="41.5"/><line class="lf" x1="188.0" y1="46.3" x2="196.2" y2="51.6"/><line class="lf" x1="195.6" y1="41.5" x2="211.0" y2="38.8"/><line class="lf" x1="211.0" y1="38.8" x2="219.0" y2="40.8"/><line class="lf" x1="219.0" y1="40.8" x2="234.5" y2="38.1"/><line class="lf" x1="234.5" y1="38.1" x2="242.0" y2="33.4"/><line class="lf" x1="234.5" y1="38.1" x2="242.6" y2="43.4"/><line class="lf" x1="242.0" y1="33.4" x2="257.5" y2="30.6"/><line class="lf" x1="56.8" y1="76.1" x2="72.3" y2="73.4"/><line class="lf" x1="72.3" y1="73.4" x2="80.6" y2="81.5"/><line class="lf" x1="72.3" y1="73.4" x2="79.7" y2="65.4"/><line class="lf" x1="80.6" y1="81.5" x2="96.1" y2="78.8"/><line class="lf" x1="96.1" y1="78.8" x2="103.3" y2="68.0"/><line class="lf" x1="96.1" y1="78.8" x2="104.6" y2="89.1"/><line class="lf" x1="103.3" y1="68.0" x2="118.8" y2="65.2"/><line class="lf" x1="118.8" y1="65.2" x2="127.1" y2="73.4"/><line class="lf" x1="118.8" y1="65.2" x2="126.1" y2="57.2"/><line class="lf" x1="127.1" y1="73.4" x2="142.6" y2="70.6"/><line class="lf" x1="142.6" y1="70.6" x2="149.7" y2="59.8"/><line class="lf" x1="142.6" y1="70.6" x2="151.0" y2="80.9"/><line class="lf" x1="149.7" y1="59.8" x2="165.2" y2="57.0"/><line class="lf" x1="165.2" y1="57.0" x2="173.5" y2="65.2"/><line class="lf" x1="165.2" y1="57.0" x2="172.5" y2="49.0"/><line class="lf" x1="173.5" y1="65.2" x2="189.0" y2="62.4"/><line class="lf" x1="189.0" y1="62.4" x2="196.2" y2="51.6"/><line class="lf" x1="189.0" y1="62.4" x2="197.5" y2="72.8"/><line class="lf" x1="196.2" y1="51.6" x2="211.7" y2="48.8"/><line class="lf" x1="211.7" y1="48.8" x2="220.0" y2="57.0"/><line class="lf" x1="211.7" y1="48.8" x2="219.0" y2="40.8"/><line class="lf" x1="220.0" y1="57.0" x2="235.5" y2="54.2"/><line class="lf" x1="235.5" y1="54.2" x2="242.6" y2="43.4"/><line class="lf" x1="235.5" y1="54.2" x2="243.9" y2="64.6"/><line class="lf" x1="242.6" y1="43.4" x2="258.1" y2="40.7"/><line class="lf" x1="58.1" y1="97.3" x2="73.6" y2="94.6"/><line class="lf" x1="73.6" y1="94.6" x2="82.1" y2="106.3"/><line class="lf" x1="73.6" y1="94.6" x2="80.6" y2="81.5"/><line class="lf" x1="82.1" y1="106.3" x2="97.6" y2="103.6"/><line class="lf" x1="97.6" y1="103.6" x2="104.6" y2="89.1"/><line class="lf" x1="97.6" y1="103.6" x2="106.2" y2="115.8"/><line class="lf" x1="104.6" y1="89.1" x2="120.1" y2="86.4"/><line class="lf" x1="120.1" y1="86.4" x2="128.6" y2="98.1"/><line class="lf" x1="120.1" y1="86.4" x2="127.1" y2="73.4"/><line class="lf" x1="128.6" y1="98.1" x2="144.1" y2="95.4"/><line class="lf" x1="144.1" y1="95.4" x2="151.0" y2="80.9"/><line class="lf" x1="144.1" y1="95.4" x2="152.6" y2="107.6"/><line class="lf" x1="151.0" y1="80.9" x2="166.5" y2="78.2"/><line class="lf" x1="166.5" y1="78.2" x2="175.0" y2="89.9"/><line class="lf" x1="166.5" y1="78.2" x2="173.5" y2="65.2"/><line class="lf" x1="175.0" y1="89.9" x2="190.5" y2="87.2"/><line class="lf" x1="190.5" y1="87.2" x2="197.5" y2="72.8"/><line class="lf" x1="190.5" y1="87.2" x2="199.1" y2="99.4"/><line class="lf" x1="197.5" y1="72.8" x2="212.9" y2="70.0"/><line class="lf" x1="212.9" y1="70.0" x2="221.5" y2="81.7"/><line class="lf" x1="212.9" y1="70.0" x2="220.0" y2="57.0"/><line class="lf" x1="221.5" y1="81.7" x2="237.0" y2="79.0"/><line class="lf" x1="237.0" y1="79.0" x2="243.9" y2="64.6"/><line class="lf" x1="237.0" y1="79.0" x2="245.5" y2="91.2"/><line class="lf" x1="243.9" y1="64.6" x2="259.4" y2="61.8"/><line class="lf" x1="59.8" y1="124.0" x2="75.2" y2="121.2"/><line class="lf" x1="75.2" y1="121.2" x2="83.8" y2="133.0"/><line class="lf" x1="75.2" y1="121.2" x2="82.1" y2="106.3"/><line class="lf" x1="83.8" y1="133.0" x2="99.3" y2="130.3"/><line class="lf" x1="99.3" y1="130.3" x2="106.2" y2="115.8"/><line class="lf" x1="99.3" y1="130.3" x2="107.7" y2="140.8"/><line class="lf" x1="106.2" y1="115.8" x2="121.7" y2="113.0"/><line class="lf" x1="121.7" y1="113.0" x2="130.2" y2="124.8"/><line class="lf" x1="121.7" y1="113.0" x2="128.6" y2="98.1"/><line class="lf" x1="130.2" y1="124.8" x2="145.7" y2="122.1"/><line class="lf" x1="145.7" y1="122.1" x2="152.6" y2="107.6"/><line class="lf" x1="145.7" y1="122.1" x2="154.2" y2="132.6"/><line class="lf" x1="152.6" y1="107.6" x2="168.1" y2="104.9"/><line class="lf" x1="168.1" y1="104.9" x2="176.7" y2="116.6"/><line class="lf" x1="168.1" y1="104.9" x2="175.0" y2="89.9"/><line class="lf" x1="176.7" y1="116.6" x2="192.1" y2="113.9"/><line class="lf" x1="192.1" y1="113.9" x2="199.1" y2="99.4"/><line class="lf" x1="192.1" y1="113.9" x2="200.6" y2="124.4"/><line class="lf" x1="199.1" y1="99.4" x2="214.6" y2="96.7"/><line class="lf" x1="214.6" y1="96.7" x2="223.1" y2="108.5"/><line class="lf" x1="214.6" y1="96.7" x2="221.5" y2="81.7"/><line class="lf" x1="223.1" y1="108.5" x2="238.6" y2="105.7"/><line class="lf" x1="238.6" y1="105.7" x2="245.5" y2="91.2"/><line class="lf" x1="238.6" y1="105.7" x2="247.0" y2="116.2"/><line class="lf" x1="245.5" y1="91.2" x2="261.0" y2="88.5"/><line class="lf" x1="61.3" y1="148.9" x2="76.8" y2="146.2"/><line class="lf" x1="76.8" y1="146.2" x2="85.1" y2="154.6"/><line class="lf" x1="76.8" y1="146.2" x2="83.8" y2="133.0"/><line class="lf" x1="85.1" y1="154.6" x2="100.6" y2="151.8"/><line class="lf" x1="100.6" y1="151.8" x2="107.7" y2="140.8"/><line class="lf" x1="100.6" y1="151.8" x2="108.7" y2="157.4"/><line class="lf" x1="107.7" y1="140.8" x2="123.2" y2="138.0"/><line class="lf" x1="123.2" y1="138.0" x2="131.5" y2="146.4"/><line class="lf" x1="123.2" y1="138.0" x2="130.2" y2="124.8"/><line class="lf" x1="131.5" y1="146.4" x2="147.0" y2="143.6"/><line class="lf" x1="147.0" y1="143.6" x2="154.2" y2="132.6"/><line class="lf" x1="147.0" y1="143.6" x2="155.2" y2="149.2"/><line class="lf" x1="154.2" y1="132.6" x2="169.6" y2="129.8"/><line class="lf" x1="169.6" y1="129.8" x2="178.0" y2="138.2"/><line class="lf" x1="169.6" y1="129.8" x2="176.7" y2="116.6"/><line class="lf" x1="178.0" y1="138.2" x2="193.4" y2="135.4"/><line class="lf" x1="193.4" y1="135.4" x2="200.6" y2="124.4"/><line class="lf" x1="193.4" y1="135.4" x2="201.6" y2="141.0"/><line class="lf" x1="200.6" y1="124.4" x2="216.1" y2="121.7"/><line class="lf" x1="216.1" y1="121.7" x2="224.4" y2="130.0"/><line class="lf" x1="216.1" y1="121.7" x2="223.1" y2="108.5"/><line class="lf" x1="224.4" y1="130.0" x2="239.9" y2="127.3"/><line class="lf" x1="239.9" y1="127.3" x2="247.0" y2="116.2"/><line class="lf" x1="239.9" y1="127.3" x2="248.1" y2="132.8"/><line class="lf" x1="247.0" y1="116.2" x2="262.5" y2="113.5"/><line class="lf" x1="62.3" y1="165.6" x2="77.8" y2="162.8"/><line class="lf" x1="77.8" y1="162.8" x2="85.7" y2="165.1"/><line class="lf" x1="77.8" y1="162.8" x2="85.1" y2="154.6"/><line class="lf" x1="85.7" y1="165.1" x2="101.2" y2="162.4"/><line class="lf" x1="101.2" y1="162.4" x2="108.7" y2="157.4"/><line class="lf" x1="101.2" y1="162.4" x2="109.0" y2="161.2"/><line class="lf" x1="108.7" y1="157.4" x2="124.2" y2="154.6"/><line class="lf" x1="124.2" y1="154.6" x2="132.2" y2="156.9"/><line class="lf" x1="124.2" y1="154.6" x2="131.5" y2="146.4"/><line class="lf" x1="132.2" y1="156.9" x2="147.6" y2="154.2"/><line class="lf" x1="147.6" y1="154.2" x2="155.2" y2="149.2"/><line class="lf" x1="147.6" y1="154.2" x2="155.4" y2="153.0"/><line class="lf" x1="155.2" y1="149.2" x2="170.6" y2="146.5"/><line class="lf" x1="170.6" y1="146.5" x2="178.6" y2="148.7"/><line class="lf" x1="170.6" y1="146.5" x2="178.0" y2="138.2"/><line class="lf" x1="178.6" y1="148.7" x2="194.1" y2="146.0"/><line class="lf" x1="194.1" y1="146.0" x2="201.6" y2="141.0"/><line class="lf" x1="194.1" y1="146.0" x2="201.8" y2="144.8"/><line class="lf" x1="201.6" y1="141.0" x2="217.1" y2="138.3"/><line class="lf" x1="217.1" y1="138.3" x2="225.1" y2="140.6"/><line class="lf" x1="217.1" y1="138.3" x2="224.4" y2="130.0"/><line class="lf" x1="225.1" y1="140.6" x2="240.5" y2="137.8"/><line class="lf" x1="240.5" y1="137.8" x2="248.1" y2="132.8"/><line class="lf" x1="240.5" y1="137.8" x2="248.3" y2="136.6"/><line class="lf" x1="248.1" y1="132.8" x2="263.5" y2="130.1"/><line class="ln" x1="62.5" y1="169.4" x2="78.0" y2="166.6"/><line class="ln" x1="78.0" y1="166.6" x2="85.5" y2="161.9"/><line class="ln" x1="85.5" y1="161.9" x2="101.0" y2="159.2"/><line class="ln" x1="101.0" y1="159.2" x2="109.0" y2="161.2"/><line class="ln" x1="101.0" y1="159.2" x2="108.3" y2="151.2"/><line class="ln" x1="109.0" y1="161.2" x2="124.4" y2="158.5"/><line class="ln" x1="124.4" y1="158.5" x2="132.0" y2="153.7"/><line class="ln" x1="132.0" y1="153.7" x2="147.5" y2="151.0"/><line class="ln" x1="147.5" y1="151.0" x2="155.4" y2="153.0"/><line class="ln" x1="147.5" y1="151.0" x2="154.8" y2="143.0"/><line class="ln" x1="155.4" y1="153.0" x2="170.9" y2="150.3"/><line class="ln" x1="170.9" y1="150.3" x2="178.4" y2="145.5"/><line class="ln" x1="178.4" y1="145.5" x2="193.9" y2="142.8"/><line class="ln" x1="193.9" y1="142.8" x2="201.8" y2="144.8"/><line class="ln" x1="193.9" y1="142.8" x2="201.2" y2="134.8"/><line class="ln" x1="201.8" y1="144.8" x2="217.3" y2="142.1"/><line class="ln" x1="217.3" y1="142.1" x2="224.9" y2="137.3"/><line class="ln" x1="224.9" y1="137.3" x2="240.3" y2="134.6"/><line class="ln" x1="240.3" y1="134.6" x2="248.3" y2="136.6"/><line class="ln" x1="240.3" y1="134.6" x2="247.7" y2="126.6"/><line class="ln" x1="248.3" y1="136.6" x2="263.8" y2="133.9"/><line class="ln" x1="61.9" y1="159.3" x2="77.4" y2="156.6"/><line class="ln" x1="77.4" y1="156.6" x2="84.5" y2="145.8"/><line class="ln" x1="77.4" y1="156.6" x2="85.5" y2="161.9"/><line class="ln" x1="84.5" y1="145.8" x2="100.0" y2="143.0"/><line class="ln" x1="100.0" y1="143.0" x2="108.3" y2="151.2"/><line class="ln" x1="100.0" y1="143.0" x2="107.1" y2="130.0"/><line class="ln" x1="108.3" y1="151.2" x2="123.8" y2="148.4"/><line class="ln" x1="123.8" y1="148.4" x2="131.0" y2="137.6"/><line class="ln" x1="123.8" y1="148.4" x2="132.0" y2="153.7"/><line class="ln" x1="131.0" y1="137.6" x2="146.5" y2="134.8"/><line class="ln" x1="146.5" y1="134.8" x2="154.8" y2="143.0"/><line class="ln" x1="146.5" y1="134.8" x2="153.5" y2="121.8"/><line class="ln" x1="154.8" y1="143.0" x2="170.3" y2="140.2"/><line class="ln" x1="170.3" y1="140.2" x2="177.4" y2="129.4"/><line class="ln" x1="170.3" y1="140.2" x2="178.4" y2="145.5"/><line class="ln" x1="177.4" y1="129.4" x2="192.9" y2="126.6"/><line class="ln" x1="192.9" y1="126.6" x2="201.2" y2="134.8"/><line class="ln" x1="192.9" y1="126.6" x2="199.9" y2="113.6"/><line class="ln" x1="201.2" y1="134.8" x2="216.7" y2="132.0"/><line class="ln" x1="216.7" y1="132.0" x2="223.9" y2="121.2"/><line class="ln" x1="216.7" y1="132.0" x2="224.9" y2="137.3"/><line class="ln" x1="223.9" y1="121.2" x2="239.4" y2="118.5"/><line class="ln" x1="239.4" y1="118.5" x2="247.7" y2="126.6"/><line class="ln" x1="239.4" y1="118.5" x2="246.4" y2="105.4"/><line class="ln" x1="247.7" y1="126.6" x2="263.2" y2="123.9"/><line class="ln" x1="60.6" y1="138.2" x2="76.1" y2="135.4"/><line class="ln" x1="76.1" y1="135.4" x2="83.0" y2="121.0"/><line class="ln" x1="76.1" y1="135.4" x2="84.5" y2="145.8"/><line class="ln" x1="83.0" y1="121.0" x2="98.5" y2="118.3"/><line class="ln" x1="98.5" y1="118.3" x2="107.1" y2="130.0"/><line class="ln" x1="98.5" y1="118.3" x2="105.4" y2="103.3"/><line class="ln" x1="107.1" y1="130.0" x2="122.5" y2="127.2"/><line class="ln" x1="122.5" y1="127.2" x2="129.5" y2="112.8"/><line class="ln" x1="122.5" y1="127.2" x2="131.0" y2="137.6"/><line class="ln" x1="129.5" y1="112.8" x2="145.0" y2="110.1"/><line class="ln" x1="145.0" y1="110.1" x2="153.5" y2="121.8"/><line class="ln" x1="145.0" y1="110.1" x2="151.9" y2="95.1"/><line class="ln" x1="153.5" y1="121.8" x2="169.0" y2="119.1"/><line class="ln" x1="169.0" y1="119.1" x2="175.9" y2="104.6"/><line class="ln" x1="169.0" y1="119.1" x2="177.4" y2="129.4"/><line class="ln" x1="175.9" y1="104.6" x2="191.4" y2="101.9"/><line class="ln" x1="191.4" y1="101.9" x2="199.9" y2="113.6"/><line class="ln" x1="191.4" y1="101.9" x2="198.3" y2="87.0"/><line class="ln" x1="199.9" y1="113.6" x2="215.4" y2="110.9"/><line class="ln" x1="215.4" y1="110.9" x2="222.4" y2="96.4"/><line class="ln" x1="215.4" y1="110.9" x2="223.9" y2="121.2"/><line class="ln" x1="222.4" y1="96.4" x2="237.9" y2="93.7"/><line class="ln" x1="237.9" y1="93.7" x2="246.4" y2="105.4"/><line class="ln" x1="237.9" y1="93.7" x2="244.8" y2="78.8"/><line class="ln" x1="246.4" y1="105.4" x2="261.9" y2="102.7"/><line class="ln" x1="59.0" y1="111.5" x2="74.5" y2="108.8"/><line class="ln" x1="74.5" y1="108.8" x2="81.4" y2="94.3"/><line class="ln" x1="74.5" y1="108.8" x2="83.0" y2="121.0"/><line class="ln" x1="81.4" y1="94.3" x2="96.9" y2="91.5"/><line class="ln" x1="96.9" y1="91.5" x2="105.4" y2="103.3"/><line class="ln" x1="96.9" y1="91.5" x2="103.9" y2="78.3"/><line class="ln" x1="105.4" y1="103.3" x2="120.9" y2="100.6"/><line class="ln" x1="120.9" y1="100.6" x2="127.9" y2="86.1"/><line class="ln" x1="120.9" y1="100.6" x2="129.5" y2="112.8"/><line class="ln" x1="127.9" y1="86.1" x2="143.3" y2="83.4"/><line class="ln" x1="143.3" y1="83.4" x2="151.9" y2="95.1"/><line class="ln" x1="143.3" y1="83.4" x2="150.4" y2="70.2"/><line class="ln" x1="151.9" y1="95.1" x2="167.4" y2="92.4"/><line class="ln" x1="167.4" y1="92.4" x2="174.3" y2="77.9"/><line class="ln" x1="167.4" y1="92.4" x2="175.9" y2="104.6"/><line class="ln" x1="174.3" y1="77.9" x2="189.8" y2="75.2"/><line class="ln" x1="189.8" y1="75.2" x2="198.3" y2="87.0"/><line class="ln" x1="189.8" y1="75.2" x2="196.8" y2="62.0"/><line class="ln" x1="198.3" y1="87.0" x2="213.8" y2="84.2"/><line class="ln" x1="213.8" y1="84.2" x2="220.7" y2="69.7"/><line class="ln" x1="213.8" y1="84.2" x2="222.4" y2="96.4"/><line class="ln" x1="220.7" y1="69.7" x2="236.2" y2="67.0"/><line class="ln" x1="236.2" y1="67.0" x2="244.8" y2="78.8"/><line class="ln" x1="236.2" y1="67.0" x2="243.2" y2="53.8"/><line class="ln" x1="244.8" y1="78.8" x2="260.2" y2="76.0"/><line class="ln" x1="57.5" y1="86.5" x2="73.0" y2="83.8"/><line class="ln" x1="73.0" y1="83.8" x2="80.1" y2="72.7"/><line class="ln" x1="73.0" y1="83.8" x2="81.4" y2="94.3"/><line class="ln" x1="80.1" y1="72.7" x2="95.6" y2="70.0"/><line class="ln" x1="95.6" y1="70.0" x2="103.9" y2="78.3"/><line class="ln" x1="95.6" y1="70.0" x2="102.9" y2="61.7"/><line class="ln" x1="103.9" y1="78.3" x2="119.4" y2="75.6"/><line class="ln" x1="119.4" y1="75.6" x2="126.6" y2="64.6"/><line class="ln" x1="119.4" y1="75.6" x2="127.9" y2="86.1"/><line class="ln" x1="126.6" y1="64.6" x2="142.0" y2="61.8"/><line class="ln" x1="142.0" y1="61.8" x2="150.4" y2="70.2"/><line class="ln" x1="142.0" y1="61.8" x2="149.4" y2="53.5"/><line class="ln" x1="150.4" y1="70.2" x2="165.8" y2="67.4"/><line class="ln" x1="165.8" y1="67.4" x2="173.0" y2="56.4"/><line class="ln" x1="165.8" y1="67.4" x2="174.3" y2="77.9"/><line class="ln" x1="173.0" y1="56.4" x2="188.5" y2="53.6"/><line class="ln" x1="188.5" y1="53.6" x2="196.8" y2="62.0"/><line class="ln" x1="188.5" y1="53.6" x2="195.8" y2="45.4"/><line class="ln" x1="196.8" y1="62.0" x2="212.3" y2="59.2"/><line class="ln" x1="212.3" y1="59.2" x2="219.4" y2="48.2"/><line class="ln" x1="212.3" y1="59.2" x2="220.7" y2="69.7"/><line class="ln" x1="219.4" y1="48.2" x2="234.9" y2="45.4"/><line class="ln" x1="234.9" y1="45.4" x2="243.2" y2="53.8"/><line class="ln" x1="234.9" y1="45.4" x2="242.2" y2="37.2"/><line class="ln" x1="243.2" y1="53.8" x2="258.7" y2="51.1"/><line class="ln" x1="56.5" y1="69.9" x2="71.9" y2="67.2"/><line class="ln" x1="71.9" y1="67.2" x2="79.5" y2="62.2"/><line class="ln" x1="71.9" y1="67.2" x2="80.1" y2="72.7"/><line class="ln" x1="79.5" y1="62.2" x2="94.9" y2="59.4"/><line class="ln" x1="94.9" y1="59.4" x2="102.9" y2="61.7"/><line class="ln" x1="94.9" y1="59.4" x2="102.7" y2="57.9"/><line class="ln" x1="102.9" y1="61.7" x2="118.4" y2="59.0"/><line class="ln" x1="118.4" y1="59.0" x2="125.9" y2="54.0"/><line class="ln" x1="118.4" y1="59.0" x2="126.6" y2="64.6"/><line class="ln" x1="125.9" y1="54.0" x2="141.4" y2="51.3"/><line class="ln" x1="141.4" y1="51.3" x2="149.4" y2="53.5"/><line class="ln" x1="141.4" y1="51.3" x2="149.1" y2="49.7"/><line class="ln" x1="149.4" y1="53.5" x2="164.8" y2="50.8"/><line class="ln" x1="164.8" y1="50.8" x2="172.4" y2="45.8"/><line class="ln" x1="164.8" y1="50.8" x2="173.0" y2="56.4"/><line class="ln" x1="172.4" y1="45.8" x2="187.8" y2="43.1"/><line class="ln" x1="187.8" y1="43.1" x2="195.8" y2="45.4"/><line class="ln" x1="187.8" y1="43.1" x2="195.6" y2="41.5"/><line class="ln" x1="195.8" y1="45.4" x2="211.3" y2="42.6"/><line class="ln" x1="211.3" y1="42.6" x2="218.8" y2="37.6"/><line class="ln" x1="211.3" y1="42.6" x2="219.4" y2="48.2"/><line class="ln" x1="218.8" y1="37.6" x2="234.3" y2="34.9"/><line class="ln" x1="234.3" y1="34.9" x2="242.2" y2="37.2"/><line class="ln" x1="234.3" y1="34.9" x2="242.0" y2="33.4"/><line class="ln" x1="242.2" y1="37.2" x2="257.7" y2="34.4"/><line class="ln" x1="71.7" y1="63.4" x2="79.5" y2="62.2"/><line class="ln" x1="118.2" y1="55.2" x2="125.9" y2="54.0"/><line class="ln" x1="164.6" y1="47.0" x2="172.4" y2="45.8"/><line class="ln" x1="211.0" y1="38.8" x2="218.8" y2="37.6"/><circle class="at" cx="62.5" cy="169.4" r="2"/><circle class="at" cx="78.0" cy="166.6" r="2"/><circle class="at" cx="85.5" cy="161.9" r="2"/><circle class="at" cx="101.0" cy="159.2" r="2"/><circle class="at" cx="109.0" cy="161.2" r="2"/><circle class="at" cx="124.4" cy="158.5" r="2"/><circle class="at" cx="132.0" cy="153.7" r="2"/><circle class="at" cx="147.5" cy="151.0" r="2"/><circle class="at" cx="155.4" cy="153.0" r="2"/><circle class="at" cx="170.9" cy="150.3" r="2"/><circle class="at" cx="178.4" cy="145.5" r="2"/><circle class="at" cx="193.9" cy="142.8" r="2"/><circle class="at" cx="201.8" cy="144.8" r="2"/><circle class="at" cx="217.3" cy="142.1" r="2"/><circle class="at" cx="224.9" cy="137.3" r="2"/><circle class="at" cx="240.3" cy="134.6" r="2"/><circle class="at" cx="248.3" cy="136.6" r="2"/><circle class="at" cx="263.8" cy="133.9" r="2"/><circle class="at" cx="61.9" cy="159.3" r="2"/><circle class="at" cx="77.4" cy="156.6" r="2"/><circle class="at" cx="84.5" cy="145.8" r="2"/><circle class="at" cx="100.0" cy="143.0" r="2"/><circle class="at" cx="108.3" cy="151.2" r="2"/><circle class="at" cx="123.8" cy="148.4" r="2"/><circle class="at" cx="131.0" cy="137.6" r="2"/><circle class="at" cx="146.5" cy="134.8" r="2"/><circle class="at" cx="154.8" cy="143.0" r="2"/><circle class="at" cx="170.3" cy="140.2" r="2"/><circle class="at" cx="177.4" cy="129.4" r="2"/><circle class="at" cx="192.9" cy="126.6" r="2"/><circle class="at" cx="201.2" cy="134.8" r="2"/><circle class="at" cx="216.7" cy="132.0" r="2"/><circle class="at" cx="223.9" cy="121.2" r="2"/><circle class="at" cx="239.4" cy="118.5" r="2"/><circle class="at" cx="247.7" cy="126.6" r="2"/><circle class="at" cx="263.2" cy="123.9" r="2"/><circle class="at" cx="60.6" cy="138.2" r="2"/><circle class="at" cx="76.1" cy="135.4" r="2"/><circle class="at" cx="83.0" cy="121.0" r="2"/><circle class="at" cx="98.5" cy="118.3" r="2"/><circle class="at" cx="107.1" cy="130.0" r="2"/><circle class="at" cx="122.5" cy="127.2" r="2"/><circle class="at" cx="129.5" cy="112.8" r="2"/><circle class="at" cx="145.0" cy="110.1" r="2"/><circle class="at" cx="153.5" cy="121.8" r="2"/><circle class="at" cx="169.0" cy="119.1" r="2"/><circle class="at" cx="175.9" cy="104.6" r="2"/><circle class="at" cx="191.4" cy="101.9" r="2"/><circle class="at" cx="199.9" cy="113.6" r="2"/><circle class="at" cx="215.4" cy="110.9" r="2"/><circle class="at" cx="222.4" cy="96.4" r="2"/><circle class="at" cx="237.9" cy="93.7" r="2"/><circle class="at" cx="246.4" cy="105.4" r="2"/><circle class="at" cx="261.9" cy="102.7" r="2"/><circle class="at" cx="59.0" cy="111.5" r="2"/><circle class="at" cx="74.5" cy="108.8" r="2"/><circle class="at" cx="81.4" cy="94.3" r="2"/><circle class="at" cx="96.9" cy="91.5" r="2"/><circle class="at" cx="105.4" cy="103.3" r="2"/><circle class="at" cx="120.9" cy="100.6" r="2"/><circle class="at" cx="127.9" cy="86.1" r="2"/><circle class="at" cx="143.3" cy="83.4" r="2"/><circle class="at" cx="151.9" cy="95.1" r="2"/><circle class="at" cx="167.4" cy="92.4" r="2"/><circle class="at" cx="174.3" cy="77.9" r="2"/><circle class="at" cx="189.8" cy="75.2" r="2"/><circle class="at" cx="198.3" cy="87.0" r="2"/><circle class="at" cx="213.8" cy="84.2" r="2"/><circle class="at" cx="220.7" cy="69.7" r="2"/><circle class="at" cx="236.2" cy="67.0" r="2"/><circle class="at" cx="244.8" cy="78.8" r="2"/><circle class="at" cx="260.2" cy="76.0" r="2"/><circle class="at" cx="57.5" cy="86.5" r="2"/><circle class="at" cx="73.0" cy="83.8" r="2"/><circle class="at" cx="80.1" cy="72.7" r="2"/><circle class="at" cx="95.6" cy="70.0" r="2"/><circle class="at" cx="103.9" cy="78.3" r="2"/><circle class="at" cx="119.4" cy="75.6" r="2"/><circle class="at" cx="126.6" cy="64.6" r="2"/><circle class="at" cx="142.0" cy="61.8" r="2"/><circle class="at" cx="150.4" cy="70.2" r="2"/><circle class="at" cx="165.8" cy="67.4" r="2"/><circle class="at" cx="173.0" cy="56.4" r="2"/><circle class="at" cx="188.5" cy="53.6" r="2"/><circle class="at" cx="196.8" cy="62.0" r="2"/><circle class="at" cx="212.3" cy="59.2" r="2"/><circle class="at" cx="219.4" cy="48.2" r="2"/><circle class="at" cx="234.9" cy="45.4" r="2"/><circle class="at" cx="243.2" cy="53.8" r="2"/><circle class="at" cx="258.7" cy="51.1" r="2"/><circle class="at" cx="56.5" cy="69.9" r="2"/><circle class="at" cx="71.9" cy="67.2" r="2"/><circle class="at" cx="79.5" cy="62.2" r="2"/><circle class="at" cx="94.9" cy="59.4" r="2"/><circle class="at" cx="102.9" cy="61.7" r="2"/><circle class="at" cx="118.4" cy="59.0" r="2"/><circle class="at" cx="125.9" cy="54.0" r="2"/><circle class="at" cx="141.4" cy="51.3" r="2"/><circle class="at" cx="149.4" cy="53.5" r="2"/><circle class="at" cx="164.8" cy="50.8" r="2"/><circle class="at" cx="172.4" cy="45.8" r="2"/><circle class="at" cx="187.8" cy="43.1" r="2"/><circle class="at" cx="195.8" cy="45.4" r="2"/><circle class="at" cx="211.3" cy="42.6" r="2"/><circle class="at" cx="218.8" cy="37.6" r="2"/><circle class="at" cx="234.3" cy="34.9" r="2"/><circle class="at" cx="242.2" cy="37.2" r="2"/><circle class="at" cx="257.7" cy="34.4" r="2"/></svg><figcaption class="fig-note">Single-wall</figcaption></figure>
+            <figure><svg viewBox="0 0 240 240" class="illo" role="img" aria-label="End view of a multi-wall carbon nanotube: several tubes nested inside each other"><circle class="lr" cx="120.0" cy="120.0" r="26" fill="none"/><circle class="at" cx="146.0" cy="120.0" r="2"/><circle class="at" cx="143.4" cy="131.3" r="2"/><circle class="at" cx="136.2" cy="140.3" r="2"/><circle class="at" cx="125.8" cy="145.3" r="2"/><circle class="at" cx="114.2" cy="145.3" r="2"/><circle class="at" cx="103.8" cy="140.3" r="2"/><circle class="at" cx="96.6" cy="131.3" r="2"/><circle class="at" cx="94.0" cy="120.0" r="2"/><circle class="at" cx="96.6" cy="108.7" r="2"/><circle class="at" cx="103.8" cy="99.7" r="2"/><circle class="at" cx="114.2" cy="94.7" r="2"/><circle class="at" cx="125.8" cy="94.7" r="2"/><circle class="at" cx="136.2" cy="99.7" r="2"/><circle class="at" cx="143.4" cy="108.7" r="2"/><circle class="lr" cx="120.0" cy="120.0" r="44" fill="none"/><circle class="at" cx="163.7" cy="125.5" r="2"/><circle class="at" cx="160.9" cy="136.2" r="2"/><circle class="at" cx="155.6" cy="145.9" r="2"/><circle class="at" cx="148.0" cy="153.9" r="2"/><circle class="at" cx="138.7" cy="159.8" r="2"/><circle class="at" cx="128.2" cy="163.2" r="2"/><circle class="at" cx="117.2" cy="163.9" r="2"/><circle class="at" cx="106.4" cy="161.8" r="2"/><circle class="at" cx="96.4" cy="157.2" r="2"/><circle class="at" cx="87.9" cy="150.1" r="2"/><circle class="at" cx="81.4" cy="141.2" r="2"/><circle class="at" cx="77.4" cy="130.9" r="2"/><circle class="at" cx="76.0" cy="120.0" r="2"/><circle class="at" cx="77.4" cy="109.1" r="2"/><circle class="at" cx="81.4" cy="98.8" r="2"/><circle class="at" cx="87.9" cy="89.9" r="2"/><circle class="at" cx="96.4" cy="82.8" r="2"/><circle class="at" cx="106.4" cy="78.2" r="2"/><circle class="at" cx="117.2" cy="76.1" r="2"/><circle class="at" cx="128.2" cy="76.8" r="2"/><circle class="at" cx="138.7" cy="80.2" r="2"/><circle class="at" cx="148.0" cy="86.1" r="2"/><circle class="at" cx="155.6" cy="94.1" r="2"/><circle class="at" cx="160.9" cy="103.8" r="2"/><circle class="at" cx="163.7" cy="114.5" r="2"/><circle class="lr" cx="120.0" cy="120.0" r="62" fill="none"/><circle class="at" cx="182.0" cy="120.0" r="2"/><circle class="at" cx="181.0" cy="131.1" r="2"/><circle class="at" cx="178.0" cy="141.8" r="2"/><circle class="at" cx="173.2" cy="151.8" r="2"/><circle class="at" cx="166.7" cy="160.8" r="2"/><circle class="at" cx="158.7" cy="168.5" r="2"/><circle class="at" cx="149.4" cy="174.6" r="2"/><circle class="at" cx="139.2" cy="179.0" r="2"/><circle class="at" cx="128.3" cy="181.4" r="2"/><circle class="at" cx="117.2" cy="181.9" r="2"/><circle class="at" cx="106.2" cy="180.4" r="2"/><circle class="at" cx="95.6" cy="177.0" r="2"/><circle class="at" cx="85.8" cy="171.7" r="2"/><circle class="at" cx="77.2" cy="164.8" r="2"/><circle class="at" cx="69.8" cy="156.4" r="2"/><circle class="at" cx="64.1" cy="146.9" r="2"/><circle class="at" cx="60.2" cy="136.5" r="2"/><circle class="at" cx="58.2" cy="125.6" r="2"/><circle class="at" cx="58.2" cy="114.4" r="2"/><circle class="at" cx="60.2" cy="103.5" r="2"/><circle class="at" cx="64.1" cy="93.1" r="2"/><circle class="at" cx="69.8" cy="83.6" r="2"/><circle class="at" cx="77.2" cy="75.2" r="2"/><circle class="at" cx="85.8" cy="68.3" r="2"/><circle class="at" cx="95.6" cy="63.0" r="2"/><circle class="at" cx="106.2" cy="59.6" r="2"/><circle class="at" cx="117.2" cy="58.1" r="2"/><circle class="at" cx="128.3" cy="58.6" r="2"/><circle class="at" cx="139.2" cy="61.0" r="2"/><circle class="at" cx="149.4" cy="65.4" r="2"/><circle class="at" cx="158.7" cy="71.5" r="2"/><circle class="at" cx="166.7" cy="79.2" r="2"/><circle class="at" cx="173.2" cy="88.2" r="2"/><circle class="at" cx="178.0" cy="98.2" r="2"/><circle class="at" cx="181.0" cy="108.9" r="2"/><circle class="lr" cx="120.0" cy="120.0" r="80" fill="none"/><circle class="at" cx="199.8" cy="125.6" r="2"/><circle class="at" cx="198.3" cy="136.6" r="2"/><circle class="at" cx="195.2" cy="147.4" r="2"/><circle class="at" cx="190.6" cy="157.6" r="2"/><circle class="at" cx="184.7" cy="167.0" r="2"/><circle class="at" cx="177.5" cy="175.6" r="2"/><circle class="at" cx="169.3" cy="183.0" r="2"/><circle class="at" cx="160.0" cy="189.3" r="2"/><circle class="at" cx="150.0" cy="194.2" r="2"/><circle class="at" cx="139.4" cy="197.6" r="2"/><circle class="at" cx="128.4" cy="199.6" r="2"/><circle class="at" cx="117.2" cy="200.0" r="2"/><circle class="at" cx="106.1" cy="198.8" r="2"/><circle class="at" cx="95.3" cy="196.1" r="2"/><circle class="at" cx="84.9" cy="191.9" r="2"/><circle class="at" cx="75.3" cy="186.3" r="2"/><circle class="at" cx="66.5" cy="179.5" r="2"/><circle class="at" cx="58.7" cy="171.4" r="2"/><circle class="at" cx="52.2" cy="162.4" r="2"/><circle class="at" cx="46.9" cy="152.5" r="2"/><circle class="at" cx="43.1" cy="142.1" r="2"/><circle class="at" cx="40.8" cy="131.1" r="2"/><circle class="at" cx="40.0" cy="120.0" r="2"/><circle class="at" cx="40.8" cy="108.9" r="2"/><circle class="at" cx="43.1" cy="97.9" r="2"/><circle class="at" cx="46.9" cy="87.5" r="2"/><circle class="at" cx="52.2" cy="77.6" r="2"/><circle class="at" cx="58.7" cy="68.6" r="2"/><circle class="at" cx="66.5" cy="60.5" r="2"/><circle class="at" cx="75.3" cy="53.7" r="2"/><circle class="at" cx="84.9" cy="48.1" r="2"/><circle class="at" cx="95.3" cy="43.9" r="2"/><circle class="at" cx="106.1" cy="41.2" r="2"/><circle class="at" cx="117.2" cy="40.0" r="2"/><circle class="at" cx="128.4" cy="40.4" r="2"/><circle class="at" cx="139.4" cy="42.4" r="2"/><circle class="at" cx="150.0" cy="45.8" r="2"/><circle class="at" cx="160.0" cy="50.7" r="2"/><circle class="at" cx="169.3" cy="57.0" r="2"/><circle class="at" cx="177.5" cy="64.4" r="2"/><circle class="at" cx="184.7" cy="73.0" r="2"/><circle class="at" cx="190.6" cy="82.4" r="2"/><circle class="at" cx="195.2" cy="92.6" r="2"/><circle class="at" cx="198.3" cy="103.4" r="2"/><circle class="at" cx="199.8" cy="114.4" r="2"/><circle class="ln" cx="120.0" cy="120.0" r="98" fill="none"/><circle class="at" cx="218.0" cy="120.0" r="2"/><circle class="at" cx="217.4" cy="131.2" r="2"/><circle class="at" cx="215.5" cy="142.2" r="2"/><circle class="at" cx="212.3" cy="152.9" r="2"/><circle class="at" cx="207.9" cy="163.2" r="2"/><circle class="at" cx="202.4" cy="173.0" r="2"/><circle class="at" cx="195.9" cy="182.0" r="2"/><circle class="at" cx="188.3" cy="190.3" r="2"/><circle class="at" cx="179.8" cy="197.6" r="2"/><circle class="at" cx="170.6" cy="203.9" r="2"/><circle class="at" cx="160.7" cy="209.1" r="2"/><circle class="at" cx="150.3" cy="213.2" r="2"/><circle class="at" cx="139.5" cy="216.0" r="2"/><circle class="at" cx="128.4" cy="217.6" r="2"/><circle class="at" cx="117.2" cy="218.0" r="2"/><circle class="at" cx="106.1" cy="217.0" r="2"/><circle class="at" cx="95.1" cy="214.8" r="2"/><circle class="at" cx="84.4" cy="211.3" r="2"/><circle class="at" cx="74.3" cy="206.7" r="2"/><circle class="at" cx="64.7" cy="200.9" r="2"/><circle class="at" cx="55.8" cy="194.1" r="2"/><circle class="at" cx="47.8" cy="186.3" r="2"/><circle class="at" cx="40.7" cy="177.6" r="2"/><circle class="at" cx="34.7" cy="168.2" r="2"/><circle class="at" cx="29.7" cy="158.1" r="2"/><circle class="at" cx="26.0" cy="147.6" r="2"/><circle class="at" cx="23.4" cy="136.7" r="2"/><circle class="at" cx="22.2" cy="125.6" r="2"/><circle class="at" cx="22.2" cy="114.4" r="2"/><circle class="at" cx="23.4" cy="103.3" r="2"/><circle class="at" cx="26.0" cy="92.4" r="2"/><circle class="at" cx="29.7" cy="81.9" r="2"/><circle class="at" cx="34.7" cy="71.8" r="2"/><circle class="at" cx="40.7" cy="62.4" r="2"/><circle class="at" cx="47.8" cy="53.7" r="2"/><circle class="at" cx="55.8" cy="45.9" r="2"/><circle class="at" cx="64.7" cy="39.1" r="2"/><circle class="at" cx="74.3" cy="33.3" r="2"/><circle class="at" cx="84.4" cy="28.7" r="2"/><circle class="at" cx="95.1" cy="25.2" r="2"/><circle class="at" cx="106.1" cy="23.0" r="2"/><circle class="at" cx="117.2" cy="22.0" r="2"/><circle class="at" cx="128.4" cy="22.4" r="2"/><circle class="at" cx="139.5" cy="24.0" r="2"/><circle class="at" cx="150.3" cy="26.8" r="2"/><circle class="at" cx="160.7" cy="30.9" r="2"/><circle class="at" cx="170.6" cy="36.1" r="2"/><circle class="at" cx="179.8" cy="42.4" r="2"/><circle class="at" cx="188.3" cy="49.7" r="2"/><circle class="at" cx="195.9" cy="58.0" r="2"/><circle class="at" cx="202.4" cy="67.0" r="2"/><circle class="at" cx="207.9" cy="76.8" r="2"/><circle class="at" cx="212.3" cy="87.1" r="2"/><circle class="at" cx="215.5" cy="97.8" r="2"/><circle class="at" cx="217.4" cy="108.8" r="2"/><circle class="pf" cx="120.0" cy="120.0" r="8"/></svg><figcaption class="fig-note">Multi-wall, end view</figcaption></figure>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-title"><h3 id="p-cnt">Carbon nanotubes</h3><span class="chip">Specification to follow</span></div>
+          <p>A layer of carbon atoms rolled into a seamless tube a few nanometres across and many times longer than it is wide. Nanotubes are very strong for their weight and conduct electricity well.</p>
+          <p><strong>Single-wall nanotubes</strong> are one layer thick. They give the highest conductivity at very low loadings and are used in battery electrodes, conductive films and electronics.</p>
+          <p><strong>Multi-wall nanotubes</strong> are several tubes nested inside each other. They are more robust and lower in cost, and are used as conductive additives in lithium-ion batteries, in polymer composites, antistatic plastics and coatings.</p>
+        </div>
+      </article>
+      <article class="product" aria-labelledby="p-c60">
+        <div class="product-art"><svg viewBox="0 0 240 240" class="illo" role="img" aria-label="Drawing of a C60 fullerene molecule: 60 carbon atoms arranged in 12 pentagons and 20 hexagons"><line class="lf" x1="202.1" y1="113.4" x2="221.2" y2="126.6"/><line class="lf" x1="202.1" y1="113.4" x2="185.9" y2="73.9"/><line class="lf" x1="202.1" y1="113.4" x2="175.9" y2="139.7"/><line class="lf" x1="188.8" y1="47.6" x2="207.9" y2="60.8"/><line class="lf" x1="188.8" y1="47.6" x2="155.5" y2="23.1"/><line class="lf" x1="188.8" y1="47.6" x2="185.9" y2="73.9"/><line class="lf" x1="221.2" y1="126.6" x2="224.1" y2="100.3"/><line class="lf" x1="221.2" y1="126.6" x2="214.1" y2="166.1"/><line class="lf" x1="143.5" y1="116.4" x2="103.9" y2="132.7"/><line class="lf" x1="143.5" y1="116.4" x2="149.7" y2="75.7"/><line class="lf" x1="143.5" y1="116.4" x2="175.9" y2="139.7"/><line class="lf" x1="15.9" y1="139.7" x2="21.2" y2="116.4"/><line class="lf" x1="15.9" y1="139.7" x2="32.1" y2="179.2"/><line class="lf" x1="86.1" y1="218.7" x2="53.6" y2="195.5"/><line class="lf" x1="86.1" y1="218.7" x2="123.8" y2="218.7"/><line class="lf" x1="55.2" y1="51.3" x2="81.4" y2="25.0"/><line class="lf" x1="55.2" y1="51.3" x2="76.7" y2="67.6"/><line class="lf" x1="55.2" y1="51.3" x2="27.4" y2="75.7"/><line class="lf" x1="187.8" y1="192.4" x2="168.7" y2="179.2"/><line class="lf" x1="187.8" y1="192.4" x2="160.1" y2="216.9"/><line class="lf" x1="187.8" y1="192.4" x2="214.1" y2="166.1"/><line class="lf" x1="81.4" y1="25.0" x2="79.9" y2="23.1"/><line class="lf" x1="81.4" y1="25.0" x2="119.2" y2="25.0"/><line class="lf" x1="153.9" y1="21.3" x2="155.5" y2="23.1"/><line class="lf" x1="168.7" y1="179.2" x2="129.2" y2="195.5"/><line class="lf" x1="168.7" y1="179.2" x2="175.9" y2="139.7"/><line class="lf" x1="155.5" y1="23.1" x2="119.2" y2="25.0"/><line class="lf" x1="96.8" y1="172.2" x2="103.9" y2="132.7"/><line class="lf" x1="96.8" y1="172.2" x2="59.0" y2="172.2"/><line class="lf" x1="96.8" y1="172.2" x2="129.2" y2="195.5"/><line class="lf" x1="103.9" y1="132.7" x2="70.5" y2="108.3"/><line class="lf" x1="160.1" y1="216.9" x2="123.8" y2="218.7"/><line class="lf" x1="59.0" y1="172.2" x2="53.6" y2="195.5"/><line class="lf" x1="59.0" y1="172.2" x2="42.8" y2="132.7"/><line class="lf" x1="21.2" y1="116.4" x2="42.8" y2="132.7"/><line class="lf" x1="21.2" y1="116.4" x2="27.4" y2="75.7"/><line class="lf" x1="76.7" y1="67.6" x2="116.3" y2="51.3"/><line class="lf" x1="76.7" y1="67.6" x2="70.5" y2="108.3"/><line class="lf" x1="129.2" y1="195.5" x2="123.8" y2="218.7"/><line class="lf" x1="116.3" y1="51.3" x2="149.7" y2="75.7"/><line class="lf" x1="116.3" y1="51.3" x2="119.2" y2="25.0"/><line class="lf" x1="185.9" y1="73.9" x2="149.7" y2="75.7"/><line class="lf" x1="70.5" y1="108.3" x2="42.8" y2="132.7"/><line class="lf" x1="53.6" y1="195.5" x2="32.1" y2="179.2"/><line class="lf" x1="25.9" y1="73.9" x2="27.4" y2="75.7"/><path class="pf" d="M158.6 215.0 L184.8 188.7 L163.3 172.4 L123.7 188.7 L120.8 215.0Z"/><path class="pf" d="M96.5 123.6 L64.1 100.3 L37.9 126.6 L54.1 166.1 L90.3 164.3Z"/><path class="pf" d="M71.3 60.8 L110.8 44.5 L116.2 21.3 L79.9 23.1 L52.2 47.6Z"/><path class="pf" d="M197.2 107.3 L169.5 131.7 L136.1 107.3 L143.2 67.8 L181.0 67.8Z"/><line class="ln" x1="110.8" y1="44.5" x2="143.2" y2="67.8"/><line class="ln" x1="110.8" y1="44.5" x2="116.2" y2="21.3"/><line class="ln" x1="110.8" y1="44.5" x2="71.3" y2="60.8"/><line class="ln" x1="207.9" y1="60.8" x2="224.1" y2="100.3"/><line class="ln" x1="207.9" y1="60.8" x2="186.4" y2="44.5"/><line class="ln" x1="15.9" y1="139.7" x2="18.8" y2="113.4"/><line class="ln" x1="123.7" y1="188.7" x2="90.3" y2="164.3"/><line class="ln" x1="123.7" y1="188.7" x2="120.8" y2="215.0"/><line class="ln" x1="123.7" y1="188.7" x2="163.3" y2="172.4"/><line class="ln" x1="86.1" y1="218.7" x2="84.5" y2="216.9"/><line class="ln" x1="143.2" y1="67.8" x2="136.1" y2="107.3"/><line class="ln" x1="143.2" y1="67.8" x2="181.0" y2="67.8"/><line class="ln" x1="153.9" y1="21.3" x2="116.2" y2="21.3"/><line class="ln" x1="153.9" y1="21.3" x2="186.4" y2="44.5"/><line class="ln" x1="136.1" y1="107.3" x2="169.5" y2="131.7"/><line class="ln" x1="136.1" y1="107.3" x2="96.5" y2="123.6"/><line class="ln" x1="79.9" y1="23.1" x2="116.2" y2="21.3"/><line class="ln" x1="79.9" y1="23.1" x2="52.2" y2="47.6"/><line class="ln" x1="90.3" y1="164.3" x2="54.1" y2="166.1"/><line class="ln" x1="90.3" y1="164.3" x2="96.5" y2="123.6"/><line class="ln" x1="158.6" y1="215.0" x2="160.1" y2="216.9"/><line class="ln" x1="158.6" y1="215.0" x2="120.8" y2="215.0"/><line class="ln" x1="158.6" y1="215.0" x2="184.8" y2="188.7"/><line class="ln" x1="224.1" y1="100.3" x2="218.8" y2="123.6"/><line class="ln" x1="120.8" y1="215.0" x2="84.5" y2="216.9"/><line class="ln" x1="184.8" y1="188.7" x2="212.6" y2="164.3"/><line class="ln" x1="184.8" y1="188.7" x2="163.3" y2="172.4"/><line class="ln" x1="214.1" y1="166.1" x2="212.6" y2="164.3"/><line class="ln" x1="84.5" y1="216.9" x2="51.2" y2="192.4"/><line class="ln" x1="218.8" y1="123.6" x2="197.2" y2="107.3"/><line class="ln" x1="218.8" y1="123.6" x2="212.6" y2="164.3"/><line class="ln" x1="64.1" y1="100.3" x2="71.3" y2="60.8"/><line class="ln" x1="64.1" y1="100.3" x2="96.5" y2="123.6"/><line class="ln" x1="64.1" y1="100.3" x2="37.9" y2="126.6"/><line class="ln" x1="169.5" y1="131.7" x2="197.2" y2="107.3"/><line class="ln" x1="169.5" y1="131.7" x2="163.3" y2="172.4"/><line class="ln" x1="52.2" y1="47.6" x2="71.3" y2="60.8"/><line class="ln" x1="52.2" y1="47.6" x2="25.9" y2="73.9"/><line class="ln" x1="197.2" y1="107.3" x2="181.0" y2="67.8"/><line class="ln" x1="54.1" y1="166.1" x2="37.9" y2="126.6"/><line class="ln" x1="54.1" y1="166.1" x2="51.2" y2="192.4"/><line class="ln" x1="186.4" y1="44.5" x2="181.0" y2="67.8"/><line class="ln" x1="37.9" y1="126.6" x2="18.8" y2="113.4"/><line class="ln" x1="51.2" y1="192.4" x2="32.1" y2="179.2"/><line class="ln" x1="18.8" y1="113.4" x2="25.9" y2="73.9"/><circle class="at" cx="110.8" cy="44.5" r="2.6"/><circle class="at" cx="207.9" cy="60.8" r="2.6"/><circle class="at" cx="123.7" cy="188.7" r="2.6"/><circle class="at" cx="143.2" cy="67.8" r="2.6"/><circle class="at" cx="153.9" cy="21.3" r="2.6"/><circle class="at" cx="136.1" cy="107.3" r="2.6"/><circle class="at" cx="79.9" cy="23.1" r="2.6"/><circle class="at" cx="90.3" cy="164.3" r="2.6"/><circle class="at" cx="158.6" cy="215.0" r="2.6"/><circle class="at" cx="224.1" cy="100.3" r="2.6"/><circle class="at" cx="120.8" cy="215.0" r="2.6"/><circle class="at" cx="184.8" cy="188.7" r="2.6"/><circle class="at" cx="116.2" cy="21.3" r="2.6"/><circle class="at" cx="84.5" cy="216.9" r="2.6"/><circle class="at" cx="218.8" cy="123.6" r="2.6"/><circle class="at" cx="64.1" cy="100.3" r="2.6"/><circle class="at" cx="169.5" cy="131.7" r="2.6"/><circle class="at" cx="52.2" cy="47.6" r="2.6"/><circle class="at" cx="197.2" cy="107.3" r="2.6"/><circle class="at" cx="71.3" cy="60.8" r="2.6"/><circle class="at" cx="54.1" cy="166.1" r="2.6"/><circle class="at" cx="186.4" cy="44.5" r="2.6"/><circle class="at" cx="96.5" cy="123.6" r="2.6"/><circle class="at" cx="37.9" cy="126.6" r="2.6"/><circle class="at" cx="51.2" cy="192.4" r="2.6"/><circle class="at" cx="18.8" cy="113.4" r="2.6"/><circle class="at" cx="25.9" cy="73.9" r="2.6"/><circle class="at" cx="212.6" cy="164.3" r="2.6"/><circle class="at" cx="163.3" cy="172.4" r="2.6"/><circle class="at" cx="181.0" cy="67.8" r="2.6"/></svg></div>
+        <div class="product-body">
+          <div class="product-title"><h3 id="p-c60">Fullerenes (C<sub>60</sub> and C<sub>70</sub>)</h3><span class="chip">Specification to follow</span></div>
+          <p>Closed, hollow molecules made only of carbon. C<sub>60</sub>, the molecule our company is named after, has 60 carbon atoms arranged in 12 pentagons and 20 hexagons, the same pattern as a soccer ball. C<sub>70</sub> is a slightly elongated version with 70 atoms.</p>
+          <p><strong>Used in:</strong> organic solar cells and electronics, lubricant and polymer additives, cosmetics, and materials research.</p>
+        </div>
+      </article>
+    </div>
+
+    <h3 style="margin:56px 0 0">Why buy carbon from Global C60</h3>
+    <div class="why">
+      <div>Made from CO<sub>2</sub> captured from industrial emissions</div>
+      <div>Produced in North America</div>
+      <div>A supply source outside China for buyers who need to document material origin and carbon footprint</div>
+    </div>
+  </div>
+</section>
+
+<!-- BUYERS -->
+<section class="band" id="buyers" aria-labelledby="buy-h">
+  <div class="wrap">
+    <div class="grid g2" style="gap:48px">
+      <div class="stack">
+        <span class="label">Carbon buyers and partners</span>
+        <h2 id="buy-h">We are looking for carbon buyers and partners</h2>
+        <p class="muted">Global Carbon Marketing (GCM) is a separate company being established to sell the carbon produced by Global C60 units. GCM will manage grade, volume and quality so buyers receive consistent material. It will launch with its own name and website.</p>
+        <p class="muted">Until GCM is operating, all carbon inquiries come to Global C60 directly. Tell us what you use, in what volumes and to what specification, and we will follow up as material and lab data become available.</p>
+        <div class="actions"><button class="btn btn-primary" type="button" data-open-form="carbon">Register interest in our carbon</button></div>
+      </div>
+      <div class="card">
+        <h3>We want to hear from</h3>
+        <ul class="plain">
+          <li>Tire and rubber product manufacturers</li>
+          <li>Plastics compounders and masterbatch producers</li>
+          <li>Ink, toner and pigment producers</li>
+          <li>Battery material producers and dispersion formulators</li>
+          <li>Polymer and composite compounders</li>
+          <li>Coatings, lubricant and refractory manufacturers</li>
+          <li>Research groups and specialty chemical distributors</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section class="band alt" id="company" aria-labelledby="co-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Company</span>
+      <h2 id="co-h">Where we are</h2>
+      <p class="muted">Validation and verification of the technology is under way. Discussions with host sites for first deployments are planned, and we are talking with investors about funding them. If you would like to be part of either, register your interest.</p>
+    </div>
+    <ul class="status-list">
+      <li><span class="label">Technology</span><strong>Validation and verification</strong><span><span class="chip">Under way</span></span></li>
+      <li><span class="label">Host sites</span><strong>First deployments</strong><span><span class="chip">Discussions planned</span></span></li>
+      <li><span class="label">Capital</span><strong>Investment</strong><span><span class="chip">Talking with investors</span></span></li>
+    </ul>
+
+    <h3 style="margin:64px 0 24px">Team</h3>
+    <div class="grid g3">
+      <div class="person card">
+        <h3>Ron Visser</h3>
+        <span class="role">CEO &amp; Co-founder</span>
+        <p>Regulatory compliance and management system consulting; founded and developed Beyond Compliance Inc. software solution; co-founded, built and exited Visser Consulting to Deloitte; co-founder of several technology-based companies.</p>
+        <div class="contact"><a href="mailto:rvisser@globalc60.com">rvisser@globalc60.com</a><a class="li-link" href="https://www.linkedin.com/in/ron-visser" rel="noopener"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA6CAYAAAAA0F95AAAKZElEQVR42uWaa4xdVRXHf2vtc8+982ppmbYU0fIuShWBIiExKDEhMRriB0EsJkaNiDExqB80xqQxUWP0A8YYFGN8EKMxxNhIfAZQIPgIPhDQQZCH0JZSKB2mM72Pc/Zafjjn3rl35s6ddjoD07pv7iSTu/fZe/33ev3XOgKQfvLX52UVudmDX0GMjohwPA93R4NgcQr8Cxz8+de45ZYcARDvnprwqdu3tarZLtHaWWSt4194ABHBDUTGpDLyFUbftc5FPou7MEc6lSDfIBk6y3M7MYTv0QTcY8uTkH4q+diu7Yg4O3dqDwCeVN5Cs+kQTyzhAQTFMsuGNc1H5AIAzj+/R04l5ifezc9RAzBH08P9fk2ORngVoT3bATfHjwcMVARC+c/VcwA4AgRFBFHFGi2IbfVySCuoCua+qu0AKhAi/TVgMHSoKJZneLPOti3jnLlhCBFj91TG3558DosBSVPcfJWbAUcLgBfCtyIbas7nrtrOtRe9io3DAhgvmPDbfz3Dzl88xH/2Z2i1sso1YaErXjCUKp5nbKjlfOeDl/LxN5/GxmHH3LAI4xLZse01/PTDV3DxeBVrZmjQ1elPfUkACLQydr79Iq46c5zMjOig4oXdS0Krabxh/TBffu8FDKeCZwIux78GqAjWaLH11evZsX0z5kYiEMQLpyKOAmmi5Llz2ekbect5m/FGk4CtPjd4tBoghZlzxniNdVW6Msje240BTJ0RhIs3KuQZipwYPgDAxQtn2EFFyiXaZVaCAyFXwHAJq88F6FEC4OUvzxxssi9zkJzo0hHWyjltOAT452QGwTGZmacpx50GmDmSJjzy9Av8cuJZRCrELOLmHeEdiHkkUeG+3c9z5yO7kaHhVegBlmoCAjGk7Nz1L/68d4Y0DSCOmRPNcXcqSeCp6Raf+Nk/ONhIEE3xWBscd44XANxAkpTdLznvv+WP/OShx3lJoKJCqgIi/O6JZ3n3d+/m/ienkTTBPA52uatwJIM0wD1Hq8K/p5vs+MEDXLZ1LxdtqBA8MDFp3P3vPTTyFEmrOLE0fenKwY8tgz/CXGaFAGj7A5wwXEFsmPsem+K+iXpBLhIlVEepVAJ5ns05duEiQ9ABVSswM8Rnc6dCsQRzwd2LSTKbmYoUC5cz5R4MgAeIEKfqEGaACF4BDRDrxJlpYl6DtAqJlAcOiDgeI3F6uo9aAaIQBGrVTt4hErCmgTUhyQkhoSYV3CEjJ2tleC5QSZFKQcvNdeUAEAFy47SxwBUXnEqTgLr1CGNSZygk/OGpF3n0+QypJIVwec6mscCVF28p6HP7Fl0QFywIz7da3PXPF4gaiA5eb7Bl/Rre+trNvPH0k9g6vpZNw1VidKbqGU8dOMjDeya557FJ/r7veSykaKWGHSMLTQZxAWtlnLt+hO9dd8nAjOmGn93Po3ueQavDRZ6QRV67cZRb3/OmBdc8MnmIyx65k8m6s2FMuOFtW/nApWdwxli1nJF3ZRoOZ54El8D+Rs6uiX186RcP8d/JHK0mi4PgSzUBFWZEaJmRegaSIMwSntxzggYsS0CS2d1EcYs0zVB3XLqcWoQQBG8YjWm4+OwNfOvq89m+eU3xszuYIy50yk8YJo4hbKwlXH/haVy+5WSuufVeHtrXQpMqbrH0Lb48bLC9seJUVFENiFJ+BVHBVVBV1HudX5ExBoIqiYJ2fSUUa+qNjMvOOpkffehStm9eg5W5RRApaHUIqAqqjoRAkEBaVrtj7py3foibr72UNbUUjzYw5ghLBmDuY6TnX+mXa5dponp7RfHR8hNEwZ1T1g7xzfddyLkjSmZegCNzdpLZfaT8I1JoUGbGm09Zywcv3ITPHCrKdgtc9SCGfhQAtOOVdiRvUyLvh7aV9VjpBaLNqU5dN8LWk0fJHRItOYZBLDNN6zx1PvCd3d24bvs5rB0ZwvIMWUJ41KObKt2XvLCJ+ezN6QIq6KW9q4C5IxSFllB+VQTc8M5u3gNCoo4Arz91mHNesxFv5QsbuxxDItTvQfNyPZkDhjBLirzfAaT0EoKZE1SYzoR7Ht/P01OH8KCcuWmcK08bQ4hFPWJOqU2KejVVcbZtEP4yYag5UZcpDC4UTeQIXYUvmhELHh1NhHv/O8Vnd/2J+/ccoNk0cKFaHeIjl5/NV96xjZT+IFrpNC84ZR3YU5guYx5wtN50LlLqg9EzBw3CX188yLXf/z179zuctAatCmJOM8/5+h0TnHfKOB+9ZDOx1JR+Y9PICKhiiRbpw8r4gFkT8wGhtU0G55FCmTvPaQFf/M0EeydbDJ00hkbFM8EihDCMpGv51QN7yA2CLrznWCUUiC8hKVxyMm2D8gtv22j/eeZFLjEx2eDuh/ch6ShZzDvzHMXJ8UqTJ16a4kA9zvKIvprZ3kVfPgAWMxM5AlV6cP8hJvMa6gHvF0o8Mpk50+4rRomVV2KUkuzeP4m1IjLXttvqQ41DU3Vm6o0Vqwq8MgCU43CzVcR6XdCjkFvkmHvQvkoBmJlpgDG/ndZOOgc0mryL+HSWL5AJypLZ4HKExAEjt/ahvf+zSwCOpdvWzUKXVQNkkLZJ8cKNL6J+Vkrm4pjMEpflbC96mwyF5cgEpZea+ELMS+gItKiqdEBYQVuTZfIBR5MJih+j4/bZ56xkpX3lMsGXJZ94BcOgL6YBzGkTLHGTle6zJMsNQFte9eWx3RXyDR03lvBKD+k1HZf5znQFQPBj1oBlxaCkzyZdKr/cQlsZl+74tgLjpewHVgUAL8vQ0ih/+OnXASNAC9i0KADuRaESdxxHZJbmYkU86Nera6/zsjjmXVdq5RumfoRFTDMnL8vm3vWmajRHypb9oiMdygHF8jXl7UfgULKYqVRD2Q7vl0ppCsBQJSn66W1gUELiVFX6Wlm7slNLkhLYgEvs8QHSVV8bG6mRqMyzi0SLM40NV0oCsUDRzgHvvAyuwAzQANJk0M1LEPYePMxNdz9JxTPyknW07bQpyqhGHtg9A0mCm6FEvBLYM9XgpnsniCTlW0XadR6nqoEHnqkjlQR3xSTOOXPxplZ0+NY9T3DGSEpmhrY1yoUI1JLAg88dgFAr6up0NRi6fIy3GglghMoBKMqMQFX4zC99kIP2PIcsY7bI3eVDXYA6JMNIJcWJqBuuSbGu8RKEUKyVZP7T0xohKJE4LyVRd5SEqIfxmTrYEEXBL/aGCQ3FtzoGeriPpnqU6mjwvLmDL175Y9wVkfFywxcGmoCYEsIQXqt2cdTukSE+SqToBeKCabUAKHHCmpNLdZEeDegQNFfMWxCM+fVsQcxwDejYGsRTwGabH+1OO4p4JPN6aW6+EN0oxm0IsP+IwqCpYdiASqv23qhQ3JK0BfQOJYx9+WhZ64vzj2ECFhw8oeh75gtE8th1liNujHR19fw4fMN5KWlPb6jq0BklJPJ/AYL113Yl5ntPYBAcETTPCSYvFj7gtl4AgvmNEi0jqciCRbXjWfdro8Fj8444XLkLEG67puddTo1ffedtnvuNuD9d+oYTAwQBXDLqh253za7n81c0yvvtke9/J5qjv2VYkKoAAAAASUVORK5CYII=" alt="Ron Visser on LinkedIn" width="20" height="18"></a></div>
+      </div>
+      <div class="person card">
+        <h3>Ron Green</h3>
+        <span class="role">CFO &amp; Co-founder</span>
+        <p>COO of EverGen Infrastructure (waste-to-energy and RNG operations); co-founder and board member of Beyond Energy; executive at several co-founded energy service companies.</p>
+        <div class="contact"><a href="mailto:rgreen@globalc60.com">rgreen@globalc60.com</a><a class="li-link" href="https://www.linkedin.com/in/ronwgreen/" rel="noopener"><img src="data:image/png;base64,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" alt="Ron Green on LinkedIn" width="20" height="18"></a></div>
+      </div>
+      <div class="person card">
+        <h3>Kevin Carroll, P.Eng.</h3>
+        <span class="role">Technical Advisor &amp; Co-founder</span>
+        <p>Former Chief Development Officer of E3 Lithium (Clearwater lithium project); VP Operations at DeltaStream Energy; co-founder and VP Engineering of Huron Resources.</p>
+        <div class="contact"><a href="mailto:kcarroll@globalc60.com">kcarroll@globalc60.com</a><a class="li-link" href="https://www.linkedin.com/in/kevin-carroll-494a862/" rel="noopener"><img src="data:image/png;base64,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" alt="Kevin Carroll on LinkedIn" width="20" height="18"></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-band on-dark" id="contact" aria-labelledby="ct-h">
+  <svg class="hero-lattice" aria-hidden="true" focusable="false"><defs><pattern id="lat2" width="66.00" height="38.11" patternUnits="userSpaceOnUse"><path d="M0 19.05 L11.00 0 L33.00 0 L44.00 19.05 L33.00 38.11 L11.00 38.11 Z M44.00 19.05 L66.00 19.05"/></pattern></defs><rect width="100%" height="100%" fill="url(#lat2)"/></svg>
+  <div class="wrap">
+    <div class="stack">
+      <span class="label">Contact</span>
+      <h2 id="ct-h">Register your interest</h2>
+      <p class="lead">Emitters looking at a unit, buyers looking for carbon, and investors: tell us who you are and what you are interested in, and we will follow up.</p>
+      <div class="actions"><button class="btn btn-primary" type="button" data-open-form="">Register your interest</button></div>
+    </div>
+    <div class="contact-box">
+      <span class="label">Write to us directly</span>
+      <div class="email-row"><a href="mailto:rvisser@globalc60.com">rvisser@globalc60.com</a></div>
+      <p class="small muted">Global C60 Inc. · Calgary, Alberta, Canada</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <svg class="logo" viewBox="0 0 1000 449" role="img" aria-label="GlobalC60 Recovery" xmlns="http://www.w3.org/2000/svg"><g><path class="bar" data-bar="0" fill-rule="nonzero" d="M 51.6 362.6 L 51.6 252.7 L 88.2 252.7 L 88.2 362.6 Z M 51.6 362.6"/><path class="bar" data-bar="1" fill-rule="nonzero" d="M 97.9 362.6 L 97.9 230.8 L 134.5 230.8 L 134.5 362.6 Z M 97.9 362.6"/><path class="bar" data-bar="2" fill-rule="nonzero" d="M 145.1 362.6 L 145.1 216.7 L 181.7 216.7 L 181.7 362.6 Z M 145.1 362.6"/><path class="plume-black" fill-rule="evenodd" d="M 78.0 238.2 C 143.4 162.9 46.7 151.7 36.3 99.2 C 8.2 167.1 103.1 168.1 78.0 238.2"/><path class="plume-green" fill-rule="evenodd" d="M 159.6 138.9 C 211.6 63.3 120.9 52.4 111.1 0.0 C 84.6 67.9 173.5 72.8 159.6 138.9"/><path class="plume-blue" fill-rule="evenodd" d="M 116.7 218.3 C 208.8 115.3 42.4 75.1 58.4 0.0 C 0.0 99.8 160.4 127.0 116.7 218.3"/><path class="word" fill-rule="nonzero" d="M 257.1 362.6 C 245.5 362.6 235.8 361.3 228.0 358.8 C 216.3 354.9 210.4 348.4 210.4 339.1 L 210.4 280.3 C 210.4 271.2 216.3 264.7 228.0 260.7 C 235.8 258.0 245.5 256.7 257.1 256.7 L 341.0 256.7 L 341.0 277.4 L 257.1 277.4 C 239.9 277.4 231.3 280.4 231.3 286.2 L 231.3 332.9 C 231.3 338.9 239.9 341.8 257.1 341.8 L 320.2 341.8 L 320.2 310.7 L 249.7 310.7 L 249.7 289.9 L 330.6 289.9 C 333.4 289.9 335.9 290.9 338.0 293.0 C 340.0 295.1 341.0 297.5 341.0 300.4 L 341.0 362.6 Z M 257.1 362.6"/><path class="word" fill-rule="nonzero" d="M 357.4 362.6 L 357.4 256.7 L 378.2 256.7 L 378.2 341.8 L 452.0 341.8 L 452.0 362.6 Z M 357.4 362.6"/><path class="word" fill-rule="nonzero" d="M 595.3 339.1 C 595.3 347.9 589.4 354.4 577.5 358.5 C 569.0 361.2 559.3 362.6 548.5 362.6 L 511.4 362.6 C 501.2 362.6 491.6 361.1 482.7 358.0 C 470.7 353.9 464.6 347.6 464.6 339.1 L 464.6 280.3 C 464.6 271.2 470.5 264.7 482.3 260.8 C 490.4 258.0 500.1 256.7 511.4 256.7 L 548.5 256.7 C 579.7 256.7 595.3 264.5 595.3 280.3 Z M 574.5 285.8 C 574.5 280.2 566.2 277.4 549.6 277.4 L 510.4 277.4 C 494.1 277.4 486.0 280.2 486.0 285.8 L 486.0 333.8 C 486.0 339.2 494.1 341.8 510.4 341.8 L 549.6 341.8 C 566.2 341.8 574.5 339.2 574.5 333.8 Z M 574.5 285.8"/><path class="word" fill-rule="nonzero" d="M 743.9 339.1 C 743.9 347.7 737.7 354.1 725.5 358.3 C 716.9 361.2 707.2 362.6 696.4 362.6 L 613.2 362.6 L 613.2 256.5 L 697.1 256.5 C 708.1 256.5 717.7 258.0 725.9 260.8 C 737.9 265.0 743.9 271.5 743.9 280.2 L 743.9 295.5 C 743.9 302.7 740.0 307.3 732.2 309.4 C 735.6 310.0 738.4 311.5 740.6 313.9 C 742.8 316.4 743.9 319.3 743.9 322.6 Z M 722.5 285.2 C 722.5 282.4 719.0 280.3 712.0 278.9 C 707.0 277.8 702.0 277.3 697.1 277.3 L 634.0 277.3 L 634.0 298.8 L 712.9 298.8 C 714.8 298.8 716.8 298.4 718.8 297.7 C 721.3 296.8 722.5 295.5 722.5 293.8 Z M 722.5 325.9 C 722.5 321.7 716.5 319.6 704.6 319.6 L 634.0 319.6 L 634.0 341.8 L 696.4 341.8 C 713.8 341.8 722.5 339.3 722.5 334.1 Z M 722.5 325.9"/><path class="word" fill-rule="nonzero" d="M 871.7 362.6 L 871.7 329.5 L 782.6 329.5 L 782.6 362.6 L 761.8 362.6 L 761.8 290.2 C 761.8 279.3 767.1 270.7 777.7 264.5 C 786.7 259.3 797.0 256.7 808.7 256.7 L 844.3 256.7 C 855.6 256.7 866.1 259.4 875.5 264.8 C 886.8 271.2 892.4 279.7 892.4 290.2 L 892.4 362.6 Z M 871.7 294.7 C 871.7 289.2 868.3 284.8 861.6 281.6 C 855.9 278.8 850.1 277.4 844.3 277.4 L 808.7 277.4 C 803.7 277.4 798.3 279.1 792.5 282.3 C 785.9 286.1 782.6 290.2 782.6 294.7 L 782.6 308.7 L 871.7 308.7 Z M 871.7 294.7"/><path class="word" fill-rule="nonzero" d="M 905.3 362.6 L 905.3 256.7 L 926.1 256.7 L 926.1 341.8 L 1000.0 341.8 L 1000.0 362.6 Z M 905.3 362.6"/><path class="sub" fill-rule="nonzero" d="M 126.5 433.3 L 114.9 448.3 L 85.6 448.3 C 80.5 448.3 75.8 447.6 71.5 446.0 C 67.2 444.5 63.4 442.4 60.3 439.8 C 57.2 437.1 54.8 434.0 53.0 430.4 C 51.2 426.7 50.3 422.8 50.3 418.5 C 50.3 414.3 51.2 410.4 53.0 406.9 C 54.8 403.3 57.2 400.3 60.3 397.8 C 63.4 395.2 67.2 393.3 71.5 391.9 C 75.8 390.5 80.5 389.9 85.6 389.9 L 126.5 389.9 L 114.9 405.1 L 85.6 405.1 C 83.1 405.1 80.8 405.4 78.7 406.1 C 76.6 406.8 74.8 407.8 73.3 409.0 C 71.8 410.3 70.6 411.8 69.7 413.5 C 68.9 415.3 68.4 417.2 68.4 419.3 C 68.4 421.4 68.9 423.3 69.7 425.0 C 70.5 426.7 71.7 428.2 73.3 429.4 C 74.8 430.7 76.6 431.6 78.7 432.3 C 80.8 433.0 83.1 433.3 85.6 433.3 Z M 126.5 433.3"/><path class="sub" fill-rule="nonzero" d="M 165.3 405.1 C 161.7 405.1 158.6 405.8 155.8 407.2 C 153.1 408.7 151.0 410.7 149.7 413.2 L 186.7 413.2 C 193.3 413.2 198.6 414.6 202.6 417.3 C 206.5 420.0 208.5 424.1 208.5 429.3 C 208.5 433.4 207.5 436.7 205.4 439.3 C 203.4 441.9 200.7 443.9 197.3 445.4 C 193.9 446.9 190.1 447.9 185.7 448.4 C 181.3 449.0 176.7 449.3 172.0 449.3 C 158.5 449.3 148.3 446.8 141.4 441.9 C 134.5 437.0 131.0 429.2 131.0 418.5 C 131.0 414.3 131.9 410.4 133.7 406.9 C 135.4 403.3 137.9 400.3 141.0 397.8 C 144.1 395.2 147.8 393.3 152.1 391.9 C 156.5 390.5 161.1 389.9 166.2 389.9 L 203.9 389.9 L 192.2 405.1 Z M 149.7 424.8 C 150.2 426.7 151.1 428.3 152.3 429.5 C 153.5 430.8 155.1 431.7 157.0 432.4 C 158.9 433.0 161.2 433.5 163.9 433.7 C 166.5 434.0 169.6 434.1 173.0 434.1 C 176.8 434.1 179.8 434.0 182.2 433.7 C 184.7 433.5 186.5 433.2 187.9 432.7 C 189.2 432.3 190.1 431.7 190.7 431.1 C 191.2 430.4 191.4 429.6 191.4 428.8 C 191.4 426.2 189.4 424.8 185.2 424.8 Z M 149.7 424.8"/><path class="sub" fill-rule="nonzero" d="M 253.2 388.9 C 265.6 388.9 274.9 391.3 281.1 396.2 C 287.4 401.0 290.5 408.6 290.5 419.0 C 290.5 429.5 287.4 437.2 281.2 442.0 C 275.0 446.9 265.6 449.3 253.2 449.3 C 240.7 449.3 231.4 446.9 225.1 442.0 C 218.9 437.2 215.8 429.5 215.8 419.0 C 215.8 408.6 219.0 401.0 225.2 396.2 C 231.4 391.3 240.7 388.9 253.2 388.9 Z M 253.2 434.1 C 256.7 434.1 259.7 433.9 262.2 433.5 C 264.7 433.1 266.8 432.4 268.3 431.3 C 269.8 430.2 270.9 428.6 271.6 426.7 C 272.3 424.7 272.6 422.2 272.6 419.0 C 272.6 415.9 272.3 413.4 271.6 411.4 C 270.9 409.5 269.8 407.9 268.3 406.9 C 266.8 405.8 264.7 405.1 262.2 404.7 C 259.7 404.3 256.7 404.1 253.2 404.1 C 249.5 404.1 246.5 404.3 244.0 404.7 C 241.5 405.1 239.6 405.8 238.0 406.9 C 236.5 407.9 235.4 409.5 234.7 411.4 C 234.0 413.4 233.7 415.9 233.7 419.0 C 233.7 422.2 234.0 424.7 234.7 426.7 C 235.4 428.6 236.5 430.2 238.0 431.3 C 239.6 432.4 241.5 433.1 244.0 433.5 C 246.5 433.9 249.5 434.1 253.2 434.1"/><path class="sub" fill-rule="nonzero" d="M 416.0 448.3 L 391.8 448.3 L 378.8 432.9 L 351.0 432.9 L 351.0 448.3 L 332.9 448.3 L 332.9 418.4 L 383.8 418.4 C 386.6 418.4 388.9 417.8 390.9 416.7 C 392.8 415.5 393.8 413.9 393.8 411.9 C 393.8 409.6 392.9 407.9 391.1 406.8 C 389.4 405.6 386.9 405.1 383.8 405.1 L 332.9 405.1 L 344.7 389.9 L 382.3 389.9 C 385.6 389.9 389.1 390.2 392.6 390.8 C 396.2 391.4 399.4 392.5 402.3 394.1 C 405.2 395.6 407.7 397.8 409.5 400.4 C 411.4 403.1 412.4 406.6 412.4 410.7 C 412.4 413.0 412.0 415.2 411.3 417.2 C 410.6 419.2 409.6 421.1 408.3 422.7 C 407.0 424.4 405.4 425.7 403.5 426.9 C 401.6 428.0 399.5 428.8 397.1 429.3 C 398.1 430.0 399.2 431.0 400.4 432.2 C 401.6 433.3 403.2 434.9 405.3 437.0 Z M 416.0 448.3"/><path class="sub" fill-rule="nonzero" d="M 490.4 433.3 L 478.8 448.3 L 422.5 448.3 L 422.5 389.9 L 490.2 389.9 L 478.5 405.1 L 440.7 405.1 L 440.7 412.1 L 487.0 412.1 L 476.6 425.3 L 440.7 425.3 L 440.7 433.3 Z M 490.4 433.3"/><path class="sub" fill-rule="nonzero" d="M 571.0 433.3 L 559.4 448.3 L 530.0 448.3 C 524.9 448.3 520.2 447.6 515.9 446.0 C 511.6 444.5 507.9 442.4 504.8 439.8 C 501.7 437.1 499.2 434.0 497.4 430.4 C 495.7 426.7 494.8 422.8 494.8 418.5 C 494.8 414.3 495.7 410.4 497.4 406.9 C 499.2 403.3 501.7 400.3 504.8 397.8 C 507.9 395.2 511.6 393.3 515.9 391.9 C 520.2 390.5 524.9 389.9 530.0 389.9 L 571.0 389.9 L 559.4 405.1 L 530.0 405.1 C 527.6 405.1 525.3 405.4 523.2 406.1 C 521.1 406.8 519.3 407.8 517.8 409.0 C 516.2 410.3 515.1 411.8 514.2 413.5 C 513.3 415.3 512.9 417.2 512.9 419.3 C 512.9 421.4 513.3 423.3 514.1 425.0 C 515.0 426.7 516.2 428.2 517.7 429.4 C 519.3 430.7 521.1 431.6 523.2 432.3 C 525.3 433.0 527.6 433.3 530.0 433.3 Z M 571.0 433.3"/><path class="sub" fill-rule="nonzero" d="M 618.2 388.9 C 632.4 388.9 643.1 391.3 650.2 396.2 C 657.3 401.0 660.9 408.6 660.9 419.0 C 660.9 429.5 657.4 437.2 650.2 442.0 C 643.1 446.9 632.5 449.3 618.2 449.3 C 603.8 449.3 593.1 446.9 586.1 442.0 C 579.0 437.2 575.4 429.5 575.4 419.0 C 575.4 408.6 579.0 401.0 586.1 396.2 C 593.2 391.3 603.9 388.9 618.2 388.9 Z M 618.2 434.1 C 622.7 434.1 626.6 433.9 629.7 433.5 C 632.9 433.1 635.4 432.4 637.4 431.3 C 639.3 430.2 640.7 428.6 641.6 426.7 C 642.5 424.7 642.9 422.2 642.9 419.0 C 642.9 415.9 642.5 413.4 641.6 411.4 C 640.7 409.5 639.3 407.9 637.4 406.9 C 635.4 405.8 632.9 405.1 629.7 404.7 C 626.6 404.3 622.7 404.1 618.2 404.1 C 613.6 404.1 609.8 404.3 606.7 404.7 C 603.5 405.1 600.9 405.8 599.0 406.9 C 597.0 407.9 595.6 409.5 594.8 411.4 C 593.9 413.4 593.4 415.9 593.4 419.0 C 593.4 422.2 593.9 424.7 594.8 426.7 C 595.6 428.6 597.0 430.2 599.0 431.3 C 600.9 432.4 603.5 433.1 606.7 433.5 C 609.8 433.9 613.6 434.1 618.2 434.1"/><path class="sub" fill-rule="nonzero" d="M 679.2 389.9 L 705.5 428.7 L 732.9 389.9 L 754.2 389.9 L 716.8 442.7 C 715.6 444.4 714.0 445.9 712.1 447.3 C 710.2 448.6 707.9 449.3 705.1 449.3 C 702.4 449.3 700.1 448.6 698.3 447.4 C 696.4 446.1 694.9 444.6 693.6 442.7 L 657.0 389.9 Z M 679.2 389.9"/><path class="sub" fill-rule="nonzero" d="M 828.6 433.3 L 817.0 448.3 L 760.7 448.3 L 760.7 389.9 L 828.4 389.9 L 816.7 405.1 L 778.9 405.1 L 778.9 412.1 L 825.2 412.1 L 814.8 425.3 L 778.9 425.3 L 778.9 433.3 Z M 828.6 433.3"/><path class="sub" fill-rule="nonzero" d="M 917.7 448.3 L 893.5 448.3 L 880.5 432.9 L 852.7 432.9 L 852.7 448.3 L 834.6 448.3 L 834.6 418.4 L 885.5 418.4 C 888.3 418.4 890.7 417.8 892.6 416.7 C 894.5 415.5 895.5 413.9 895.5 411.9 C 895.5 409.6 894.6 407.9 892.8 406.8 C 891.1 405.6 888.6 405.1 885.5 405.1 L 834.6 405.1 L 846.4 389.9 L 884.0 389.9 C 887.3 389.9 890.8 390.2 894.3 390.8 C 897.9 391.4 901.1 392.5 904.0 394.1 C 906.9 395.6 909.3 397.8 911.2 400.4 C 913.1 403.1 914.1 406.6 914.1 410.7 C 914.1 413.0 913.7 415.2 913.0 417.2 C 912.3 419.2 911.3 421.1 910.0 422.7 C 908.7 424.4 907.1 425.7 905.2 426.9 C 903.3 428.0 901.2 428.8 898.8 429.3 C 899.8 430.0 900.9 431.0 902.1 432.2 C 903.3 433.3 905.0 434.9 907.0 437.0 Z M 917.7 448.3"/><path class="sub" fill-rule="nonzero" d="M 1000.0 389.9 L 965.3 429.0 L 965.3 448.3 L 947.1 448.3 L 947.1 428.9 L 911.5 389.9 L 934.7 389.9 L 948.7 406.1 C 949.1 406.6 949.8 407.3 950.5 408.2 C 951.3 409.0 952.1 409.9 952.9 410.8 C 953.7 411.8 954.4 412.6 955.1 413.4 C 955.9 414.3 956.3 414.9 956.6 415.3 C 957.2 414.5 958.1 413.4 959.2 412.0 C 960.3 410.6 961.9 408.6 964.0 406.0 L 977.3 389.9 Z M 1000.0 389.9"/></g></svg>
+      <div class="foot-meta">
+        <span>Global C60 Inc. · Calgary, Alberta</span>
+        <span><a href="mailto:rvisser@globalc60.com">rvisser@globalc60.com</a></span>
+        <span>Carbon conversion technology licensed from <a href="https://elementalair.com" rel="noopener">Elemental Air</a>.</span>
+      </div>
+    </div>
+    <div class="foot-right">
+      <div class="theme-switch" role="group" aria-label="Colour theme">
+        <button type="button" data-theme-set="dark" aria-pressed="true">Dark</button>
+        <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
+      </div>
+      <span>© 2026 Global C60 Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- INTEREST FORM -->
+<dialog class="modal" id="interest" aria-labelledby="form-h">
+  <div class="modal-head">
+    <div class="stack" style="gap:6px">
+      <span class="label">Global C60</span>
+      <h2 id="form-h">Register your interest</h2>
+    </div>
+    <button class="modal-close" type="button" data-close-form aria-label="Close">×</button>
+  </div>
+  <form class="enquiry" name="interest" method="POST" data-netlify="true" netlify-honeypot="website" novalidate>
+    <input type="hidden" name="form-name" value="interest">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <div class="two">
+      <div class="field"><label for="f-company">Company name</label><input id="f-company" name="company" autocomplete="organization" required><span class="err" hidden>Enter your company name.</span></div>
+      <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" hidden>Enter your name.</span></div>
+    </div>
+    <div class="field"><label for="f-title">Title <span class="opt">(optional)</span></label><input id="f-title" name="title" autocomplete="organization-title"></div>
+    <div class="two">
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err" hidden>Enter a complete email address, for example name@company.com.</span></div>
+      <div class="field"><label for="f-phone">Phone <span class="opt">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+    </div>
+    <div class="field">
+      <label for="f-interest">Your interest</label>
+      <select id="f-interest" name="interest" required>
+        <option value="">Choose one</option>
+        <option value="carbon">Carbon purchasing</option>
+        <option value="site">Deploying the technology on our site</option>
+        <option value="reduction">Carbon reduction</option>
+        <option value="investing">Investing in Global C60</option>
+        <option value="other">Other</option>
+      </select>
+      <span class="err" hidden>Choose what you are interested in.</span>
+    </div>
+    <div class="field"><label for="f-comments">Comments <span class="opt">(optional)</span></label><textarea id="f-comments" name="comments" placeholder="For example: emission source and volumes, or the carbon you use and in what quantities"></textarea></div>
+    <div class="form-foot">
+      <div class="actions"><button class="btn btn-primary" type="submit">Send</button><button class="btn-link" type="button" data-close-form>Cancel</button></div>
+      <p class="small muted">We use these details only to reply to you. We do not share them.</p>
+      <div class="form-msg" role="status" aria-live="polite" hidden></div>
+    </div>
+  </form>
+</dialog>
+
+<script>
+/* ---------- Form delivery ----------
+   Set FORM_ENDPOINT once hosting is chosen:
+   - Netlify: "netlify"  (submissions appear under Forms in Netlify; add an email notification to rvisser@globalc60.com)
+   - Formspree or similar: the form's URL, for example "https://formspree.io/f/abcdwxyz"
+   - Left empty: visitors are asked to email rvisser@globalc60.com instead. */
+var FORM_ENDPOINT = "";
+var CONTACT_EMAIL = "rvisser@globalc60.com";
+
+(function(){
+  var root = document.documentElement;
+
+  /* theme switch */
+  function currentTheme(){ return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
+  function syncSwitch(){
+    var t = currentTheme();
+    document.querySelectorAll('[data-theme-set]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-theme-set') === t)); });
+  }
+  document.querySelectorAll('[data-theme-set]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var t = b.getAttribute('data-theme-set');
+      root.setAttribute('data-theme', t);
+      try{ localStorage.setItem('gc60-theme', t); }catch(e){}
+      syncSwitch();
+    });
+  });
+  syncSwitch();
+
+  /* mobile menu */
+  var menuBtn = document.querySelector('.menu-btn'), nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? 'Close' : 'Menu';
+  });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); menuBtn.textContent='Menu'; }); });
+
+  /* modal */
+  var dlg = document.getElementById('interest');
+  var form = dlg.querySelector('form');
+  var msg = form.querySelector('.form-msg');
+  var submitBtn = form.querySelector('[type=submit]');
+  var lastOpener = null;
+  document.querySelectorAll('[data-open-form]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      lastOpener = btn;
+      var pre = btn.getAttribute('data-open-form');
+      if (pre) form.interest.value = pre;
+      nav.classList.remove('open');
+      if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open','');
+      setTimeout(function(){ document.getElementById('f-company').focus(); }, 30);
+    });
+  });
+  function closeForm(){ if (dlg.open) dlg.close(); }
+  dlg.querySelectorAll('[data-close-form]').forEach(function(b){ b.addEventListener('click', closeForm); });
+  dlg.addEventListener('click', function(e){ if (e.target === dlg) closeForm(); });
+  dlg.addEventListener('close', function(){ if (lastOpener) lastOpener.focus(); });
+
+  function setError(input, on){
+    var f = input.closest('.field'), err = f.querySelector('.err');
+    if (on){ f.setAttribute('data-invalid',''); input.setAttribute('aria-invalid','true'); if (err){ err.hidden = false; err.id = err.id || input.id + '-err'; input.setAttribute('aria-describedby', err.id); } }
+    else { f.removeAttribute('data-invalid'); input.removeAttribute('aria-invalid'); if (err) err.hidden = true; }
+  }
+  function validate(){
+    var first = null;
+    ['f-company','f-name','f-email','f-interest'].forEach(function(id){
+      var el = document.getElementById(id);
+      var bad = !el.value.trim() || (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()));
+      setError(el, bad);
+      if (bad && !first) first = el;
+    });
+    if (first) first.focus();
+    return !first;
+  }
+  form.querySelectorAll('input,select').forEach(function(el){ el.addEventListener('input', function(){ if (el.closest('.field[data-invalid]')) setError(el, false); }); });
+
+  function show(text, ok){ msg.hidden = false; msg.className = 'form-msg' + (ok ? ' ok' : ''); msg.textContent = text; }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    msg.hidden = true;
+    if (!validate()) return;
+    if (form.website.value) return; /* spam trap */
+    if (!FORM_ENDPOINT){
+      show('The form is not connected yet. Please email ' + CONTACT_EMAIL + ' with your details and we will reply.', false);
+      return;
+    }
+    submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+    var data = new FormData(form), req;
+    if (FORM_ENDPOINT === 'netlify'){
+      req = fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(data).toString() });
+    } else {
+      req = fetch(FORM_ENDPOINT, { method:'POST', headers:{'Accept':'application/json'}, body:data });
+    }
+    req.then(function(r){
+      if (!r.ok) throw new Error(r.status);
+      form.reset();
+      show('Thank you. We have your details and will be in touch.', true);
+    }).catch(function(){
+      show('Your details were not sent. Check your connection and try again, or email ' + CONTACT_EMAIL + '.', false);
+    }).finally(function(){ submitBtn.disabled = false; submitBtn.textContent = 'Send'; });
+  });
+})();
+</script>
+</body>
+</html>

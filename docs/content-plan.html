@@ -1,0 +1,444 @@
+<title>GlobalC60.com Content Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: working review document. Narrow reading column; each proposed website section is a framed "copy block" with review notes beside or below it. */
+:root{
+  --bg:#F3F4F2;
+  --surface:#FFFFFF;
+  --ink:#16191B;
+  --muted:#5A6166;
+  --line:#D5D9D8;
+  --accent:#1E6468;
+  --accent-soft:#E2EEEE;
+  --flag:#8A5A12;
+  --flag-soft:#F6EEDD;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121517;--surface:#1A1E21;--ink:#E8EBEA;--muted:#9AA3A6;--line:#2E3538;
+    --accent:#6FB8BB;--accent-soft:#1C3031;--flag:#E0B266;--flag-soft:#2E2618;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121517;--surface:#1A1E21;--ink:#E8EBEA;--muted:#9AA3A6;--line:#2E3538;
+  --accent:#6FB8BB;--accent-soft:#1C3031;--flag:#E0B266;--flag-soft:#2E2618;color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:20px;padding-block:40px 80px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:48px}
+h1,h2,h3{font-family:var(--display);font-stretch:85%;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:800;letter-spacing:-.01em}
+h2{font-size:1.6rem;font-weight:700}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0;max-width:66ch}
+a{color:var(--accent)}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header.top{display:grid;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:24px}
+header.top .meta{display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.lede{font-size:1.1rem}
+section.part{display:grid;gap:18px}
+.part-head{display:grid;gap:6px}
+.stack{display:grid;gap:14px}
+ul,ol{margin:0;padding-left:1.25em;display:grid;gap:6px}
+li{max-width:64ch}
+
+/* the draft website copy */
+.copy{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px;display:grid;gap:14px;min-width:0}
+.copy .slot{font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.copy h3.site{font-size:1.45rem}
+.copy .btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{font-family:var(--body);font-weight:600;font-size:.9rem;padding:9px 16px;border-radius:4px;border:1.5px solid var(--ink);background:transparent;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.grid2 > div{min-width:0;display:grid;gap:8px;align-content:start}
+.product{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:8px}
+.product:first-of-type{border-top:0;padding-top:0}
+.status{display:inline-block;font-family:var(--mono);font-size:.72rem;padding:2px 8px;border-radius:3px;background:var(--accent-soft);color:var(--accent)}
+.status.later{background:var(--flag-soft);color:var(--flag)}
+.callout{border-left:3px solid var(--accent);padding:4px 0 4px 16px;display:grid;gap:6px}
+.steps{counter-reset:s;list-style:none;padding:0;gap:12px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:2.2em 1fr;gap:4px 10px}
+.steps li::before{content:counter(s);font-family:var(--mono);font-size:.85rem;color:var(--accent);padding-top:2px}
+.report{font-family:var(--mono);font-size:.82rem;border:1px dashed var(--line);border-radius:4px;overflow-x:auto}
+.report table{border-collapse:collapse;width:100%;min-width:420px}
+.report td,.report th{padding:7px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.report th{font-weight:500;color:var(--muted);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+.report tr:last-child td{border-bottom:0}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.team > div{display:grid;gap:4px;min-width:0;align-content:start}
+.team .role{margin-top:-2px;margin-bottom:4px}
+.team .role{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.team .links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.85rem;align-items:center}
+.team .links a{display:inline-flex;align-items:center;gap:4px}
+.team .links img.li{width:18px;height:auto;display:block}
+.field-list{font-family:var(--mono);font-size:.85rem}
+
+/* review notes */
+.note{background:var(--flag-soft);border-radius:6px;padding:14px 18px;display:grid;gap:6px;font-size:.93rem}
+.note .tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--flag)}
+.decisions{counter-reset:d;list-style:none;padding:0;gap:14px}
+.decisions li{counter-increment:d;display:grid;grid-template-columns:2em 1fr;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.decisions li::before{content:counter(d);font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--flag);line-height:1.2}
+.decisions strong{display:block}
+.seo{display:grid;gap:10px}
+.seo dt{font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.seo dd{margin:0 0 6px}
+nav.toc{font-size:.9rem}
+nav.toc ol{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none;padding:0}
+nav.toc a{text-decoration:none;border-bottom:1px solid var(--line);color:var(--ink)}
+nav.toc a:hover,nav.toc a:focus-visible{border-color:var(--accent);color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+footer.end{border-top:1px solid var(--line);padding-top:16px;font-size:.85rem;color:var(--muted)}
+</style>
+
+<div class="wrap">
+
+<header class="top">
+  <span class="eyebrow">Global C60 Inc. · Website planning</span>
+  <h1>GlobalC60.com content plan</h1>
+  <p class="lede">Draft copy for every section of the one-page site, written from your answers. Review the words first. Site structure and visual design follow once you have uploaded your reference sites and the existing logo.</p>
+  <div class="meta"><span>Draft 1 · 30 Sept 2026</span><span>Deliverable: one self-contained HTML file</span><span>Owner: Ron Visser</span></div>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <ol>
+    <li><a href="#decisions">Decisions needed</a></li>
+    <li><a href="#hero">Hero</a></li>
+    <li><a href="#what">What we do</a></li>
+    <li><a href="#engage">How we work with you</a></li>
+    <li><a href="#benefits">Benefits</a></li>
+    <li><a href="#products">Carbon products</a></li>
+    <li><a href="#gcm">Carbon marketing</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#form">Interest form</a></li>
+    <li><a href="#seo">SEO</a></li>
+    <li><a href="#next">Next steps</a></li>
+  </ol>
+</nav>
+
+<!-- DECISIONS -->
+<section class="part" id="decisions">
+  <div class="part-head">
+    <span class="eyebrow">Before this goes live</span>
+    <h2>Decisions needed from you</h2>
+    <p>These came up while writing the copy. The draft uses the safer option in each case until you confirm.</p>
+  </div>
+  <ol class="decisions">
+    <li><div><strong>Calgary address. <span class="status">Decided</span></strong> The site shows "Calgary, Alberta" only, with no street address, in the hero, the footer and the search listing.</div></li>
+    <li><div><strong>Elemental Air spelling. <span class="status">Decided</span></strong> The site uses "Elemental Air" (two words) and links to elementalair.com.</div></li>
+    <li><div><strong>Ron Green's title. <span class="status">Decided</span></strong> CFO &amp; Co-founder. The business plan should be updated to match (it currently shows COO).</div></li>
+    <li><div><strong>Carbon credit wording. <span class="status">Decided</span></strong> Kept generic. The site says CO₂ is removed and that solid carbon and carbon credits are created. It does not say who holds the credits or how they are shared.</div></li>
+    <li><div><strong>Alberta TIER callout. <span class="status">Decided</span></strong> Recognition of the GC60 process for TIER credit is being discussed with the TIER program. The callout now says so, and keeps the "can help" wording until recognition is confirmed.</div></li>
+    <li><div><strong>Investor option on the form. <span class="status">Decided</span></strong> "Investing in Global C60" is added to the form's interest list, alongside your four options.</div></li>
+    <li><div><strong>Team lines.</strong> Short bios are drafted below from what I know. Please correct each one, especially Kevin's and Ron Green's.</div></li>
+  </ol>
+</section>
+
+<!-- HERO -->
+<section class="part" id="hero">
+  <div class="part-head">
+    <span class="eyebrow">Section 1</span>
+    <h2>Hero</h2>
+  </div>
+  <div class="copy">
+    <span class="slot">Site copy</span>
+    <span class="eyebrow">Calgary, Alberta</span>
+    <h3 class="site">Industrial CO₂, converted into solid carbon.</h3>
+    <p>Global C60 installs and operates carbon conversion units at industrial sites. The CO₂ in your emission stream becomes solid carbon for industrial markets, starting with a carbon black equivalent, and you receive a monthly record of how much CO₂ was removed.</p>
+    <div class="btns"><span class="btn primary">Host a unit at your site</span><span class="btn">Buy our carbon</span></div>
+    <p style="font-size:.9rem;color:var(--muted)">Status: validation and verification of the technology is under way, and discussions for first deployments are planned.</p>
+  </div>
+  <div class="note"><span class="tag">Note</span><p>Both buttons open the same form, with the interest already selected. The status line sits under the buttons so visitors know where the company is without us giving dates.</p></div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="part" id="what">
+  <div class="part-head">
+    <span class="eyebrow">Section 2</span>
+    <h2>What we do</h2>
+  </div>
+  <div class="copy">
+    <span class="slot">Site copy</span>
+    <h3 class="site">What Global C60 does</h3>
+    <p>Global C60 Inc. is a Calgary company that removes CO₂ from industrial emission streams and turns it into carbon products. We use carbon conversion technology licensed from <a href="https://elementalair.com">Elemental Air</a>.</p>
+    <p>GC60 installs, operates and maintains the units, removes the carbon from site, and reports the results to you every month. Clients can host a unit at their site, or contract us to remove CO₂ on a per-tonne basis.</p>
+    <div class="grid2">
+      <div><h3>Who we work with</h3>
+        <ul>
+          <li>Oil and gas operators</li>
+          <li>Gas-fired power producers, including those supplying data centres</li>
+          <li>Renewable natural gas (RNG) operators</li>
+          <li>Heavy industrial facilities</li>
+          <li>Any site that emits large volumes of CO₂</li>
+        </ul>
+      </div>
+      <div><h3>What comes out</h3>
+        <ul>
+          <li>Less CO₂ leaving your stack</li>
+          <li>A monthly, documented record of the CO₂ removed</li>
+          <li>Solid carbon that is sold into industrial markets</li>
+          <li>Carbon credits created from the CO₂ removed</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="note"><span class="tag">Note</span><p>Nothing here describes how the conversion works. "Carbon conversion technology licensed from Elemental Air" is the only technical statement on the page.</p></div>
+</section>
+
+<!-- ENGAGEMENT -->
+<section class="part" id="engage">
+  <div class="part-head">
+    <span class="eyebrow">Section 3</span>
+    <h2>How we work with you</h2>
+  </div>
+  <div class="copy">
+    <span class="slot">Site copy</span>
+    <h3 class="site">Ways to work with us</h3>
+    <div class="grid2">
+      <div><h3>Host a unit</h3><p>GC60 places a unit at your site and runs it. You provide space, power and access to your flue gas stream.</p></div>
+      <div><h3>Carbon-as-a-Service (CaaS)</h3><p>You contract GC60 to remove CO₂ from your emissions on a per-tonne basis. You pay for the tonnes removed, which lowers your CO₂ emissions and your exposure to carbon taxes and compliance costs.</p></div>
+    </div>
+    <h3>How a deployment works</h3>
+    <ol class="steps">
+      <li><span><strong>First conversation.</strong> You tell us about your emission source, the volumes involved and the site.</span></li>
+      <li><span><strong>Site and stream review.</strong> We look at your flue gas flow rate and CO₂ concentration, available power, space and truck access.</span></li>
+      <li><span><strong>Agreement.</strong> We agree the service model, site access and the monthly reporting you will receive.</span></li>
+      <li><span><strong>Installation.</strong> We place the unit and a small, modular, temporary building on site, and connect to your flue gas stream and power.</span></li>
+      <li><span><strong>Operation and reporting.</strong> We run the unit, truck the carbon off site, and send you a CO₂ reduction report every month.</span></li>
+    </ol>
+    <div class="grid2">
+      <div><h3>What your site provides</h3>
+        <ul>
+          <li>Space for the unit</li>
+          <li>Room for a small, modular, temporary building</li>
+          <li>Access to power</li>
+          <li>A connection to your flue gas stream</li>
+          <li>Access for trucks</li>
+        </ul>
+      </div>
+      <div><h3>What you receive</h3>
+        <ul>
+          <li>A monthly CO₂ reduction report for the emission stream</li>
+          <li>A unit installed, operated and maintained by GC60</li>
+          <li>CO₂ removed from your stream, which is converted into solid carbon and creates carbon credits</li>
+        </ul>
+      </div>
+    </div>
+    <div class="stack">
+      <h3>What the monthly report shows</h3>
+      <div class="report" role="region" aria-label="Monthly report fields" tabindex="0">
+        <table>
+          <thead><tr><th>Field</th><th>What it tells you</th></tr></thead>
+          <tbody>
+            <tr><td>Emission volume</td><td>Total flue gas treated in the month</td></tr>
+            <tr><td>Flow rate</td><td>Rate of the emission stream through the unit</td></tr>
+            <tr><td>Inlet CO₂ concentration</td><td>CO₂ content of the stream as it enters</td></tr>
+            <tr><td>Total CO₂ removed</td><td>CO₂ removed from that stream in the month</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="note"><span class="tag">Note</span><p>The report table is the most concrete thing an operations or environment manager will look for, so it is shown as a list of fields, with no example numbers.</p></div>
+</section>
+
+<!-- BENEFITS -->
+<section class="part" id="benefits">
+  <div class="part-head">
+    <span class="eyebrow">Section 4</span>
+    <h2>Benefits, with the two callouts</h2>
+  </div>
+  <div class="copy">
+    <span class="slot">Site copy</span>
+    <h3 class="site">What it means for an emitter</h3>
+    <div class="grid2">
+      <div><h3>Lower compliance cost</h3><p>Carbon pricing in Canada, and in several US states and programs, puts a cost on each tonne of CO₂ a facility emits. CO₂ removed from your stream by a GC60 unit is measured and documented, which can reduce what you owe or need to offset.</p></div>
+      <div><h3>Documented reductions</h3><p>The monthly report gives your environment and regulatory teams measured data for compliance filings and sustainability reporting.</p></div>
+      <div><h3>Pay for results</h3><p>Under a Carbon-as-a-Service (CaaS) contract you pay per tonne of CO₂ removed. GC60 installs, operates and maintains the unit. Your site provides space, power and access.</p></div>
+      <div><h3>Waste becomes a product</h3><p>Today the CO₂ in your emissions is a waste stream. GC60 turns that waste into solid carbon that is sold to industrial buyers, instead of being released to the air or stored underground.</p></div>
+      <div><h3>Reduced at the source</h3><p>CO₂ is converted where it is produced. It is not captured and sent off site for sequestration, so your facility does not need a connection to CO₂ pipeline and storage infrastructure. Modular units can significantly reduce the cost of carbon compliance.</p></div>
+      <div><h3>Other emissions reduced</h3><p>Along with CO₂, a GC60 unit reduces sulphur oxides (SOx), nitrogen oxides (NOx) and other carbon oxides such as carbon monoxide in the emission stream. It does not remove hydrogen sulphide (H₂S).</p></div>
+    </div>
+    <div class="callout">
+      <span class="eyebrow">Alberta facilities</span>
+      <h3>Managing TIER obligations</h3>
+      <p>Facilities regulated under Alberta's Technology Innovation and Emissions Reduction (TIER) Regulation must meet an emissions benchmark or cover the gap with fund payments, credits or offsets. A GC60 unit removes CO₂ at the source and gives you monthly measured data, which can help you manage your TIER obligations and plan for tightening benchmarks. GC60 is in discussions with the TIER program on recognizing CO₂ removed by our process for credit.</p>
+    </div>
+    <div class="callout">
+      <span class="eyebrow">Under investigation</span>
+      <h3>Methane-as-a-Service (MaaS)</h3>
+      <p>GC60 is investigating how to capture methane that is not combusted in engines and heaters, and methane redirected from flaring, and convert it into solid carbon. If you operate engines, heaters or flares and would like to be part of that work, register your interest.</p>
+    </div>
+  </div>
+  <div class="note"><span class="tag">Note</span><p>The SOx, NOx and carbon monoxide statement is a performance claim, so it should match what the October testing and lab results show before the site goes live. The general statement avoids naming any one program so it holds for BC, Saskatchewan, federal and US readers. The US line says "several states and programs" because there is no federal US carbon price. Once TIER recognition is confirmed, the callout can state it directly.</p></div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="part" id="products">
+  <div class="part-head">
+    <span class="eyebrow">Section 5</span>
+    <h2>Carbon products</h2>
+  </div>
+  <div class="copy">
+    <span class="slot">Site copy</span>
+    <h3 class="site">The carbon we produce</h3>
+    <p>Every GC60 unit produces solid carbon. We are starting with a domestically produced carbon equivalent to carbon black. Lab-assessed specifications for our carbon nanotubes and fullerenes will be published once the current validation work is complete.</p>
+
+    <div class="product">
+      <h3>Carbon black equivalent <span class="status">Available for discussion now</span></h3>
+      <p>A fine black carbon powder, produced in North America from captured CO₂, for use where carbon black is used today. Because it is a direct alternative to an existing material, it is expected to need less extensive qualification testing than a new specialty material before it can be added to, or replace, a current carbon black supply.</p>
+      <p><strong>Industries that use carbon black:</strong></p>
+      <ul>
+        <li>Tires and rubber products, including belts, hoses, seals and mouldings</li>
+        <li>Plastics and masterbatch, for colour, UV protection and antistatic grades</li>
+        <li>Printing inks and toners</li>
+        <li>Paints and coatings</li>
+        <li>Wire and cable jacketing</li>
+        <li>Conductive additives for batteries and electronics</li>
+        <li>Construction materials, as a pigment for concrete and roofing</li>
+      </ul>
+    </div>
+
+    <div class="product">
+      <h3>Carbon nanotubes <span class="status later">Specification to follow</span></h3>
+      <p>A layer of carbon atoms rolled into a seamless tube a few nanometres across and many times longer than it is wide. Nanotubes are very strong for their weight and conduct electricity well.</p>
+      <p><strong>Single-wall nanotubes</strong> are one layer thick. They give the highest conductivity at very low loadings and are used in battery electrodes, conductive films and electronics.</p>
+      <p><strong>Multi-wall nanotubes</strong> are several tubes nested inside each other. They are more robust and lower in cost, and are used as conductive additives in lithium-ion batteries, in polymer composites, antistatic plastics and coatings.</p>
+    </div>
+
+    <div class="product">
+      <h3>Fullerenes (C60 and C70) <span class="status later">Specification to follow</span></h3>
+      <p>Closed, hollow molecules made only of carbon. C60, the molecule our company is named after, has 60 carbon atoms arranged in 12 pentagons and 20 hexagons, the same pattern as a soccer ball. C70 is a slightly elongated version with 70 atoms.</p>
+      <p><strong>Used in:</strong> organic solar cells and electronics, lubricant and polymer additives, cosmetics, and materials research.</p>
+    </div>
+
+    <div class="callout">
+      <h3>Why buy carbon from GC60</h3>
+      <ul>
+        <li>Made from CO₂ captured from industrial emissions</li>
+        <li>Produced in North America</li>
+        <li>A supply source outside China for buyers who need to document material origin and carbon footprint</li>
+      </ul>
+    </div>
+    <div class="btns"><span class="btn primary">Register interest in our carbon</span></div>
+  </div>
+  <div class="note"><span class="tag">Note</span><p>We are not producing graphene, so no product description on the page mentions it. This is where the drawn illustrations go: a carbon black particle cluster, a single-wall tube, a multi-wall tube in cross-section, and a C60 cage. The status tags let us switch nanotubes and fullerenes to "available" after November without rewriting the section.</p></div>
+</section>
+
+<!-- GCM -->
+<section class="part" id="gcm">
+  <div class="part-head">
+    <span class="eyebrow">Section 6</span>
+    <h2>Carbon marketing and buyers</h2>
+  </div>
+  <div class="copy">
+    <span class="slot">Site copy</span>
+    <h3 class="site">We are looking for carbon buyers and partners</h3>
+    <p>Global Carbon Marketing (GCM) is a separate company being established to sell the carbon produced by GC60 units. GCM will manage grade, volume and quality so buyers receive consistent material. It will launch with its own name and website.</p>
+    <p>Until GCM is operating, all carbon inquiries come to Global C60 directly. We want to hear from:</p>
+    <ul>
+      <li>Tire and rubber product manufacturers</li>
+      <li>Plastics compounders and masterbatch producers</li>
+      <li>Ink, toner and pigment producers</li>
+      <li>Battery material producers and dispersion formulators</li>
+      <li>Polymer and composite compounders</li>
+      <li>Coatings, lubricant and refractory manufacturers</li>
+      <li>Research groups and specialty chemical distributors</li>
+    </ul>
+    <p>Tell us what you use, in what volumes and to what specification, and we will follow up as material and lab data become available.</p>
+    <div class="btns"><span class="btn primary">Register interest in our carbon</span></div>
+  </div>
+  <div class="note"><span class="tag">Note</span><p>GCM gets a plain text mention only, no logo, so it does not compete with the GC60 brand or commit GCM to a look before it has one.</p></div>
+</section>
+
+<!-- STAGE + INVESTORS + TEAM -->
+<section class="part" id="team">
+  <div class="part-head">
+    <span class="eyebrow">Section 7</span>
+    <h2>Where we are, investors and team</h2>
+  </div>
+  <div class="copy">
+    <span class="slot">Site copy</span>
+    <h3 class="site">Where we are</h3>
+    <p>Validation and verification of the technology is under way. Discussions with host sites for first deployments are planned, and we are talking with investors about funding them. If you would like to be part of either, register your interest.</p>
+    <h3>Team</h3>
+    <div class="team">
+      <div><strong>Ron Visser</strong><span class="role">CEO &amp; Co-founder</span><p>Regulatory compliance and management system consulting; founded and developed Beyond Compliance Inc. software solution; co-founded, built and exited Visser Consulting to Deloitte; co-founder of several technology-based companies.</p><div class="links"><span>rvisser@globalc60.com</span><a href="https://www.linkedin.com/in/ron-visser" aria-label="Ron Visser on LinkedIn"><img class="li" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA6CAYAAAAA0F95AAAKZElEQVR42uWaa4xdVRXHf2vtc8+982ppmbYU0fIuShWBIiExKDEhMRriB0EsJkaNiDExqB80xqQxUWP0A8YYFGN8EKMxxNhIfAZQIPgIPhDQQZCH0JZSKB2mM72Pc/Zafjjn3rl35s6ddjoD07pv7iSTu/fZe/33ev3XOgKQfvLX52UVudmDX0GMjohwPA93R4NgcQr8Cxz8+de45ZYcARDvnprwqdu3tarZLtHaWWSt4194ABHBDUTGpDLyFUbftc5FPou7MEc6lSDfIBk6y3M7MYTv0QTcY8uTkH4q+diu7Yg4O3dqDwCeVN5Cs+kQTyzhAQTFMsuGNc1H5AIAzj+/R04l5ifezc9RAzBH08P9fk2ORngVoT3bATfHjwcMVARC+c/VcwA4AgRFBFHFGi2IbfVySCuoCua+qu0AKhAi/TVgMHSoKJZneLPOti3jnLlhCBFj91TG3558DosBSVPcfJWbAUcLgBfCtyIbas7nrtrOtRe9io3DAhgvmPDbfz3Dzl88xH/2Z2i1sso1YaErXjCUKp5nbKjlfOeDl/LxN5/GxmHH3LAI4xLZse01/PTDV3DxeBVrZmjQ1elPfUkACLQydr79Iq46c5zMjOig4oXdS0Krabxh/TBffu8FDKeCZwIux78GqAjWaLH11evZsX0z5kYiEMQLpyKOAmmi5Llz2ekbect5m/FGk4CtPjd4tBoghZlzxniNdVW6Msje240BTJ0RhIs3KuQZipwYPgDAxQtn2EFFyiXaZVaCAyFXwHAJq88F6FEC4OUvzxxssi9zkJzo0hHWyjltOAT452QGwTGZmacpx50GmDmSJjzy9Av8cuJZRCrELOLmHeEdiHkkUeG+3c9z5yO7kaHhVegBlmoCAjGk7Nz1L/68d4Y0DSCOmRPNcXcqSeCp6Raf+Nk/ONhIEE3xWBscd44XANxAkpTdLznvv+WP/OShx3lJoKJCqgIi/O6JZ3n3d+/m/ienkTTBPA52uatwJIM0wD1Hq8K/p5vs+MEDXLZ1LxdtqBA8MDFp3P3vPTTyFEmrOLE0fenKwY8tgz/CXGaFAGj7A5wwXEFsmPsem+K+iXpBLhIlVEepVAJ5ns05duEiQ9ABVSswM8Rnc6dCsQRzwd2LSTKbmYoUC5cz5R4MgAeIEKfqEGaACF4BDRDrxJlpYl6DtAqJlAcOiDgeI3F6uo9aAaIQBGrVTt4hErCmgTUhyQkhoSYV3CEjJ2tleC5QSZFKQcvNdeUAEAFy47SxwBUXnEqTgLr1CGNSZygk/OGpF3n0+QypJIVwec6mscCVF28p6HP7Fl0QFywIz7da3PXPF4gaiA5eb7Bl/Rre+trNvPH0k9g6vpZNw1VidKbqGU8dOMjDeya557FJ/r7veSykaKWGHSMLTQZxAWtlnLt+hO9dd8nAjOmGn93Po3ueQavDRZ6QRV67cZRb3/OmBdc8MnmIyx65k8m6s2FMuOFtW/nApWdwxli1nJF3ZRoOZ54El8D+Rs6uiX186RcP8d/JHK0mi4PgSzUBFWZEaJmRegaSIMwSntxzggYsS0CS2d1EcYs0zVB3XLqcWoQQBG8YjWm4+OwNfOvq89m+eU3xszuYIy50yk8YJo4hbKwlXH/haVy+5WSuufVeHtrXQpMqbrH0Lb48bLC9seJUVFENiFJ+BVHBVVBV1HudX5ExBoIqiYJ2fSUUa+qNjMvOOpkffehStm9eg5W5RRApaHUIqAqqjoRAkEBaVrtj7py3foibr72UNbUUjzYw5ghLBmDuY6TnX+mXa5dponp7RfHR8hNEwZ1T1g7xzfddyLkjSmZegCNzdpLZfaT8I1JoUGbGm09Zywcv3ITPHCrKdgtc9SCGfhQAtOOVdiRvUyLvh7aV9VjpBaLNqU5dN8LWk0fJHRItOYZBLDNN6zx1PvCd3d24bvs5rB0ZwvIMWUJ41KObKt2XvLCJ+ezN6QIq6KW9q4C5IxSFllB+VQTc8M5u3gNCoo4Arz91mHNesxFv5QsbuxxDItTvQfNyPZkDhjBLirzfAaT0EoKZE1SYzoR7Ht/P01OH8KCcuWmcK08bQ4hFPWJOqU2KejVVcbZtEP4yYag5UZcpDC4UTeQIXYUvmhELHh1NhHv/O8Vnd/2J+/ccoNk0cKFaHeIjl5/NV96xjZT+IFrpNC84ZR3YU5guYx5wtN50LlLqg9EzBw3CX188yLXf/z179zuctAatCmJOM8/5+h0TnHfKOB+9ZDOx1JR+Y9PICKhiiRbpw8r4gFkT8wGhtU0G55FCmTvPaQFf/M0EeydbDJ00hkbFM8EihDCMpGv51QN7yA2CLrznWCUUiC8hKVxyMm2D8gtv22j/eeZFLjEx2eDuh/ch6ShZzDvzHMXJ8UqTJ16a4kA9zvKIvprZ3kVfPgAWMxM5AlV6cP8hJvMa6gHvF0o8Mpk50+4rRomVV2KUkuzeP4m1IjLXttvqQ41DU3Vm6o0Vqwq8MgCU43CzVcR6XdCjkFvkmHvQvkoBmJlpgDG/ndZOOgc0mryL+HSWL5AJypLZ4HKExAEjt/ahvf+zSwCOpdvWzUKXVQNkkLZJ8cKNL6J+Vkrm4pjMEpflbC96mwyF5cgEpZea+ELMS+gItKiqdEBYQVuTZfIBR5MJih+j4/bZ56xkpX3lMsGXJZ94BcOgL6YBzGkTLHGTle6zJMsNQFte9eWx3RXyDR03lvBKD+k1HZf5znQFQPBj1oBlxaCkzyZdKr/cQlsZl+74tgLjpewHVgUAL8vQ0ih/+OnXASNAC9i0KADuRaESdxxHZJbmYkU86Nera6/zsjjmXVdq5RumfoRFTDMnL8vm3vWmajRHypb9oiMdygHF8jXl7UfgULKYqVRD2Q7vl0ppCsBQJSn66W1gUELiVFX6Wlm7slNLkhLYgEvs8QHSVV8bG6mRqMyzi0SLM40NV0oCsUDRzgHvvAyuwAzQANJk0M1LEPYePMxNdz9JxTPyknW07bQpyqhGHtg9A0mCm6FEvBLYM9XgpnsniCTlW0XadR6nqoEHnqkjlQR3xSTOOXPxplZ0+NY9T3DGSEpmhrY1yoUI1JLAg88dgFAr6up0NRi6fIy3GglghMoBKMqMQFX4zC99kIP2PIcsY7bI3eVDXYA6JMNIJcWJqBuuSbGu8RKEUKyVZP7T0xohKJE4LyVRd5SEqIfxmTrYEEXBL/aGCQ3FtzoGeriPpnqU6mjwvLmDL175Y9wVkfFywxcGmoCYEsIQXqt2cdTukSE+SqToBeKCabUAKHHCmpNLdZEeDegQNFfMWxCM+fVsQcxwDejYGsRTwGabH+1OO4p4JPN6aW6+EN0oxm0IsP+IwqCpYdiASqv23qhQ3JK0BfQOJYx9+WhZ64vzj2ECFhw8oeh75gtE8th1liNujHR19fw4fMN5KWlPb6jq0BklJPJ/AYL113Yl5ntPYBAcETTPCSYvFj7gtl4AgvmNEi0jqciCRbXjWfdro8Fj8444XLkLEG67puddTo1ffedtnvuNuD9d+oYTAwQBXDLqh253za7n81c0yvvtke9/J5qjv2VYkKoAAAAASUVORK5CYII=" alt="LinkedIn" width="18" height="18"></a></div></div>
+      <div><strong>Ron Green</strong><span class="role">CFO &amp; Co-founder</span><p>COO of EverGen Infrastructure (waste-to-energy and RNG operations); co-founder and board member of Beyond Energy; executive at several co-founded energy service companies.</p><div class="links"><span>rgreen@globalc60.com</span><a href="https://www.linkedin.com/in/ronwgreen/" aria-label="Ron Green on LinkedIn"><img class="li" src="data:image/png;base64,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" alt="LinkedIn" width="18" height="18"></a></div></div>
+      <div><strong>Kevin Carroll, P.Eng.</strong><span class="role">Technical Advisor &amp; Co-founder</span><p>Former Chief Development Officer of E3 Lithium (Clearwater lithium project); VP Operations at DeltaStream Energy; co-founder and VP Engineering of Huron Resources.</p><div class="links"><span>kcarroll@globalc60.com</span><a href="https://www.linkedin.com/in/kevin-carroll-494a862/" aria-label="Kevin Carroll on LinkedIn"><img class="li" src="data:image/png;base64,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" alt="LinkedIn" width="18" height="18"></a></div></div>
+    </div>
+  </div>
+  <div class="note"><span class="tag">Note</span><p>Kept to one line each so the page stays about the company. Names only, no photos, matching the no-photo decision.</p></div>
+</section>
+
+<!-- FORM -->
+<section class="part" id="form">
+  <div class="part-head">
+    <span class="eyebrow">Section 8</span>
+    <h2>Interest form, contact and footer</h2>
+  </div>
+  <div class="copy">
+    <span class="slot">Modal form</span>
+    <h3 class="site">Register your interest</h3>
+    <ul class="field-list">
+      <li>Company name (required)</li>
+      <li>Your name (required)</li>
+      <li>Title (optional)</li>
+      <li>Email (required)</li>
+      <li>Phone</li>
+      <li>Interest: Carbon purchasing · Deploying the technology on our site · Carbon reduction · Investing in Global C60 · Other</li>
+      <li>Comments (free text)</li>
+    </ul>
+    <p><strong>Under the submit button:</strong> We use these details only to reply to you. We do not share them.</p>
+    <p><strong>After submitting:</strong> Thank you. We have your details and will be in touch.</p>
+    <span class="slot">Footer</span>
+    <p>Global C60 Inc. · Calgary, Alberta · rvisser@globalc60.com · social links once the channels exist · © 2026 Global C60 Inc.</p>
+  </div>
+  <div class="note"><span class="tag">Note</span><p>A static HTML page cannot send email on its own. The form will post to a small form service that forwards each submission to rvisser@globalc60.com. Which one depends on your hosting choice: Netlify Forms if you pick Netlify, Formspree or a small Cloudflare function otherwise. I will build it so the endpoint is one line to change, with a hidden spam trap field. The email address is also shown as plain text for anyone who prefers to write directly.</p></div>
+</section>
+
+<!-- SEO -->
+<section class="part" id="seo">
+  <div class="part-head">
+    <span class="eyebrow">Section 9</span>
+    <h2>SEO and social sharing</h2>
+  </div>
+  <div class="copy">
+    <dl class="seo">
+      <dt>Page title (58 characters)</dt>
+      <dd>Global C60 | Converting Industrial CO₂ into Carbon Products</dd>
+      <dt>Meta description (about 155 characters)</dt>
+      <dd>Global C60 installs and operates units at industrial sites that convert CO₂ emissions into carbon black equivalent carbon, carbon nanotubes and fullerenes. Calgary, Alberta.</dd>
+      <dt>Search terms the copy supports</dt>
+      <dd>CO₂ to carbon, carbon conversion, CO₂ utilization Alberta, TIER compliance, carbon black alternative North America, carbon nanotube supplier North America, fullerene C60 supplier, methane flaring reduction, carbon as a service, SOx and NOx reduction</dd>
+      <dt>Social share image</dt>
+      <dd>A 1200 × 630 graphic built from the site's C60 and nanotube illustrations with the company name, used for LinkedIn, X and Facebook previews.</dd>
+      <dt>Also included</dt>
+      <dd>Structured data identifying Global C60 Inc. as an organization (name, logo, location, email, social profiles), canonical URL https://globalc60.com, favicon, and a robots.txt and sitemap to upload with the page.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section class="part" id="next">
+  <div class="part-head">
+    <span class="eyebrow">Plan</span>
+    <h2>Next steps</h2>
+  </div>
+  <ol class="steps">
+    <li><span><strong>You:</strong> mark up this copy and answer the seven decisions.</span></li>
+    <li><span><strong>You:</strong> upload the reference sites you like and the existing logo artifact.</span></li>
+    <li><span><strong>Me:</strong> propose the page structure (section order, what sits above the fold, navigation) and two visual directions, including a refined logo mark.</span></li>
+    <li><span><strong>Me:</strong> draw the original illustrations: graphite layer, single-wall and multi-wall nanotubes, and the C60 cage.</span></li>
+    <li><span><strong>Me:</strong> build the single HTML file with the modal form, SEO tags and share image.</span></li>
+    <li><span><strong>You:</strong> choose Netlify or Cloudflare. I connect the form and give you the files to upload.</span></li>
+  </ol>
+</section>
+
+<footer class="end">Prepared for Global C60 Inc. Draft copy for review, not for publication.</footer>
+</div>

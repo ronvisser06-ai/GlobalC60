@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Global C60 | Converting Industrial CO₂ into Carbon Products</title>
+<meta name="description" content="Global C60 installs and operates units at industrial sites that convert CO₂ emissions into carbon black equivalent carbon, carbon nanotubes and fullerenes. Calgary, Alberta.">
+<link rel="canonical" href="https://globalc60.com/">
+<meta name="theme-color" content="#061423">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global C60">
+<meta property="og:title" content="Global C60 | Converting Industrial CO₂ into Carbon Products">
+<meta property="og:description" content="Global C60 installs and operates units at industrial sites that convert CO₂ emissions into solid carbon products. Calgary, Alberta.">
+<meta property="og:url" content="https://globalc60.com/">
+<meta property="og:image" content="https://globalc60.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Global C60: industrial CO₂ converted into solid carbon">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Global C60 | Converting Industrial CO₂ into Carbon Products">
+<meta name="twitter:description" content="Global C60 installs and operates units at industrial sites that convert CO₂ emissions into solid carbon products.">
+<meta name="twitter:image" content="https://globalc60.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Global C60 Inc.",
+  "alternateName": "GlobalC60 Recovery",
+  "url": "https://globalc60.com/",
+  "logo": "https://globalc60.com/logo-512.png",
+  "email": "rvisser@globalc60.com",
+  "description": "Global C60 installs and operates units at industrial sites that convert CO₂ emissions into solid carbon products.",
+  "address": {"@type": "PostalAddress", "addressLocality": "Calgary", "addressRegion": "AB", "addressCountry": "CA"},
+  "founder": [
+    {"@type": "Person", "name": "Ron Visser", "jobTitle": "CEO & Co-founder", "sameAs": "https://www.linkedin.com/in/ron-visser"},
+    {"@type": "Person", "name": "Ron Green", "jobTitle": "CFO & Co-founder", "sameAs": "https://www.linkedin.com/in/ronwgreen/"},
+    {"@type": "Person", "name": "Kevin Carroll", "jobTitle": "Technical Advisor & Co-founder", "sameAs": "https://www.linkedin.com/in/kevin-carroll-494a862/"}
+  ]
+}
+</script>
+
+<script>
+/* Dark-first. A visitor's choice from the footer switch is remembered. */
+(function(){try{var t=localStorage.getItem('gc60-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+/* Layout: dark-first single page on a 1200px, 12-column grid. Deep Navy opening band,
+   content on Navy 900 with Navy 800 cards; light theme swaps to white with Steel 50 cards.
+   Tokens follow the GlobalC60 Recovery Brand and Website Design Guide v1.2, section 7. */
+:root{
+  --navy-950:#061423;--navy-900:#0B1F33;--navy-800:#10304D;--navy-700:#164468;--navy-600:#1E5A87;--navy-500:#2A73A8;
+  --blue-400:#56A7CE;--blue-300:#5DCEE9;--blue-200:#A8DCEF;
+  --steel-900:#141A21;--steel-800:#262E38;--steel-700:#3E4955;--steel-600:#5A6675;--steel-500:#7A8695;--steel-400:#9EA8B4;--steel-300:#C3CAD3;--steel-200:#DDE2E8;--steel-100:#EDF0F3;--steel-50:#F6F8FA;
+  --green-700:#2F7A17;--green-600:#76C15F;--green-500:#66D42F;--green-400:#6DFF29;--green-300:#A6F57C;
+  --orange-700:#B44508;--orange-600:#D9560E;--orange-500:#F4731F;--orange-400:#FF9442;--orange-300:#FFB57A;
+
+  /* semantic, dark (default) */
+  --bg:#061423;--bg-2:#0B1F33;--bg-3:#10304D;
+  --fg:#EEF2F6;--fg-2:#A9B8C8;--fg-3:#9EA8B4;
+  --line:#1C3A57;--line-strong:#35638F;
+  --brand:#56A7CE;--link:#5DCEE9;
+  --accent:#F4731F;--accent-hover:#FF9442;--accent-fg:#061423;--accent-text:#FF9442;
+  --green:#6DFF29;--green-text:#A6F57C;--blue:#5DCEE9;--blue-text:#5DCEE9;--focus:#5DCEE9;
+  --section:#0B1F33;--card:#10304D;--card-line:#1C3A57;
+  --logo-bar:#9EA8B4;--logo-word:#F6F8FA;--logo-sub:#5DCEE9;--logo-p1:#7A8695;--logo-p2:#5DCEE9;--logo-p3:#6DFF29;
+  --il-line:#5DCEE9;--il-faint:#35638F;--il-atom:#EEF2F6;--il-pent:#6DFF29;--il-part:#10304D;
+  --lattice:#5DCEE9;
+
+  --font-display:"Barlow","Arial Narrow",system-ui,sans-serif;
+  --font-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --radius-control:6px;--radius-card:8px;
+  --content-max:1200px;--measure:68ch;
+  --gutter:24px;--pad-x:24px;--section-pad:64px;
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#FFFFFF;--bg-2:#F6F8FA;--bg-3:#EDF0F3;
+  --fg:#0B1F33;--fg-2:#3E4955;--fg-3:#5A6675;
+  --line:#DDE2E8;--line-strong:#7A8695;
+  --brand:#10304D;--link:#1E5A87;
+  --accent:#F4731F;--accent-hover:#D9560E;--accent-fg:#061423;--accent-text:#B44508;
+  --green:#66D42F;--green-text:#2F7A17;--blue:#56A7CE;--blue-text:#2A73A8;--focus:#2A73A8;
+  --section:#FFFFFF;--card:#F6F8FA;--card-line:#DDE2E8;
+  --logo-bar:#3E4955;--logo-word:#0B1F33;--logo-sub:#2A73A8;--logo-p1:#10304D;--logo-p2:#56A7CE;--logo-p3:#66D42F;
+  --il-line:#1E5A87;--il-faint:#C3CAD3;--il-atom:#0B1F33;--il-pent:#66D42F;--il-part:#EDF0F3;
+  --lattice:#10304D;
+  color-scheme:light;
+}
+/* The opening band and closing contact band stay Deep Navy in both themes. */
+.on-dark{
+  --bg:#061423;--bg-2:#0B1F33;--bg-3:#10304D;
+  --fg:#EEF2F6;--fg-2:#A9B8C8;--fg-3:#9EA8B4;
+  --line:#1C3A57;--line-strong:#35638F;
+  --brand:#56A7CE;--link:#5DCEE9;
+  --accent-hover:#FF9442;--accent-text:#FF9442;
+  --green:#6DFF29;--green-text:#A6F57C;--blue:#5DCEE9;--blue-text:#5DCEE9;--focus:#5DCEE9;
+  --card:#10304D;--card-line:#1C3A57;
+  --logo-bar:#9EA8B4;--logo-word:#F6F8FA;--logo-sub:#5DCEE9;--logo-p1:#7A8695;--logo-p2:#5DCEE9;--logo-p3:#6DFF29;
+  --il-line:#5DCEE9;--il-faint:#35638F;--il-atom:#EEF2F6;--il-pent:#6DFF29;--il-part:#10304D;
+  --lattice:#5DCEE9;
+  background:var(--bg);color:var(--fg);
+}
+@media (max-width:640px){:root{--pad-x:16px;--section-pad:40px}}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(92px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:26px;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+[hidden]{display:none!important}
+a{color:var(--link);text-underline-offset:3px;transition:color 150ms}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:2px}
+sub{font-size:.7em;line-height:0;vertical-align:-.25em}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--accent);color:var(--accent-fg);padding:10px 16px;border-radius:var(--radius-control);font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+
+/* type */
+h1,h2,h3{font-family:var(--font-display);font-weight:700;margin:0;text-wrap:balance;color:var(--fg)}
+.display{font-size:54px;line-height:56px;letter-spacing:-.01em}
+h2{font-size:30px;line-height:36px}
+h3{font-size:22px;line-height:28px;font-weight:600}
+p{margin:0;max-width:var(--measure)}
+.lead{font-size:19px;line-height:30px;color:var(--fg-2)}
+.small{font-size:14px;line-height:22px}
+.label{font-family:var(--font-mono);font-weight:500;font-size:12px;line-height:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-text)}
+.muted{color:var(--fg-2)}
+@media (max-width:640px){.display{font-size:36px;line-height:40px}h2{font-size:26px;line-height:32px}}
+
+/* layout */
+.wrap{max-width:calc(var(--content-max) + 2*var(--pad-x));margin:0 auto;padding-inline:var(--pad-x)}
+.band{padding-block:var(--section-pad);background:var(--section)}
+.band + .band{border-top:1px solid var(--line)}
+.band.alt{background:var(--bg)}
+.section-head{display:grid;gap:12px;margin-bottom:40px;max-width:760px}
+.stack{display:grid;gap:16px;align-content:start}
+.grid{display:grid;gap:var(--gutter)}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:960px){.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.g2,.g3{grid-template-columns:minmax(0,1fr)}}
+.grid > *{min-width:0}
+ul.plain{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+ul.plain li{position:relative;padding-left:20px;max-width:var(--measure)}
+ul.plain li::before{content:"";position:absolute;left:2px;top:10px;width:8px;height:2px;background:var(--blue)}
+ul.plain.green li::before{background:var(--green)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;border-radius:var(--radius-control);font:600 16px/20px var(--font-body);text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:background-color 150ms,color 150ms,border-color 150ms}
+.btn-primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:var(--accent-fg)}
+.btn-secondary{background:transparent;color:var(--fg);border-color:var(--brand)}
+.btn-secondary:hover{background:var(--brand);color:var(--bg)}
+.btn-link{background:none;border:0;padding:0;min-height:44px;color:var(--link);font:600 16px/20px var(--font-body);cursor:pointer;text-decoration:none}
+.btn-link:hover{text-decoration:underline}
+.btn[disabled]{opacity:.6;cursor:progress}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:8px;padding:3px 10px;border-radius:999px;font:500 12px/18px var(--font-mono);letter-spacing:.04em;border:1px solid var(--line-strong);color:var(--fg-2);white-space:nowrap}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--fg-3)}
+.chip.ok{border-color:var(--green-text);color:var(--green-text)}
+.chip.ok::before{background:var(--green)}
+
+/* header */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--bg);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px}
+.brand-link{display:flex;align-items:center;flex:none}
+.logo{display:block;height:64px;width:auto}
+@media (max-width:640px){.logo{height:56px}}
+.logo .bar{fill:var(--logo-bar)}.logo .word{fill:var(--logo-word)}.logo .sub{fill:var(--logo-sub)}
+.logo .plume-black{fill:var(--logo-p1)}.logo .plume-blue{fill:var(--logo-p2)}.logo .plume-green{fill:var(--logo-p3)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{color:var(--fg-2);text-decoration:none;font-weight:500;font-size:15px;padding-block:12px}
+.nav a:hover{color:var(--fg)}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line-strong);color:var(--fg);border-radius:var(--radius-control);min-height:44px;padding:0 14px;font:600 15px var(--font-body);cursor:pointer}
+@media (max-width:960px){
+  .menu-btn{display:inline-flex;align-items:center}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px var(--pad-x) 16px}
+  .nav.open{display:flex}
+  .nav a{padding-block:12px;border-bottom:1px solid var(--line)}
+  .nav .btn{margin-top:12px}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:72px 64px;border-bottom:1px solid var(--line)}
+.hero-lattice{position:absolute;inset:0;width:100%;height:100%;opacity:.08;pointer-events:none}
+.hero-lattice path{fill:none;stroke:var(--lattice);stroke-width:1}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px;align-items:center}
+.hero-copy{display:grid;gap:24px;align-content:start}
+.hero-status{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;padding-top:8px;border-top:1px solid var(--line);color:var(--fg-2);font-size:14px;line-height:22px}
+.hero-figure{margin:0}
+.hero-figure svg{display:block;width:100%;height:auto}
+@media (max-width:960px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero-figure{max-width:560px}}
+@media (max-width:640px){.hero{padding-block:48px 40px}}
+
+/* process diagram */
+.dg .stackbody{fill:var(--bg-3);stroke:var(--line-strong);stroke-width:1.5}
+.dg .unit{fill:var(--bg-2);stroke:var(--fg-2);stroke-width:1.5}
+.dg .gas{fill:none;stroke:var(--blue);stroke-width:3;stroke-linecap:square}
+.dg .gas-thin{fill:none;stroke:var(--blue);stroke-width:1.5;stroke-dasharray:4 5}
+.dg .prod{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:square}
+.dg .rep{fill:none;stroke:var(--fg-3);stroke-width:1.5;stroke-dasharray:4 5}
+.dg .gasfill{fill:var(--blue)}.dg .prodfill{fill:var(--green)}.dg .repfill{fill:var(--fg-3)}
+.dg .act{fill:var(--accent)}
+.dg .particle{fill:var(--bg-3);stroke:var(--green);stroke-width:1.5}
+.dg .doc{fill:var(--bg-2);stroke:var(--fg-3);stroke-width:1.5}
+.dg .docline{stroke:var(--fg-3);stroke-width:1.5}
+.dg .unit-lattice{fill:none;stroke:var(--line-strong);stroke-width:1}
+.dg text{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;fill:var(--fg-2)}
+.dg text.strong{fill:var(--fg);font-weight:500}
+
+/* cards and panels */
+.card{background:var(--card);border:1px solid var(--card-line);border-radius:var(--radius-card);padding:24px;display:grid;gap:12px;align-content:start}
+.card h3{font-size:20px;line-height:26px}
+.card p{color:var(--fg-2)}
+.panel-title{font-family:var(--font-display);font-weight:600;font-size:20px;line-height:26px;margin:0 0 12px}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gutter);counter-reset:step}
+.steps li{counter-increment:step;display:grid;gap:8px;align-content:start;padding-top:16px;border-top:2px solid var(--line-strong)}
+.steps li::before{content:counter(step,decimal-leading-zero);font:500 12px/16px var(--font-mono);letter-spacing:.1em;color:var(--blue-text)}
+.steps h3{font-size:18px;line-height:24px}
+.steps p{color:var(--fg-2);font-size:15px;line-height:24px}
+@media (max-width:960px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.steps{grid-template-columns:minmax(0,1fr)}}
+
+/* report */
+.report{border:1px solid var(--card-line);border-radius:var(--radius-card);overflow:hidden;background:var(--card)}
+.report-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:16px 20px;border-bottom:1px solid var(--card-line)}
+.report-head strong{font-family:var(--font-display);font-weight:600;font-size:18px}
+.report-scroll{overflow-x:auto}
+.report table{width:100%;border-collapse:collapse;min-width:440px}
+.report th,.report td{text-align:left;padding:12px 20px;border-bottom:1px solid var(--card-line);vertical-align:top;font-size:15px;line-height:22px}
+.report tr:last-child td{border-bottom:0}
+.report th{font:500 12px/16px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)}
+.report td:first-child{font-family:var(--font-mono);font-size:14px;color:var(--fg);white-space:nowrap}
+.report td:last-child{color:var(--fg-2)}
+.report tr.total td:first-child{color:var(--green-text)}
+
+/* callouts */
+.callout{border:1px solid var(--card-line);border-left:3px solid var(--blue);border-radius:var(--radius-card);padding:24px;display:grid;gap:10px;align-content:start;background:var(--bg-2)}
+.callout.investigate{border-left-color:var(--line-strong)}
+.callout p{color:var(--fg-2)}
+
+/* products */
+.product{background:var(--card);border:1px solid var(--card-line);border-radius:var(--radius-card);overflow:hidden;display:grid;align-content:start}
+.product-art{background:var(--bg);border-bottom:1px solid var(--card-line);display:flex;align-items:center;justify-content:center;gap:12px;padding:20px;min-height:220px}
+.product-art svg{height:180px;width:auto;max-width:100%}
+.product-body{padding:24px;display:grid;gap:12px;align-content:start}
+.product-body p{color:var(--fg-2)}
+.product-title{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.product.feature{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.product.feature .product-art{border-bottom:0;border-right:1px solid var(--card-line);min-height:100%}
+.product.feature .product-art svg{height:260px}
+.feature-lists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+@media (max-width:960px){.product.feature{grid-template-columns:minmax(0,1fr)}.product.feature .product-art{border-right:0;border-bottom:1px solid var(--card-line);min-height:220px}}
+@media (max-width:640px){.feature-lists{grid-template-columns:minmax(0,1fr)}.product-art svg{height:150px}.product-art{min-height:180px}}
+.illo .ln{stroke:var(--il-line);stroke-width:1.5}
+.illo .lf,.illo .lr{stroke:var(--il-faint);stroke-width:1;fill:none}
+.illo .at{fill:var(--il-atom)}
+.illo .pf{fill:var(--il-pent);fill-opacity:.22;stroke:var(--il-pent);stroke-width:1.5}
+.illo .pc{fill:var(--il-part)}
+.illo .po{fill:none;stroke:var(--il-line);stroke-width:1.5}
+.fig-note{font:500 11px/16px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3);text-align:center}
+.art-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;align-items:center}
+.art-pair figure{margin:0;display:grid;gap:6px;justify-items:center}
+.art-pair svg{height:140px}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gutter);margin-top:var(--gutter)}
+.why div{border-top:2px solid var(--green);padding-top:14px;color:var(--fg);font-weight:500}
+@media (max-width:640px){.why{grid-template-columns:minmax(0,1fr)}}
+
+/* status list */
+.status-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gutter)}
+.status-list li{display:grid;gap:10px;padding:20px;border:1px solid var(--card-line);border-radius:var(--radius-card);background:var(--card)}
+.status-list strong{font-family:var(--font-display);font-weight:600;font-size:18px}
+@media (max-width:960px){.status-list{grid-template-columns:minmax(0,1fr)}}
+
+/* team */
+.person{display:grid;gap:6px;align-content:start}
+.person h3{font-size:20px;line-height:26px}
+.person .role{font:500 12px/16px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--blue-text);margin-bottom:6px}
+.person p{color:var(--fg-2);font-size:15px;line-height:24px}
+.person .contact{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:8px;font-size:14px}
+.li-link{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-10px 0}
+.li-link img{width:20px;height:auto;display:block}
+
+/* contact band */
+.contact-band{position:relative;overflow:hidden;padding-block:80px;border-top:1px solid var(--line)}
+.contact-band .wrap{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:center}
+.contact-box{display:grid;gap:12px;border:1px solid var(--line);border-radius:var(--radius-card);padding:24px;background:var(--bg-2)}
+.email-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-family:var(--font-mono);font-size:15px}
+@media (max-width:960px){.contact-band .wrap{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.contact-band{padding-block:48px}}
+
+/* footer */
+.site-footer{background:var(--bg);border-top:1px solid var(--line);padding-block:40px;color:var(--fg-2);font-size:14px;line-height:22px}
+.site-footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 40px;align-items:start}
+.site-footer .logo{height:64px}
+.foot-meta{display:grid;gap:6px;margin-top:16px}
+.theme-switch{display:inline-flex;border:1px solid var(--line-strong);border-radius:var(--radius-control);overflow:hidden}
+.theme-switch button{background:transparent;color:var(--fg-2);border:0;min-height:40px;padding:0 16px;font:500 13px var(--font-body);cursor:pointer}
+.theme-switch button[aria-pressed="true"]{background:var(--bg-3);color:var(--fg)}
+.foot-right{display:grid;gap:10px;justify-items:end}
+@media (max-width:640px){.site-footer .wrap{grid-template-columns:minmax(0,1fr)}.foot-right{justify-items:start}}
+
+/* modal form */
+dialog.modal{width:min(640px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:0;border:1px solid var(--line-strong);border-radius:var(--radius-card);background:var(--bg-2);color:var(--fg);overflow:auto}
+dialog.modal::backdrop{background:rgba(6,20,35,.72)}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:24px 24px 0}
+.modal-close{background:none;border:1px solid var(--line-strong);color:var(--fg);border-radius:var(--radius-control);width:44px;height:44px;font-size:22px;line-height:1;cursor:pointer;flex:none}
+form.enquiry{padding:20px 24px 24px;display:grid;gap:16px}
+.field{display:grid;gap:6px}
+.field label,.field legend{font-weight:500;font-size:14px;line-height:20px;color:var(--fg)}
+.field .opt{color:var(--fg-3);font-weight:400}
+.field input,.field select,.field textarea{width:100%;min-height:44px;padding:10px 12px;border:1.5px solid var(--line-strong);border-radius:var(--radius-control);background:var(--bg);color:var(--fg);font:400 16px/22px var(--font-body)}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+.field .help{font-size:13px;line-height:20px;color:var(--fg-3)}
+.field .err{font-size:13px;line-height:20px;color:var(--accent-text)}
+.field[data-invalid] input,.field[data-invalid] select{border-color:var(--accent-text)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:640px){.two{grid-template-columns:minmax(0,1fr)}}
+.form-foot{display:grid;gap:10px}
+.form-msg{padding:12px 14px;border-radius:var(--radius-control);border:1px solid var(--line-strong);font-size:14px;line-height:22px}
+.form-msg.ok{border-color:var(--green-text);color:var(--fg)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand-link" href="#top" aria-label="Global C60, back to top">{{LOGO}}</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#what">What we do</a>
+      <a href="#work">How we work</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#carbon">Carbon</a>
+      <a href="#company">Company</a>
+      <button class="btn btn-secondary" type="button" data-open-form="">Register interest</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero on-dark" id="top" aria-labelledby="hero-h">
+  {{LATTICE}}
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="label">Industrial carbon recovery · Calgary, Alberta</span>
+      <h1 class="display" id="hero-h">Industrial CO<sub>2</sub>, converted into solid carbon.</h1>
+      <p class="lead">Global C60 installs and operates carbon conversion units at industrial sites. The CO<sub>2</sub> in your emission stream becomes solid carbon for industrial markets, starting with a carbon black equivalent, and you receive a monthly record of how much CO<sub>2</sub> was removed.</p>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" data-open-form="site">Host a unit at your site</button>
+        <button class="btn btn-secondary" type="button" data-open-form="carbon">Buy our carbon</button>
+      </div>
+      <div class="hero-status">
+        <span class="chip">Validation under way</span>
+        <span>Validation and verification of the technology is under way, and discussions for first deployments are planned.</span>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      {{DIAGRAM}}
+      <figcaption class="visually-hidden">Diagram: CO<sub>2</sub> in your flue gas flows from your stack into a Global C60 unit on your site. Three things come out: treated gas, solid carbon that is trucked off site and sold, and a monthly CO<sub>2</sub> reduction report.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="band" id="what" aria-labelledby="what-h">
+  <div class="wrap">
+    <div class="grid g2" style="gap:48px">
+      <div class="stack">
+        <span class="label">What we do</span>
+        <h2 id="what-h">What Global C60 does</h2>
+        <p class="lead">Global C60 Inc. is a Calgary company that removes CO<sub>2</sub> from industrial emission streams and turns it into carbon products. We use carbon conversion technology licensed from <a href="https://elementalair.com" rel="noopener">Elemental Air</a>.</p>
+        <p class="muted">Global C60 installs, operates and maintains the units, removes the carbon from site, and reports the results to you every month. Clients can host a unit at their site, or contract us to remove CO<sub>2</sub> on a per-tonne basis.</p>
+      </div>
+      <div class="grid g2">
+        <div class="card">
+          <h3>Who we work with</h3>
+          <ul class="plain">
+            <li>Oil and gas operators</li>
+            <li>Gas-fired power producers, including those supplying data centres</li>
+            <li>Renewable natural gas (RNG) operators</li>
+            <li>Heavy industrial facilities</li>
+            <li>Any site that emits large volumes of CO<sub>2</sub></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What comes out</h3>
+          <ul class="plain green">
+            <li>Less CO<sub>2</sub> leaving your stack</li>
+            <li>A monthly, documented record of the CO<sub>2</sub> removed</li>
+            <li>Solid carbon that is sold into industrial markets</li>
+            <li>Carbon credits created from the CO<sub>2</sub> removed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="band alt" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">How we work with you</span>
+      <h2 id="work-h">Ways to work with us</h2>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <span class="label">Model 1</span>
+        <h3>Host a unit</h3>
+        <p>Global C60 places a unit at your site and runs it. You provide space, power and access to your flue gas stream.</p>
+      </div>
+      <div class="card">
+        <span class="label">Model 2</span>
+        <h3>Carbon-as-a-Service (CaaS)</h3>
+        <p>You contract Global C60 to remove CO<sub>2</sub> from your emissions on a per-tonne basis. You pay for the tonnes removed, which lowers your CO<sub>2</sub> emissions and your exposure to carbon taxes and compliance costs.</p>
+      </div>
+    </div>
+
+    <h3 style="margin:56px 0 24px">How a deployment works</h3>
+    <ol class="steps">
+      <li><h3>First conversation</h3><p>You tell us about your emission source, the volumes involved and the site.</p></li>
+      <li><h3>Site and stream review</h3><p>We look at your flue gas flow rate and CO<sub>2</sub> concentration, available power, space and truck access.</p></li>
+      <li><h3>Agreement</h3><p>We agree the service model, site access and the monthly reporting you will receive.</p></li>
+      <li><h3>Installation</h3><p>We place the unit and a small, modular, temporary building on site, and connect to your flue gas stream and power.</p></li>
+      <li><h3>Operation and reporting</h3><p>We run the unit, truck the carbon off site, and send you a CO<sub>2</sub> reduction report every month.</p></li>
+    </ol>
+
+    <div class="grid g2" style="margin-top:56px">
+      <div class="card">
+        <h3>What your site provides</h3>
+        <ul class="plain">
+          <li>Space for the unit</li>
+          <li>Room for a small, modular, temporary building</li>
+          <li>Access to power</li>
+          <li>A connection to your flue gas stream</li>
+          <li>Access for trucks</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What you receive</h3>
+        <ul class="plain green">
+          <li>A monthly CO<sub>2</sub> reduction report for the emission stream</li>
+          <li>A unit installed, operated and maintained by Global C60</li>
+          <li>CO<sub>2</sub> removed from your stream, which is converted into solid carbon and creates carbon credits</li>
+        </ul>
+      </div>
+    </div>
+    <div class="report" role="region" aria-labelledby="rep-h" style="margin-top:var(--gutter)">
+        <div class="report-head"><strong id="rep-h">What the monthly report shows</strong><span class="label">Per emission stream</span></div>
+        <div class="report-scroll" tabindex="0" aria-label="Monthly report fields">
+          <table>
+            <thead><tr><th scope="col">Field</th><th scope="col">What it tells you</th></tr></thead>
+            <tbody>
+              <tr><td>Emission volume</td><td>Total flue gas treated in the month</td></tr>
+              <tr><td>Flow rate</td><td>Rate of the emission stream through the unit</td></tr>
+              <tr><td>Inlet CO<sub>2</sub></td><td>CO<sub>2</sub> concentration of the stream as it enters</td></tr>
+              <tr class="total"><td>CO<sub>2</sub> removed</td><td>Total CO<sub>2</sub> removed from that stream in the month</td></tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="band" id="benefits" aria-labelledby="ben-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Benefits</span>
+      <h2 id="ben-h">What it means for an emitter</h2>
+    </div>
+    <div class="grid g3">
+      <div class="card"><h3>Lower compliance cost</h3><p>Carbon pricing in Canada, and in several US states and programs, puts a cost on each tonne of CO<sub>2</sub> a facility emits. CO<sub>2</sub> removed from your stream by a Global C60 unit is measured and documented, which can reduce what you owe or need to offset.</p></div>
+      <div class="card"><h3>Documented reductions</h3><p>The monthly report gives your environment and regulatory teams measured data for compliance filings and sustainability reporting.</p></div>
+      <div class="card"><h3>Pay for results</h3><p>Under a Carbon-as-a-Service (CaaS) contract you pay per tonne of CO<sub>2</sub> removed. Global C60 installs, operates and maintains the unit. Your site provides space, power and access.</p></div>
+      <div class="card"><h3>Waste becomes a product</h3><p>Today the CO<sub>2</sub> in your emissions is a waste stream. Global C60 turns that waste into solid carbon that is sold to industrial buyers, instead of being released to the air or stored underground.</p></div>
+      <div class="card"><h3>Reduced at the source</h3><p>CO<sub>2</sub> is converted where it is produced. It is not captured and sent off site for sequestration, so your facility does not need a connection to CO<sub>2</sub> pipeline and storage infrastructure. Modular units can significantly reduce the cost of carbon compliance.</p></div>
+      <div class="card"><h3>Other emissions reduced</h3><p>Along with CO<sub>2</sub>, a Global C60 unit reduces sulphur oxides (SO<sub>x</sub>), nitrogen oxides (NO<sub>x</sub>) and other carbon oxides such as carbon monoxide in the emission stream. It does not remove hydrogen sulphide (H<sub>2</sub>S).</p></div>
+    </div>
+    <div class="grid g2" style="margin-top:var(--gutter)">
+      <div class="callout">
+        <span class="label">Alberta facilities</span>
+        <h3>Managing TIER obligations</h3>
+        <p>Facilities regulated under Alberta's Technology Innovation and Emissions Reduction (TIER) Regulation must meet an emissions benchmark or cover the gap with fund payments, credits or offsets. A Global C60 unit removes CO<sub>2</sub> at the source and gives you monthly measured data, which can help you manage your TIER obligations and plan for tightening benchmarks. Global C60 is in discussions with the TIER program on recognizing CO<sub>2</sub> removed by our process for credit.</p>
+      </div>
+      <div class="callout investigate">
+        <span class="label">Under investigation</span>
+        <h3>Methane-as-a-Service (MaaS)</h3>
+        <p>Global C60 is investigating how to capture methane that is not combusted in engines and heaters, and methane redirected from flaring, and convert it into solid carbon. If you operate engines, heaters or flares and would like to be part of that work, register your interest.</p>
+        <div><button class="btn-link" type="button" data-open-form="reduction">Register interest in MaaS →</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARBON PRODUCTS -->
+<section class="band alt" id="carbon" aria-labelledby="carbon-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Carbon products</span>
+      <h2 id="carbon-h">The carbon we produce</h2>
+      <p class="lead">Every Global C60 unit produces solid carbon. We are starting with a domestically produced carbon equivalent to carbon black. Lab-assessed specifications for our carbon nanotubes and fullerenes will be published once the current validation work is complete.</p>
+    </div>
+
+    <article class="product feature" aria-labelledby="p-cb">
+      <div class="product-art">{{CB}}</div>
+      <div class="product-body">
+        <div class="product-title"><h3 id="p-cb">Carbon black equivalent</h3><span class="chip ok">Available for discussion now</span></div>
+        <p>A fine black carbon powder, produced in North America from captured CO<sub>2</sub>, for use where carbon black is used today. Because it is a direct alternative to an existing material, it is expected to need less extensive qualification testing than a new specialty material before it can be added to, or replace, a current carbon black supply.</p>
+        <span class="label" style="margin-top:8px">Industries that use carbon black</span>
+        <ul class="plain feature-lists">
+          <li>Tires and rubber products, including belts, hoses, seals and mouldings</li>
+          <li>Plastics and masterbatch, for colour, UV protection and antistatic grades</li>
+          <li>Printing inks and toners</li>
+          <li>Paints and coatings</li>
+          <li>Wire and cable jacketing</li>
+          <li>Conductive additives for batteries and electronics</li>
+          <li>Construction materials, as a pigment for concrete and roofing</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="grid g2" style="margin-top:var(--gutter)">
+      <article class="product" aria-labelledby="p-cnt">
+        <div class="product-art">
+          <div class="art-pair">
+            <figure>{{SWCNT}}<figcaption class="fig-note">Single-wall</figcaption></figure>
+            <figure>{{MWCNT}}<figcaption class="fig-note">Multi-wall, end view</figcaption></figure>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-title"><h3 id="p-cnt">Carbon nanotubes</h3><span class="chip">Specification to follow</span></div>
+          <p>A layer of carbon atoms rolled into a seamless tube a few nanometres across and many times longer than it is wide. Nanotubes are very strong for their weight and conduct electricity well.</p>
+          <p><strong>Single-wall nanotubes</strong> are one layer thick. They give the highest conductivity at very low loadings and are used in battery electrodes, conductive films and electronics.</p>
+          <p><strong>Multi-wall nanotubes</strong> are several tubes nested inside each other. They are more robust and lower in cost, and are used as conductive additives in lithium-ion batteries, in polymer composites, antistatic plastics and coatings.</p>
+        </div>
+      </article>
+      <article class="product" aria-labelledby="p-c60">
+        <div class="product-art">{{C60}}</div>
+        <div class="product-body">
+          <div class="product-title"><h3 id="p-c60">Fullerenes (C<sub>60</sub> and C<sub>70</sub>)</h3><span class="chip">Specification to follow</span></div>
+          <p>Closed, hollow molecules made only of carbon. C<sub>60</sub>, the molecule our company is named after, has 60 carbon atoms arranged in 12 pentagons and 20 hexagons, the same pattern as a soccer ball. C<sub>70</sub> is a slightly elongated version with 70 atoms.</p>
+          <p><strong>Used in:</strong> organic solar cells and electronics, lubricant and polymer additives, cosmetics, and materials research.</p>
+        </div>
+      </article>
+    </div>
+
+    <h3 style="margin:56px 0 0">Why buy carbon from Global C60</h3>
+    <div class="why">
+      <div>Made from CO<sub>2</sub> captured from industrial emissions</div>
+      <div>Produced in North America</div>
+      <div>A supply source outside China for buyers who need to document material origin and carbon footprint</div>
+    </div>
+  </div>
+</section>
+
+<!-- BUYERS -->
+<section class="band" id="buyers" aria-labelledby="buy-h">
+  <div class="wrap">
+    <div class="grid g2" style="gap:48px">
+      <div class="stack">
+        <span class="label">Carbon buyers and partners</span>
+        <h2 id="buy-h">We are looking for carbon buyers and partners</h2>
+        <p class="muted">Global Carbon Marketing (GCM) is a separate company being established to sell the carbon produced by Global C60 units. GCM will manage grade, volume and quality so buyers receive consistent material. It will launch with its own name and website.</p>
+        <p class="muted">Until GCM is operating, all carbon inquiries come to Global C60 directly. Tell us what you use, in what volumes and to what specification, and we will follow up as material and lab data become available.</p>
+        <div class="actions"><button class="btn btn-primary" type="button" data-open-form="carbon">Register interest in our carbon</button></div>
+      </div>
+      <div class="card">
+        <h3>We want to hear from</h3>
+        <ul class="plain">
+          <li>Tire and rubber product manufacturers</li>
+          <li>Plastics compounders and masterbatch producers</li>
+          <li>Ink, toner and pigment producers</li>
+          <li>Battery material producers and dispersion formulators</li>
+          <li>Polymer and composite compounders</li>
+          <li>Coatings, lubricant and refractory manufacturers</li>
+          <li>Research groups and specialty chemical distributors</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section class="band alt" id="company" aria-labelledby="co-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Company</span>
+      <h2 id="co-h">Where we are</h2>
+      <p class="muted">Validation and verification of the technology is under way. Discussions with host sites for first deployments are planned, and we are talking with investors about funding them. If you would like to be part of either, register your interest.</p>
+    </div>
+    <ul class="status-list">
+      <li><span class="label">Technology</span><strong>Validation and verification</strong><span><span class="chip">Under way</span></span></li>
+      <li><span class="label">Host sites</span><strong>First deployments</strong><span><span class="chip">Discussions planned</span></span></li>
+      <li><span class="label">Capital</span><strong>Investment</strong><span><span class="chip">Talking with investors</span></span></li>
+    </ul>
+
+    <h3 style="margin:64px 0 24px">Team</h3>
+    <div class="grid g3">
+      <div class="person card">
+        <h3>Ron Visser</h3>
+        <span class="role">CEO &amp; Co-founder</span>
+        <p>Regulatory compliance and management system consulting; founded and developed Beyond Compliance Inc. software solution; co-founded, built and exited Visser Consulting to Deloitte; co-founder of several technology-based companies.</p>
+        <div class="contact"><a href="mailto:rvisser@globalc60.com">rvisser@globalc60.com</a><a class="li-link" href="https://www.linkedin.com/in/ron-visser" rel="noopener"><img src="{{LI}}" alt="Ron Visser on LinkedIn" width="20" height="18"></a></div>
+      </div>
+      <div class="person card">
+        <h3>Ron Green</h3>
+        <span class="role">CFO &amp; Co-founder</span>
+        <p>COO of EverGen Infrastructure (waste-to-energy and RNG operations); co-founder and board member of Beyond Energy; executive at several co-founded energy service companies.</p>
+        <div class="contact"><a href="mailto:rgreen@globalc60.com">rgreen@globalc60.com</a><a class="li-link" href="https://www.linkedin.com/in/ronwgreen/" rel="noopener"><img src="{{LI}}" alt="Ron Green on LinkedIn" width="20" height="18"></a></div>
+      </div>
+      <div class="person card">
+        <h3>Kevin Carroll, P.Eng.</h3>
+        <span class="role">Technical Advisor &amp; Co-founder</span>
+        <p>Former Chief Development Officer of E3 Lithium (Clearwater lithium project); VP Operations at DeltaStream Energy; co-founder and VP Engineering of Huron Resources.</p>
+        <div class="contact"><a href="mailto:kcarroll@globalc60.com">kcarroll@globalc60.com</a><a class="li-link" href="https://www.linkedin.com/in/kevin-carroll-494a862/" rel="noopener"><img src="{{LI}}" alt="Kevin Carroll on LinkedIn" width="20" height="18"></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-band on-dark" id="contact" aria-labelledby="ct-h">
+  {{LATTICE2}}
+  <div class="wrap">
+    <div class="stack">
+      <span class="label">Contact</span>
+      <h2 id="ct-h">Register your interest</h2>
+      <p class="lead">Emitters looking at a unit, buyers looking for carbon, and investors: tell us who you are and what you are interested in, and we will follow up.</p>
+      <div class="actions"><button class="btn btn-primary" type="button" data-open-form="">Register your interest</button></div>
+    </div>
+    <div class="contact-box">
+      <span class="label">Write to us directly</span>
+      <div class="email-row"><a href="mailto:rvisser@globalc60.com">rvisser@globalc60.com</a></div>
+      <p class="small muted">Global C60 Inc. · Calgary, Alberta, Canada</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      {{LOGO_FOOT}}
+      <div class="foot-meta">
+        <span>Global C60 Inc. · Calgary, Alberta</span>
+        <span><a href="mailto:rvisser@globalc60.com">rvisser@globalc60.com</a></span>
+        <span>Carbon conversion technology licensed from <a href="https://elementalair.com" rel="noopener">Elemental Air</a>.</span>
+      </div>
+    </div>
+    <div class="foot-right">
+      <div class="theme-switch" role="group" aria-label="Colour theme">
+        <button type="button" data-theme-set="dark" aria-pressed="true">Dark</button>
+        <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
+      </div>
+      <span>© 2026 Global C60 Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- INTEREST FORM -->
+<dialog class="modal" id="interest" aria-labelledby="form-h">
+  <div class="modal-head">
+    <div class="stack" style="gap:6px">
+      <span class="label">Global C60</span>
+      <h2 id="form-h">Register your interest</h2>
+    </div>
+    <button class="modal-close" type="button" data-close-form aria-label="Close">×</button>
+  </div>
+  <form class="enquiry" name="interest" method="POST" data-netlify="true" netlify-honeypot="website" novalidate>
+    <input type="hidden" name="form-name" value="interest">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <div class="two">
+      <div class="field"><label for="f-company">Company name</label><input id="f-company" name="company" autocomplete="organization" required><span class="err" hidden>Enter your company name.</span></div>
+      <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" hidden>Enter your name.</span></div>
+    </div>
+    <div class="field"><label for="f-title">Title <span class="opt">(optional)</span></label><input id="f-title" name="title" autocomplete="organization-title"></div>
+    <div class="two">
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err" hidden>Enter a complete email address, for example name@company.com.</span></div>
+      <div class="field"><label for="f-phone">Phone <span class="opt">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+    </div>
+    <div class="field">
+      <label for="f-interest">Your interest</label>
+      <select id="f-interest" name="interest" required>
+        <option value="">Choose one</option>
+        <option value="carbon">Carbon purchasing</option>
+        <option value="site">Deploying the technology on our site</option>
+        <option value="reduction">Carbon reduction</option>
+        <option value="investing">Investing in Global C60</option>
+        <option value="other">Other</option>
+      </select>
+      <span class="err" hidden>Choose what you are interested in.</span>
+    </div>
+    <div class="field"><label for="f-comments">Comments <span class="opt">(optional)</span></label><textarea id="f-comments" name="comments" placeholder="For example: emission source and volumes, or the carbon you use and in what quantities"></textarea></div>
+    <div class="form-foot">
+      <div class="actions"><button class="btn btn-primary" type="submit">Send</button><button class="btn-link" type="button" data-close-form>Cancel</button></div>
+      <p class="small muted">We use these details only to reply to you. We do not share them.</p>
+      <div class="form-msg" role="status" aria-live="polite" hidden></div>
+    </div>
+  </form>
+</dialog>
+
+<script>
+/* ---------- Form delivery ----------
+   Set FORM_ENDPOINT once hosting is chosen:
+   - Netlify: "netlify"  (submissions appear under Forms in Netlify; add an email notification to rvisser@globalc60.com)
+   - Formspree or similar: the form's URL, for example "https://formspree.io/f/abcdwxyz"
+   - Left empty: visitors are asked to email rvisser@globalc60.com instead. */
+var FORM_ENDPOINT = "";
+var CONTACT_EMAIL = "rvisser@globalc60.com";
+
+(function(){
+  var root = document.documentElement;
+
+  /* theme switch */
+  function currentTheme(){ return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
+  function syncSwitch(){
+    var t = currentTheme();
+    document.querySelectorAll('[data-theme-set]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-theme-set') === t)); });
+  }
+  document.querySelectorAll('[data-theme-set]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var t = b.getAttribute('data-theme-set');
+      root.setAttribute('data-theme', t);
+      try{ localStorage.setItem('gc60-theme', t); }catch(e){}
+      syncSwitch();
+    });
+  });
+  syncSwitch();
+
+  /* mobile menu */
+  var menuBtn = document.querySelector('.menu-btn'), nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? 'Close' : 'Menu';
+  });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); menuBtn.textContent='Menu'; }); });
+
+  /* modal */
+  var dlg = document.getElementById('interest');
+  var form = dlg.querySelector('form');
+  var msg = form.querySelector('.form-msg');
+  var submitBtn = form.querySelector('[type=submit]');
+  var lastOpener = null;
+  document.querySelectorAll('[data-open-form]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      lastOpener = btn;
+      var pre = btn.getAttribute('data-open-form');
+      if (pre) form.interest.value = pre;
+      nav.classList.remove('open');
+      if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open','');
+      setTimeout(function(){ document.getElementById('f-company').focus(); }, 30);
+    });
+  });
+  function closeForm(){ if (dlg.open) dlg.close(); }
+  dlg.querySelectorAll('[data-close-form]').forEach(function(b){ b.addEventListener('click', closeForm); });
+  dlg.addEventListener('click', function(e){ if (e.target === dlg) closeForm(); });
+  dlg.addEventListener('close', function(){ if (lastOpener) lastOpener.focus(); });
+
+  function setError(input, on){
+    var f = input.closest('.field'), err = f.querySelector('.err');
+    if (on){ f.setAttribute('data-invalid',''); input.setAttribute('aria-invalid','true'); if (err){ err.hidden = false; err.id = err.id || input.id + '-err'; input.setAttribute('aria-describedby', err.id); } }
+    else { f.removeAttribute('data-invalid'); input.removeAttribute('aria-invalid'); if (err) err.hidden = true; }
+  }
+  function validate(){
+    var first = null;
+    ['f-company','f-name','f-email','f-interest'].forEach(function(id){
+      var el = document.getElementById(id);
+      var bad = !el.value.trim() || (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()));
+      setError(el, bad);
+      if (bad && !first) first = el;
+    });
+    if (first) first.focus();
+    return !first;
+  }
+  form.querySelectorAll('input,select').forEach(function(el){ el.addEventListener('input', function(){ if (el.closest('.field[data-invalid]')) setError(el, false); }); });
+
+  function show(text, ok){ msg.hidden = false; msg.className = 'form-msg' + (ok ? ' ok' : ''); msg.textContent = text; }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    msg.hidden = true;
+    if (!validate()) return;
+    if (form.website.value) return; /* spam trap */
+    if (!FORM_ENDPOINT){
+      show('The form is not connected yet. Please email ' + CONTACT_EMAIL + ' with your details and we will reply.', false);
+      return;
+    }
+    submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+    var data = new FormData(form), req;
+    if (FORM_ENDPOINT === 'netlify'){
+      req = fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(data).toString() });
+    } else {
+      req = fetch(FORM_ENDPOINT, { method:'POST', headers:{'Accept':'application/json'}, body:data });
+    }
+    req.then(function(r){
+      if (!r.ok) throw new Error(r.status);
+      form.reset();
+      show('Thank you. We have your details and will be in touch.', true);
+    }).catch(function(){
+      show('Your details were not sent. Check your connection and try again, or email ' + CONTACT_EMAIL + '.', false);
+    }).finally(function(){ submitBtn.disabled = false; submitBtn.textContent = 'Send'; });
+  });
+})();
+</script>
+</body>
+</html>

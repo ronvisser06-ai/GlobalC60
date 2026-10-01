@@ -1,0 +1,304 @@
+<title>GlobalC60.com Design Specification</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: technical specification, single reading column with wide tables in their own scroll containers.
+   Uses the GlobalC60 Recovery brand tokens; light for long reading, dark supported. */
+:root{
+  --bg:#FFFFFF;--bg-2:#F6F8FA;--bg-3:#EDF0F3;--fg:#0B1F33;--fg-2:#3E4955;--fg-3:#5A6675;
+  --line:#DDE2E8;--line-strong:#7A8695;--brand:#10304D;--link:#1E5A87;--accent-text:#B44508;
+  --green:#66D42F;--green-text:#2F7A17;--blue:#56A7CE;--blue-text:#2A73A8;--head:#061423;--head-fg:#EEF2F6;
+  --display:"Barlow","Arial Narrow",system-ui,sans-serif;--body:"IBM Plex Sans",system-ui,"Segoe UI",Arial,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#061423;--bg-2:#0B1F33;--bg-3:#10304D;--fg:#EEF2F6;--fg-2:#A9B8C8;--fg-3:#9EA8B4;--line:#1C3A57;--line-strong:#35638F;
+  --brand:#56A7CE;--link:#5DCEE9;--accent-text:#FF9442;--green:#6DFF29;--green-text:#A6F57C;--blue:#5DCEE9;--blue-text:#5DCEE9;--head:#0B1F33;--head-fg:#EEF2F6;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#061423;--bg-2:#0B1F33;--bg-3:#10304D;--fg:#EEF2F6;--fg-2:#A9B8C8;--fg-3:#9EA8B4;--line:#1C3A57;--line-strong:#35638F;
+  --brand:#56A7CE;--link:#5DCEE9;--accent-text:#FF9442;--green:#6DFF29;--green-text:#A6F57C;--blue:#5DCEE9;--blue-text:#5DCEE9;--head:#0B1F33;--head-fg:#EEF2F6;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/26px var(--body);margin:0}
+.top{background:var(--head);color:var(--head-fg);padding-block:48px 40px;padding-inline:20px}
+.top .in,.main{max-width:920px;margin:0 auto}
+.main{padding-inline:20px;padding-block:24px 96px;display:grid;gap:56px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-size:clamp(32px,5vw,44px);line-height:1.1;font-weight:700}
+h2{font-size:28px;line-height:34px;font-weight:700;padding-top:20px;border-top:2px solid var(--fg)}
+h3{font-size:20px;line-height:26px;font-weight:600}
+p,li{max-width:68ch}
+p{margin:0}
+a{color:var(--link)}
+.label{font:500 12px/16px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--blue-text)}
+.top .label{color:#5DCEE9}
+.top p{color:#A9B8C8;margin-top:14px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:20px;font:13px var(--mono);color:#9EA8B4}
+section{display:grid;gap:16px}
+.toc ol{columns:2;column-gap:32px;margin:0;padding-left:1.3em}
+.toc li{break-inside:avoid;padding-block:2px}
+@media (max-width:640px){.toc ol{columns:1}}
+ul,ol{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px;line-height:21px}
+th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px solid var(--line)}
+th{font:500 11px/16px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3);background:var(--bg-2)}
+tr:last-child td{border-bottom:0}
+td code,p code,li code{font:13px var(--mono);background:var(--bg-3);padding:1px 5px;border-radius:4px}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.sw{border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:13px;line-height:18px}
+.sw i{display:block;height:44px}
+.sw div{padding:8px 10px;display:grid}
+.sw span{font-family:var(--mono);color:var(--fg-3)}
+.note{background:var(--bg-2);border-left:3px solid var(--blue);padding:14px 18px;border-radius:0 8px 8px 0;display:grid;gap:6px}
+.flag{border-left-color:var(--accent-text)}
+.flag strong{color:var(--accent-text)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.two{grid-template-columns:minmax(0,1fr)}}
+.box{border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:grid;gap:8px;align-content:start;min-width:0}
+pre{margin:0;overflow-x:auto;background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:14px;font:13px/20px var(--mono)}
+</style>
+
+<header class="top">
+  <div class="in">
+    <span class="label">Global C60 Inc. · Website</span>
+    <h1>GlobalC60.com design specification</h1>
+    <p>How the one-page site is built: structure, brand application, components, illustrations, the interest form, search setup, accessibility and deployment. It covers the site as built on 30 September 2026 from the approved content plan and the GlobalC60 Recovery Brand and Website Design Guide v1.2.</p>
+    <div class="meta"><span>Version 1.0 · 30 Sept 2026</span><span>Owner: Ron Visser</span><span>Deliverable: index.html + 7 support files</span></div>
+  </div>
+</header>
+
+<main class="main">
+
+<nav class="toc" aria-label="Contents">
+  <ol>
+    <li><a href="#s1">Deliverable and files</a></li>
+    <li><a href="#s2">Sources and precedence</a></li>
+    <li><a href="#s3">Brand application</a></li>
+    <li><a href="#s4">Page structure</a></li>
+    <li><a href="#s5">Components</a></li>
+    <li><a href="#s6">Illustrations</a></li>
+    <li><a href="#s7">Interest form</a></li>
+    <li><a href="#s8">Search and sharing</a></li>
+    <li><a href="#s9">Accessibility</a></li>
+    <li><a href="#s10">Hosting and deployment</a></li>
+    <li><a href="#s11">Maintenance</a></li>
+    <li><a href="#s12">Open items before launch</a></li>
+  </ol>
+</nav>
+
+<section id="s1">
+  <h2>1. Deliverable and files</h2>
+  <p>The site is one self-contained HTML page. All styles, scripts, the logo and the illustrations are inside <code>index.html</code>. The only external requests are Google Fonts. Upload the whole folder to the web root.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>File</th><th>Purpose</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><code>index.html</code></td><td>The website</td><td>About 130 KB. Set <code>FORM_ENDPOINT</code> near the bottom once hosting is chosen (section 7).</td></tr>
+      <tr><td><code>og-image.png</code></td><td>Link preview image, 1200 × 630</td><td>Used by LinkedIn, X, Facebook, Teams and Slack.</td></tr>
+      <tr><td><code>favicon.svg</code>, <code>favicon-32.png</code></td><td>Browser tab icon</td><td>Mark only on Navy 950, flat stacks, per brand guide section 2.</td></tr>
+      <tr><td><code>apple-touch-icon.png</code></td><td>Phone home-screen icon, 180 px</td><td></td></tr>
+      <tr><td><code>logo-512.png</code></td><td>Logo for search engine structured data</td><td>Replace with the re-set wordmark export when available.</td></tr>
+      <tr><td><code>robots.txt</code>, <code>sitemap.xml</code></td><td>Search engine crawling</td><td>Points to https://globalc60.com/.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="s2">
+  <h2>2. Sources and precedence</h2>
+  <p>Where the two sources disagree, the approved content plan wins on words and the brand guide wins on visual treatment.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Topic</th><th>Brand guide says</th><th>Site does</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Site structure</td><td>Six pages: Home, Technology, Products, Applications, Company, Contact</td><td>One page with anchored sections</td><td>Agreed scope for launch. The section order maps to the six pages, so the site can split later without rewriting copy.</td></tr>
+      <tr><td>Technology description</td><td>Mock shows "How the reactor works", capture, react, recover</td><td>No description of how conversion works. The hero diagram shows the unit as a closed box.</td><td>Elemental Air is restricting public description of the technology.</td></tr>
+      <tr><td>First product</td><td>Graphitic carbon (Grade 1)</td><td>Carbon black equivalent</td><td>Content decision: less qualification testing for buyers; graphene is not produced.</td></tr>
+      <tr><td>Company name in copy</td><td>"Global C60 Inc." first, then "Global C60"</td><td>Same. "GC60" from the content plan is replaced with "Global C60" on the site.</td><td>Brand guide naming rule.</td></tr>
+      <tr><td>Logo</td><td>Re-set wordmark GLOBALC60 / RECOVERY pending</td><td>Current artwork (GLOBAL / C60 RECOVERY), recoloured to the guide's light and dark specifications</td><td>Guide says to use current artwork until the designer re-sets it.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="s3">
+  <h2>3. Brand application</h2>
+  <h3>Theme</h3>
+  <p>Dark-first, as the guide decides. The site opens dark whatever the visitor's system setting. A Dark / Light switch in the footer changes the theme and is remembered in the visitor's browser. The hero band and the closing contact band stay Deep Navy in both themes.</p>
+  <h3>Colour</h3>
+  <div class="swatches">
+    <div class="sw"><i style="background:#061423"></i><div><strong>Deep Navy</strong><span>#061423 page, dark</span></div></div>
+    <div class="sw"><i style="background:#0B1F33"></i><div><strong>Navy 900</strong><span>#0B1F33 sections, dark</span></div></div>
+    <div class="sw"><i style="background:#10304D"></i><div><strong>Reactor Navy</strong><span>#10304D cards, dark</span></div></div>
+    <div class="sw"><i style="background:#5DCEE9"></i><div><strong>Blue 300</strong><span>#5DCEE9 links, labels</span></div></div>
+    <div class="sw"><i style="background:#6DFF29"></i><div><strong>Green 400</strong><span>#6DFF29 product, dark</span></div></div>
+    <div class="sw"><i style="background:#F4731F"></i><div><strong>Ignition Orange</strong><span>#F4731F actions only</span></div></div>
+  </div>
+  <ul>
+    <li>All colours come from the section 7 tokens in the guide. Light theme uses the guide's light tokens unchanged.</li>
+    <li><strong>Orange</strong> appears only on primary buttons, the unit intake point in the hero diagram, and form error text. Each screen-height view has one orange button at most; other actions are outline buttons or text links.</li>
+    <li><strong>Green</strong> marks product and positive status only: the "What comes out" and "What you receive" bullets, the CO<sub>2</sub> removed row in the report, the carbon flow in the diagram, fullerene pentagons, the "Available" chip and the "Why buy" rules.</li>
+    <li>Primary buttons carry navy text on orange (6.46:1). White on orange is not used.</li>
+  </ul>
+  <h3>Type</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Role</th><th>Face</th><th>Size / line</th><th>Used for</th></tr></thead>
+    <tbody>
+      <tr><td>Display</td><td>Barlow 700</td><td>54/56, 36/40 on phones</td><td>Hero headline</td></tr>
+      <tr><td>H2</td><td>Barlow 700</td><td>30/36, 26/32 on phones</td><td>Section headings</td></tr>
+      <tr><td>H3</td><td>Barlow 600</td><td>22/28, 18 to 20 in cards</td><td>Card and sub-section headings</td></tr>
+      <tr><td>Lead</td><td>IBM Plex Sans 400</td><td>19/30</td><td>Opening paragraphs</td></tr>
+      <tr><td>Body</td><td>IBM Plex Sans 400</td><td>16/26, 68 characters max</td><td>Running text</td></tr>
+      <tr><td>Label</td><td>IBM Plex Mono 500</td><td>12/16, uppercase, 0.1em</td><td>Eyebrows, chips, diagram labels, report fields</td></tr>
+    </tbody>
+  </table></div>
+  <p>Headings use sentence case. Chemical formulas use real subscripts (CO<sub>2</sub>, C<sub>60</sub>, SO<sub>x</sub>); "C60" in the company name is set plain. The logo typefaces (Ethnocentric, Venus Rising) are not loaded; the logo ships as outlined vector paths, so no font licence question arises on the website.</p>
+  <h3>Logo</h3>
+  <ul>
+    <li>Inline SVG built from the guide's vector paths, coloured through theme tokens: light version on the light theme, dark version on the dark theme and in the Deep Navy bands.</li>
+    <li>Header and footer logo are 64 px high (about 143 px wide), above the guide's 140 px minimum. On phones 56 px high (125 px wide); this is below the minimum and should switch to the re-set lockup or the mark plus "GLOBAL" once those files exist.</li>
+  </ul>
+  <h3>Layout and shape</h3>
+  <p>1200 px content width, 24 px gutters, breakpoints at 640 and 960 px. Section padding 64 px desktop, 40 px phone. Radius 6 px on buttons and inputs, 8 px on cards, none on full-width bands. No shadows; depth comes from borders and background steps. Motion is limited to 150 ms colour transitions and smooth anchor scrolling, both off when the visitor asks for reduced motion.</p>
+</section>
+
+<section id="s4">
+  <h2>4. Page structure</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>#</th><th>Section (anchor)</th><th>Job</th><th>Layout</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>Header</td><td>Logo and navigation</td><td>Sticky. Links: What we do, How we work, Benefits, Carbon, Company. Collapses to a Menu button below 960 px.</td><td>Register interest (outline)</td></tr>
+      <tr><td>1</td><td>Hero (<code>#top</code>)</td><td>Say what the company does in one screen</td><td>Deep Navy with 8% hexagon lattice. Copy left (6 of 11 columns), process diagram right. Stacks on tablets and phones. Status chip and line under the buttons.</td><td>Host a unit at your site (primary); Buy our carbon (outline)</td></tr>
+      <tr><td>2</td><td>What we do (<code>#what</code>)</td><td>Company, licence, service</td><td>Text left; "Who we work with" and "What comes out" cards right</td><td>None</td></tr>
+      <tr><td>3</td><td>How we work (<code>#work</code>)</td><td>Engagement models and deployment</td><td>Two model cards (Host a unit, CaaS); five numbered steps; site provides / you receive cards; monthly report table full width</td><td>None</td></tr>
+      <tr><td>4</td><td>Benefits (<code>#benefits</code>)</td><td>Why an emitter should talk to us</td><td>Six benefit cards in three columns; TIER and MaaS callouts side by side</td><td>Register interest in MaaS (text link)</td></tr>
+      <tr><td>5</td><td>Carbon (<code>#carbon</code>)</td><td>Products and why buy</td><td>Carbon black feature card full width; nanotubes and fullerenes cards side by side; three "why buy" points</td><td>None (next section carries it)</td></tr>
+      <tr><td>6</td><td>Buyers (<code>#buyers</code>)</td><td>Find offtakers; explain GCM</td><td>Text and button left; buyer list right</td><td>Register interest in our carbon (primary)</td></tr>
+      <tr><td>7</td><td>Company (<code>#company</code>)</td><td>Stage and team</td><td>Three status cards (technology, host sites, capital); three team cards with email and LinkedIn icon</td><td>None</td></tr>
+      <tr><td>8</td><td>Contact (<code>#contact</code>)</td><td>Close with one clear action</td><td>Deep Navy band with lattice; text and button left; direct email box right</td><td>Register your interest (primary)</td></tr>
+      <tr><td>9</td><td>Footer</td><td>Company details, theme</td><td>Logo, Global C60 Inc., Calgary, email, licence line; Dark / Light switch; copyright</td><td>None</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="s5">
+  <h2>5. Components</h2>
+  <div class="two">
+    <div class="box"><h3>Buttons</h3><p>Primary: Orange 500 fill, navy text, hover Orange 400 (dark) or 600 (light). Secondary: 1.5 px outline in the brand colour, fills on hover. Text link: link colour, underline on hover. All at least 44 px high.</p></div>
+    <div class="box"><h3>Status chips</h3><p>Pill with a dot and a mono label. Green for confirmed ("Available for discussion now"). Steel for neutral or pending ("Specification to follow", "Under way"). The dot and wording carry the state, not colour alone.</p></div>
+    <div class="box"><h3>Cards</h3><p>Navy 800 on Navy 900 (dark) or Steel 50 on white (light), 1 px border, 8 px radius, 24 px padding. Bullets are short bars: blue for general lists, green for outcomes.</p></div>
+    <div class="box"><h3>Callouts</h3><p>Card with a 3 px left rule: blue for the Alberta TIER note, steel for "Under investigation" (MaaS).</p></div>
+    <div class="box"><h3>Steps</h3><p>Five columns on desktop, two on tablet, one on phone. Each has a 2 px top rule and a mono number 01 to 05; the numbering is real because the steps happen in order.</p></div>
+    <div class="box"><h3>Report table</h3><p>Styled as a report header plus a two-column table (field, what it tells you). Field names in mono. The CO<sub>2</sub> removed row is green. Scrolls sideways inside its box on narrow phones. No example numbers.</p></div>
+    <div class="box"><h3>Product cards</h3><p>Illustration panel on the page background, then title, chip and text. The carbon black card is a wide feature card with the industries list in two columns.</p></div>
+    <div class="box"><h3>Team cards</h3><p>Name, mono role, one-paragraph background, email and the supplied LinkedIn icon (20 px image inside a 44 px tap target). No photos.</p></div>
+  </div>
+</section>
+
+<section id="s6">
+  <h2>6. Illustrations</h2>
+  <p>All drawings are original vector graphics generated from geometry, drawn inline so they follow the theme. None shows the Elemental Air equipment or process.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Drawing</th><th>Where</th><th>How it is drawn</th></tr></thead>
+    <tbody>
+      <tr><td>Deployment diagram</td><td>Hero</td><td>Your stack → flue gas (blue) → Global C60 unit (closed box with a small lattice) → treated gas (dashed blue), solid carbon (green), monthly report (dashed steel). Orange dot marks the intake. Follows the guide's diagram rule: navy lines, blue gas, green product, orange at the point of intervention. Has a text alternative.</td></tr>
+      <tr><td>Carbon black aggregate</td><td>Carbon black card</td><td>17 fused spherical particles with an inner ring hinting at graphitic layers.</td></tr>
+      <tr><td>Single-wall nanotube</td><td>Nanotube card</td><td>Hexagonal lattice wrapped on a cylinder, back wall faint, front wall bright.</td></tr>
+      <tr><td>Multi-wall nanotube</td><td>Nanotube card</td><td>End view of five nested walls with atom dots.</td></tr>
+      <tr><td>C<sub>60</sub> fullerene</td><td>Fullerene card, share image</td><td>Truncated icosahedron computed from its 60 vertices and 90 bonds; front pentagons tinted green.</td></tr>
+      <tr><td>Hexagon lattice</td><td>Hero and contact bands</td><td>Repeating honeycomb at 8% opacity, drawn at scale, per the guide's secondary graphic.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="s7">
+  <h2>7. Interest form</h2>
+  <p>Every "Register interest", "Host a unit", "Buy our carbon" and MaaS button opens the same modal form. The button pre-selects the interest (site, carbon, carbon reduction), and the visitor can change it.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Error text</th></tr></thead>
+    <tbody>
+      <tr><td>Company name</td><td>Text</td><td>Yes</td><td>Enter your company name.</td></tr>
+      <tr><td>Your name</td><td>Text</td><td>Yes</td><td>Enter your name.</td></tr>
+      <tr><td>Title</td><td>Text</td><td>No</td><td></td></tr>
+      <tr><td>Email</td><td>Email</td><td>Yes</td><td>Enter a complete email address, for example name@company.com.</td></tr>
+      <tr><td>Phone</td><td>Phone</td><td>No</td><td></td></tr>
+      <tr><td>Your interest</td><td>Choice: Carbon purchasing · Deploying the technology on our site · Carbon reduction · Investing in Global C60 · Other</td><td>Yes</td><td>Choose what you are interested in.</td></tr>
+      <tr><td>Comments</td><td>Free text</td><td>No</td><td></td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li>States: errors show under each field and move focus to the first problem; the Send button reads "Sending…" while it works; success shows "Thank you. We have your details and will be in touch."; failure asks the visitor to retry or email rvisser@globalc60.com.</li>
+    <li>Privacy line under the button: "We use these details only to reply to you. We do not share them."</li>
+    <li>Spam: a hidden trap field (<code>website</code>) that people never fill in; submissions with it filled are dropped.</li>
+  </ul>
+  <h3>Connecting it</h3>
+  <p>A static page cannot send email itself. Set one line in <code>index.html</code>:</p>
+  <pre>var FORM_ENDPOINT = "";   // "netlify", or a Formspree URL such as "https://formspree.io/f/abcdwxyz"</pre>
+  <div class="two">
+    <div class="box"><h3>Netlify</h3><p>Set to <code>"netlify"</code>. The form already carries Netlify's attributes. Submissions appear under Forms; add an email notification to rvisser@globalc60.com. The free plan includes a monthly submission allowance; check the current limit.</p></div>
+    <div class="box"><h3>Cloudflare Pages or Bluehost</h3><p>Create a Formspree form that sends to rvisser@globalc60.com and paste its URL. Formspree's free plan has a monthly submission cap; check the current limit.</p></div>
+  </div>
+  <div class="note"><p>Until the endpoint is set, the form tells visitors to email rvisser@globalc60.com. The address is also shown as plain text in the contact band and footer.</p></div>
+</section>
+
+<section id="s8">
+  <h2>8. Search and sharing</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Item</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Title</td><td>Global C60 | Converting Industrial CO₂ into Carbon Products</td></tr>
+      <tr><td>Description</td><td>Global C60 installs and operates units at industrial sites that convert CO₂ emissions into carbon black equivalent carbon, carbon nanotubes and fullerenes. Calgary, Alberta.</td></tr>
+      <tr><td>Canonical</td><td>https://globalc60.com/</td></tr>
+      <tr><td>Share tags</td><td>Open Graph and Twitter card tags with og-image.png (1200 × 630): logo, headline, C<sub>60</sub> drawing</td></tr>
+      <tr><td>Structured data</td><td>Organization: Global C60 Inc., also known as GlobalC60 Recovery, Calgary AB, email, logo, founders with their LinkedIn profiles. Add company social profiles as <code>sameAs</code> once the channels exist.</td></tr>
+      <tr><td>Crawling</td><td>robots.txt allows all; sitemap.xml lists the home page</td></tr>
+      <tr><td>Language</td><td><code>lang="en-CA"</code>. French or other languages later would be separate pages with hreflang tags.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="s9">
+  <h2>9. Accessibility</h2>
+  <ul>
+    <li>Colour pairings are those checked in the brand guide: AA or better in both themes.</li>
+    <li>Focus ring: 2 px, Navy 500 on light and Blue 300 on dark, offset 2 px, never removed.</li>
+    <li>Skip link to the main content; landmarks for header, main, footer; each section labelled by its heading.</li>
+    <li>Touch targets at least 44 × 44 px, including LinkedIn icons and the modal close button.</li>
+    <li>Form fields have visible labels and linked error messages; the modal returns focus to the button that opened it and closes with Escape.</li>
+    <li>Every drawing has a text description; the hero diagram describes the flow in order.</li>
+    <li>Reduced motion setting turns off smooth scrolling and transitions.</li>
+  </ul>
+</section>
+
+<section id="s10">
+  <h2>10. Hosting and deployment</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Option</th><th>Steps</th><th>Suits</th></tr></thead>
+    <tbody>
+      <tr><td>Netlify</td><td>Drag the site folder onto Netlify's deploy page, add globalc60.com as a custom domain, update DNS at the registrar (Bluehost) to Netlify's records, set <code>FORM_ENDPOINT = "netlify"</code>.</td><td>Simplest overall; built-in form handling; free SSL.</td></tr>
+      <tr><td>Cloudflare Pages</td><td>Create a Pages project, upload the folder, add the custom domain; move DNS to Cloudflare or add a CNAME. Use Formspree for the form.</td><td>Fast global delivery; good if DNS moves to Cloudflare anyway.</td></tr>
+      <tr><td>Bluehost (current)</td><td>Remove or disable the WordPress coming-soon page, upload the folder to <code>public_html</code> by File Manager or FTP. Use Formspree.</td><td>No DNS change; keeps email and domain where they are.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><p><strong>Email:</strong> check where the globalc60.com mailboxes (rvisser@, rgreen@, kcarroll@) are hosted before changing DNS. Moving the website must not move or drop the MX records.</p></div>
+  <h3>Where to keep building</h3>
+  <p>This page was built in the Claude app, which is well suited to a single-file site with review by comments. Move to Claude Code when any of these happen: the site grows to the six pages in the brand guide, you want the files in a Git repository with automatic deploys to Netlify or Cloudflare, or someone else will edit the code. The folder structure here drops straight into a repository.</p>
+</section>
+
+<section id="s11">
+  <h2>11. Maintenance</h2>
+  <ul>
+    <li><strong>After the November lab results:</strong> change the nanotube and fullerene chips from "Specification to follow" to "Available for discussion now" (class <code>chip ok</code>), and add a specification line to each card.</li>
+    <li><strong>When TIER recognition is confirmed:</strong> replace the last sentence of the TIER callout with the confirmed wording.</li>
+    <li><strong>When social channels exist:</strong> add icon links in the footer and <code>sameAs</code> entries in the structured data.</li>
+    <li><strong>When the re-set logo is delivered:</strong> replace the inline logo paths and regenerate the favicons and logo-512.png.</li>
+    <li><strong>When GCM launches:</strong> point the buyers section to the GCM website and change its button to an outbound link.</li>
+  </ul>
+</section>
+
+<section id="s12">
+  <h2>12. Open items before launch</h2>
+  <div class="note flag"><strong>Claims to confirm</strong><p>The SO<sub>x</sub>, NO<sub>x</sub> and carbon monoxide reduction statement, and "modular units can significantly reduce the cost of carbon compliance", are performance claims. Check both against the October test results before going live.</p></div>
+  <div class="note flag"><strong>Elemental Air</strong><p>Confirm Elemental Air approves being named and linked. Their site currently opens to a login page.</p></div>
+  <div class="note"><strong>Hosting and form</strong><p>Choose Netlify, Cloudflare Pages or Bluehost; set <code>FORM_ENDPOINT</code>; send a test submission.</p></div>
+  <div class="note"><strong>Logo</strong><p>Designer re-set of GLOBALC60 / RECOVERY and export of the six variants; licence check for Ethnocentric before any embedded use elsewhere.</p></div>
+  <div class="note"><strong>Final read</strong><p>Each co-founder reviews their team entry and LinkedIn link.</p></div>
+</section>
+
+</main>
